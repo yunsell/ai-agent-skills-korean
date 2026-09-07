@@ -48,6 +48,14 @@
 
 정확한 파일 구조와 필드는 [Agent Skills 공개 명세](https://agentskills.io/specification)를 기준으로 확인하세요.
 
+## 현재 지도의 밀도
+
+<p align="center">
+  <img src="assets/ecosystem-treemap.svg" width="100%" alt="33개 큐레이션 항목: Agent 10, Skill 8, MCP 7, Framework 7, Plugin 1">
+</p>
+
+그래프의 면적은 이 README에 실린 **프로젝트·탐색 자원의 수**입니다. 공식 문서, 명세, 이 저장소 자체 링크는 제외하고 각 항목을 대표 역할에 한 번만 배정했습니다. Plugin 영역이 작은 것은 오류가 아니라 현재 큐레이션의 빈칸입니다. 다음 현장 조사의 우선순위이기도 합니다.
+
 ---
 
 ## ROUTE 01 / 일하는 방법을 배우기
