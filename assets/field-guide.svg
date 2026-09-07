@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">AI Agent Field Guide</title>
+  <desc id="desc">주홍색, 코발트색, 연두색으로 구성된 독립 기술 잡지 스타일의 AI 에이전트 가이드 표지</desc>
+  <defs>
+    <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2" fill="#17324D" opacity=".22"/>
+    </pattern>
+    <clipPath id="paper"><rect x="18" y="18" width="1164" height="524" rx="2"/></clipPath>
+  </defs>
+  <rect width="1200" height="560" fill="#17324D"/>
+  <rect x="18" y="18" width="1164" height="524" rx="2" fill="#F4EEDC"/>
+  <g clip-path="url(#paper)">
+    <rect x="806" y="18" width="376" height="524" fill="#E9563F"/>
+    <path d="M690 18h116v524H570z" fill="#174EA6"/>
+    <rect x="18" y="426" width="788" height="116" fill="#DDF36A"/>
+    <rect x="18" y="18" width="190" height="408" fill="url(#dots)"/>
+    <circle cx="994" cy="182" r="118" fill="none" stroke="#F4EEDC" stroke-width="2" opacity=".75"/>
+    <circle cx="994" cy="182" r="76" fill="none" stroke="#F4EEDC" stroke-width="2" opacity=".75"/>
+    <path d="M994 42v280M854 182h280" stroke="#F4EEDC" stroke-width="2" opacity=".75"/>
+    <g fill="#17324D" font-family="Arial, Helvetica, sans-serif">
+      <text x="62" y="72" font-size="18" font-weight="700" letter-spacing="4">KOREAN EDITION / 2026</text>
+      <text x="62" y="156" font-size="86" font-weight="900" letter-spacing="-3">AGENT</text>
+      <text x="62" y="236" font-size="86" font-weight="900" letter-spacing="-3">FIELD</text>
+      <text x="62" y="316" font-size="86" font-weight="900" letter-spacing="-3">GUIDE</text>
+      <text x="66" y="362" font-size="24" font-weight="700">AI 에이전트 생태계를 건너는 네 개의 경로</text>
+      <text x="66" y="394" font-size="17">SKILLS · MCP · FRAMEWORKS · CODING AGENTS</text>
+    </g>
+    <g font-family="Arial, Helvetica, sans-serif" fill="#F4EEDC">
+      <text x="848" y="72" font-size="15" font-weight="700" letter-spacing="3">FIELD NOTE № 01</text>
+      <text x="848" y="365" font-size="17" font-weight="700">NOT A RANKING.</text>
+      <text x="848" y="392" font-size="17" font-weight="700">A MAP FOR CHOOSING.</text>
+      <text x="848" y="474" font-size="14" letter-spacing="2">LAST SURVEY</text>
+      <text x="848" y="508" font-size="28" font-weight="900">2026—09—07</text>
+    </g>
+    <g font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="14" fill="#17324D">
+      <text x="62" y="472">01 / LEARN A METHOD</text>
+      <text x="272" y="472">02 / CONNECT A TOOL</text>
+      <text x="492" y="472">03 / BUILD A SYSTEM</text>
+      <text x="708" y="472">04 / SHIP WITH AGENTS</text>
+    </g>
+    <g stroke="#17324D" stroke-width="2"><path d="M62 492h162M272 492h170M492 492h168M708 492h64"/></g>
+  </g>
+  <rect x="18" y="18" width="1164" height="524" rx="2" fill="none" stroke="#17324D" stroke-width="4"/>
+</svg>
