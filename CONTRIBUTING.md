@@ -1,29 +1,48 @@
-# 기여 가이드
+# Contributing
 
-오래된 링크, 설명 오류, 새로운 프로젝트 제안을 환영합니다.
+[한국어](#korean) · [English](#english)
 
-## Issue를 열 때
+<a id="korean"></a>
 
-다음 내용을 포함해 주세요.
+## 한국어
 
-- 대상 항목과 현재 링크
-- 무엇이 오래되었거나 부정확한지
-- 근거가 되는 공식 문서 또는 원본 저장소 링크
-- 제안하는 새 설명
+AI 에이전트 사용에 도움이 되는 자료와 기존 항목의 오류 수정을 환영합니다.
 
-## Pull Request를 보낼 때
+### 자료를 제안할 때
 
-1. 공식 문서와 원본 저장소를 우선 확인합니다.
-2. 한 PR에는 하나의 주제만 담습니다.
-3. 별 수, 다운로드 수처럼 자주 바뀌는 수치는 추가하지 않습니다.
-4. 설치 명령은 원본 저장소의 현재 README와 일치시킵니다.
-5. 새 프로젝트에는 기존 목록과 다른 학습·실습 가치를 설명합니다.
+- 원본 저장소 또는 공식 문서 링크
+- 들어갈 분류와 구체적인 사용 목적
+- 기존 자료와 다른 점
+- 설명을 확인할 수 있는 근거
 
-## 표기 원칙
+### Pull Request 작성 기준
 
-- 회사나 프로젝트 조직이 직접 관리할 때만 `공식`으로 표기합니다.
-- 개인·커뮤니티 프로젝트는 제작자 이름 또는 `커뮤니티`로 구분합니다.
-- 검증하지 못한 주장은 단정하지 않습니다.
-- 홍보성 표현보다 사용 상황과 제약을 설명합니다.
+1. 원본 문서를 확인하고 한 행에 하나의 자료를 추가합니다.
+2. 자료는 대표 역할에 한 번만 배치합니다. 교육 과정은 학습 자료로, 탐색 목록은 모음집으로 표시합니다.
+3. `README.md`와 `README.en.md`의 자료·분류·링크를 함께 갱신합니다. 번역 도움이 필요하면 PR에 알려 주세요.
+4. 설명은 짧은 한 문장으로 작성하고 순위·홍보 문구·변동이 잦은 수치는 넣지 않습니다.
+5. 설치법은 원본으로 연결합니다. 지원 환경이나 공식 여부를 명시한다면 근거도 확인합니다.
+6. 보관된 프로젝트나 링크 변경을 발견하면 후속 자료 또는 상태를 설명합니다.
 
-감사합니다.
+기존 시각화 페이지는 이전 분류의 보조 자료입니다. 현재 목록의 기준은 두 README입니다.
+
+<a id="english"></a>
+
+## English
+
+Suggestions and corrections that help people work with AI agents are welcome.
+
+### When suggesting a resource
+
+Include its source repository or official documentation, proposed category, specific use case, how it differs from existing entries, and evidence for the description.
+
+### Pull request guidelines
+
+1. Check the source documentation and add one resource per row.
+2. Assign each resource to its primary role once. Label courses as learning resources and discovery lists as collections.
+3. Update resources, categories, and links in both `README.md` and `README.en.md`. Mention in your PR if you need translation help.
+4. Use one short descriptive sentence. Avoid rankings, promotional claims, and frequently changing metrics.
+5. Link to upstream installation instructions. Verify any compatibility or official-status claims.
+6. Describe status changes or successors when a project is archived or moves.
+
+The existing visual map is a companion with the previous categories. The two READMEs are the current catalog.
