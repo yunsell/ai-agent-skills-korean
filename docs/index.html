@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="33개의 Skill, MCP, Plugin, Framework, Agent를 클릭하며 탐색하는 인터랙티브 필드 맵">
+    <meta name="theme-color" content="#f2ead8">
+    <title>AI Agent Field Map — Interactive Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#map">지도로 바로 가기</a>
+
+    <header class="masthead">
+      <a class="wordmark" href="https://github.com/yunsell/ai-agent-skills-korean" aria-label="GitHub 저장소로 이동">
+        <span class="wordmark-mark" aria-hidden="true">AG</span>
+        <span>AI AGENT<br>FIELD GUIDE</span>
+      </a>
+      <p class="edition">INTERACTIVE EDITION<br>SEOUL · 2026</p>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">33 COORDINATES / 5 TERRITORIES</p>
+          <h1 id="page-title">도구의 이름보다<br><em>역할</em>을 먼저 보세요.</h1>
+        </div>
+        <div class="hero-note">
+          <span class="stamp" aria-hidden="true">LIVE<br>MAP</span>
+          <p>면적은 현재 가이드에 수록된 항목 수입니다. 타일을 선택하면 쓰임을 확인하고 원본 프로젝트로 이동할 수 있습니다.</p>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="지도 필터">
+        <div class="filter-group" role="group" aria-label="분류 선택">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">전체 <span>33</span></button>
+          <button class="filter" type="button" data-filter="agent" aria-pressed="false">Agent <span>10</span></button>
+          <button class="filter" type="button" data-filter="skill" aria-pressed="false">Skill <span>8</span></button>
+          <button class="filter" type="button" data-filter="mcp" aria-pressed="false">MCP <span>7</span></button>
+          <button class="filter" type="button" data-filter="framework" aria-pressed="false">Framework <span>7</span></button>
+          <button class="filter" type="button" data-filter="plugin" aria-pressed="false">Plugin <span>1</span></button>
+        </div>
+        <p class="instruction"><span aria-hidden="true">↗</span> 타일 선택 → 프로젝트 열기</p>
+      </section>
+
+      <section class="map-shell" aria-label="AI 에이전트 생태계 인터랙티브 지도">
+        <div id="map" class="treemap" aria-live="polite"></div>
+        <aside class="inspector" aria-live="polite" aria-label="선택한 프로젝트 정보">
+          <p class="inspector-index">FIELD NOTE <span id="detail-index">00</span></p>
+          <div id="detail-empty" class="detail-empty">
+            <p class="coordinate" aria-hidden="true">37°33′N<br>126°59′E</p>
+            <h2>궁금한 타일을<br>선택해 보세요.</h2>
+            <p>마우스, 터치 또는 키보드로 탐색할 수 있습니다.</p>
+          </div>
+          <div id="detail-content" class="detail-content" hidden>
+            <p id="detail-category" class="detail-category"></p>
+            <h2 id="detail-name"></h2>
+            <p id="detail-description" class="detail-description"></p>
+            <a id="detail-link" class="project-link" href="#" target="_blank" rel="noreferrer">원본 프로젝트 열기 <span aria-hidden="true">↗</span></a>
+          </div>
+        </aside>
+      </section>
+
+      <section class="legend" aria-labelledby="legend-title">
+        <p id="legend-title" class="eyebrow">MAP LEGEND</p>
+        <div class="legend-grid">
+          <p><i class="swatch skill"></i><strong>Skill</strong><span>일하는 방법</span></p>
+          <p><i class="swatch mcp"></i><strong>MCP</strong><span>외부 도구 연결</span></p>
+          <p><i class="swatch plugin"></i><strong>Plugin</strong><span>설치 가능한 묶음</span></p>
+          <p><i class="swatch framework"></i><strong>Framework</strong><span>시스템 설계</span></p>
+          <p><i class="swatch agent"></i><strong>Agent</strong><span>완성된 작업자</span></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>AREA ∝ COUNT · ONE ITEM = ONE TILE · PRIMARY ROLE · NO DUPLICATES</p>
+      <a href="https://github.com/yunsell/ai-agent-skills-korean">전체 한국어 가이드 읽기 ↗</a>
+    </footer>
+  </body>
+</html>
