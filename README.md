@@ -4,7 +4,7 @@
 
 AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개발 도구와 학습 자료를 모았습니다.
 
-[Skills](#skills) · [MCP](#mcp) · [탐색·CLI](#tools) · [Plugins](#plugins) · [Frameworks](#frameworks) · [Agents](#agents) · [학습 자료](#learning) · [기여하기](#contributing)
+[최근 업데이트](#recent) · [Skills](#skills) · [MCP](#mcp) · [탐색·CLI](#tools) · [Plugins](#plugins) · [Frameworks](#frameworks) · [Agents](#agents) · [학습 자료](#learning) · [기여하기](#contributing)
 
 ## 하고 싶은 일로 찾기
 
@@ -17,16 +17,30 @@ AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개
 | 에이전트로 브라우저를 조작하고 싶다 | [Playwright MCP](https://github.com/microsoft/playwright-mcp) |
 | 계획·테스트·검증 흐름을 도입하고 싶다 | [Superpowers](https://github.com/obra/superpowers) |
 | 에이전트 앱을 직접 만들고 싶다 | [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) |
+| 만든 에이전트를 평가하고 배포하고 싶다 | [Google Agents CLI](https://github.com/google/agents-cli) |
+| 운영 오류를 에이전트와 함께 분석하고 싶다 | [Sentry for AI](https://github.com/getsentry/sentry-for-ai) |
 
 > 이름을 알고 있다면 `Ctrl+F` / `⌘F`로 페이지를 검색하세요. 모든 프로젝트 이름은 원본 저장소로 연결되며, 설치법과 지원 환경은 해당 저장소에서 확인할 수 있습니다.
 
 <a id="recent"></a>
 
-## 최근 확인한 자료 · 2026-09-07
+## 최근 확인한 자료 · 2026-09-09
 
-[skills.sh Trending (24h)](https://skills.sh/trending)에서 **find-skills, agent-browser, Matt Pocock 스킬, Prisma, Neon 스킬**을 확인하고 원본 저장소를 검토해 추가하거나 설명을 갱신했습니다. 순위는 수시로 변하며 인기도가 품질 평가를 뜻하지는 않습니다.
+[skills.sh Trending·Hot](https://skills.sh/trending)에서 **Google Agents CLI, Cloudflare Skills, Azure Skills, Momentic, Playwright CLI**의 움직임을 확인했습니다. 실제 업무 범위와 설치 문서는 각 원본 저장소에서 다시 검토했습니다. 순위는 계속 바뀌며 인기도가 품질 평가를 뜻하지는 않습니다.
 
-함께 선별한 자료는 **Impeccable**(디자인), **Addy Osmani Agent Skills**(개발 절차), **Context Engineering Skills**(컨텍스트 관리), **Context7**(문서 조회)입니다. 이들은 활용 범위를 넓히기 위한 추가 자료로, 최근 순위 상승을 확인했다는 의미는 아닙니다. 원본 링크와 활용 예시는 아래 표에서 확인할 수 있습니다.
+이번 갱신에서는 실무 적용성이 분명한 **Google Agents CLI**(개발·평가·배포), **Cloudflare Skills**(Workers·Agents SDK), **Azure Skills Plugin**(배포·진단·비용), **Sentry for AI**(관측·운영 디버깅), **Momentic Agent Skills**(웹·모바일 E2E), **Playwright CLI**(브라우저 검증)를 추가했습니다.
+
+### 실무에서 주목할 흐름
+
+| 흐름 | 왜 유용한가 | 관련 자료 |
+| --- | --- | --- |
+| **CLI + Skill** | 명령 실행은 CLI에 맡기고 스킬은 절차와 판단 기준을 제공해 반복 자동화를 단순하게 구성 | [Playwright CLI](https://github.com/microsoft/playwright-cli), [agent-browser](https://github.com/vercel-labs/agent-browser) |
+| **Skill + MCP 플러그인** | 업무 지침과 실제 서비스 조작 도구를 한 묶음으로 설치해 설정 누락을 줄임 | [Cloudflare Skills](https://github.com/cloudflare/skills), [Azure Skills Plugin](https://github.com/microsoft/azure-skills), [Sentry for AI](https://github.com/getsentry/sentry-for-ai) |
+| **평가 후 배포** | 데이터셋과 평가 지표로 변경 전후를 비교하고 실패 유형을 분석한 뒤 배포 | [Google Agents CLI](https://github.com/google/agents-cli) |
+| **운영 관측과 복구** | 로그·트레이스·오류 문맥을 읽고 코드 수정까지 이어지는 운영 루프 구성 | [Sentry for AI](https://github.com/getsentry/sentry-for-ai), [Google Agents CLI](https://github.com/google/agents-cli) |
+| **버전별 문서 주입** | 학습 데이터 대신 현재 라이브러리 버전의 문서와 예제를 작업 문맥에 공급 | [Context7](https://github.com/upstash/context7) |
+
+[OpenAI 공식 스킬 안내](https://learn.chatgpt.com/docs/build-skills)에 따르면 스킬은 지침·자료·선택적 스크립트를 묶는 작성 단위이고, 여러 사람에게 스킬과 커넥터를 배포할 때는 플러그인으로 패키징할 수 있습니다.
 
 <a id="skills"></a>
 
@@ -49,6 +63,8 @@ AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개
 | [Context Engineering Skills](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering) | 컨텍스트 설계 | 컨텍스트 압축·품질 저하, 메모리, 도구 설계, 에이전트 평가 패턴 | 긴 작업에서 정보 누락·컨텍스트 비용을 분석할 때 |
 | [Prisma Skills](https://github.com/prisma/skills) | ORM·DB 개발 | Prisma CLI, Client, 스키마·마이그레이션과 버전 전환 지침 | Prisma 프로젝트의 DB 변경이나 업그레이드를 준비할 때 |
 | [Neon Agent Skills](https://github.com/neondatabase/agent-skills) | Postgres·클라우드 | Neon·Postgres 문서와 브랜치 기반 개발·마이그레이션 테스트 지침 | 분리된 DB 브랜치에서 스키마 변경을 검증할 때 |
+| [Google Agents CLI](https://github.com/google/agents-cli) | 에이전트 개발·운영 | Google ADK 프로젝트 생성, 평가 데이터셋·지표, 배포, CI/CD, 로그·트레이스 관측 스킬 | Google Cloud용 에이전트를 만들고 평가 결과를 비교한 뒤 배포할 때 |
+| [Cloudflare Skills](https://github.com/cloudflare/skills) | 엣지·서버리스 | Workers, Agents SDK, Durable Objects, Wrangler, 웹 성능과 Cloudflare One 실무 지침 | 상태가 있는 에이전트나 Worker를 만들고 배포 설정까지 검토할 때 |
 
 <a id="mcp"></a>
 
@@ -76,6 +92,7 @@ AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개
 | --- | --- | --- | --- |
 | [Skills CLI / find-skills](https://github.com/vercel-labs/skills) | 스킬 검색·관리 | 스킬 검색·설치·업데이트를 위한 CLI와 find-skills 탐색 스킬 | 원하는 작업을 설명하고 사용할 스킬을 찾을 때 |
 | [agent-browser](https://github.com/vercel-labs/agent-browser) | 브라우저 CLI | 페이지 스냅샷·요소 참조 기반 브라우저 조작 CLI와 사용 스킬 | MCP 외에 CLI 방식으로 웹 작업을 연결하고 싶을 때 |
+| [Playwright CLI](https://github.com/microsoft/playwright-cli) | 브라우저 검증 | 세션을 유지하며 클릭·입력·스크린샷·네트워크·트레이스·코드 기록을 실행하는 CLI와 스킬 | 에이전트가 구현한 화면을 브라우저에서 재현하고 증거를 남길 때 |
 | [skills.sh](https://skills.sh/) | 스킬 디렉터리 | 스킬 검색과 All Time·Trending·Hot 목록 제공 | 새 스킬 후보와 현재 관심 흐름을 찾아볼 때 |
 
 <a id="plugins"></a>
@@ -87,6 +104,9 @@ AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개
 | 자료 | 용도 | 무엇을 제공하나요? | 이런 때 활용하세요 |
 | --- | --- | --- | --- |
 | [Superpowers](https://github.com/obra/superpowers) | 개발 워크플로 | 계획·TDD·디버깅·검증을 묶은 스킬 기반 개발 방법론 | 새 기능의 설계부터 테스트·리뷰까지 절차화 |
+| [Azure Skills Plugin](https://github.com/microsoft/azure-skills) | Azure 개발·운영 | Azure 배포·검증·진단·비용·보안 지침과 Azure·Foundry MCP 구성을 함께 제공 | Azure 리소스를 조회하고 앱을 준비·배포하거나 장애와 비용을 분석할 때 |
+| [Sentry for AI](https://github.com/getsentry/sentry-for-ai) | 관측·운영 디버깅 | Sentry 설치, 오류·트레이스·로그 분석, 이슈 수정, 알림과 OpenTelemetry 구성 스킬 | 운영 오류의 영향을 파악하고 원인 문맥을 바탕으로 코드까지 수정할 때 |
+| [Momentic Agent Skills](https://github.com/momentic-ai/skills) | 웹·모바일 E2E | 테스트 작성·실행·실패 분류·수리 스킬과 브라우저·모바일 MCP 서버 구성 | 기능 변경 뒤 실제 브라우저나 기기에서 회귀 테스트를 만들고 고칠 때 |
 
 플러그인 형식과 설치 방식은 에이전트마다 다릅니다. 프로젝트의 환경별 설치 안내를 확인하세요.
 
@@ -157,4 +177,4 @@ AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개
 
 [기존 시각화 지도 보기](https://yunsell.github.io/ai-agent-skills-korean/) · 이전 분류를 사용하는 한국어 보조 페이지입니다.
 
-최근 조사·추가: 2026-09-07. 신규 항목과 위에 소개한 Matt Pocock 항목은 원본 저장소를 확인했습니다. 활용 예시는 편집자의 제안으로 실행 검증 결과가 아니며, 나머지 기존 항목을 전면 재검증한 것은 아닙니다.
+최근 조사·추가: 2026-09-09. 이번에 추가한 항목은 원본 저장소의 기능·설치 안내를 확인했습니다. 활용 예시는 편집자의 제안으로 실행 검증 결과가 아니며, 나머지 기존 항목을 전면 재검증한 것은 아닙니다.

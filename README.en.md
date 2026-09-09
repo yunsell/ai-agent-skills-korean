@@ -4,7 +4,7 @@
 
 A curated collection of skills, MCP servers, plugins, frameworks, and learning resources for working with AI agents.
 
-[Skills](#skills) · [MCP](#mcp) · [Discovery & CLI](#tools) · [Plugins](#plugins) · [Frameworks](#frameworks) · [Agents](#agents) · [Learning](#learning) · [Contributing](#contributing)
+[Recent update](#recent) · [Skills](#skills) · [MCP](#mcp) · [Discovery & CLI](#tools) · [Plugins](#plugins) · [Frameworks](#frameworks) · [Agents](#agents) · [Learning](#learning) · [Contributing](#contributing)
 
 ## Find by task
 
@@ -17,16 +17,30 @@ A curated collection of skills, MCP servers, plugins, frameworks, and learning r
 | Let an agent interact with a browser | [Playwright MCP](https://github.com/microsoft/playwright-mcp) |
 | Adopt planning and testing workflows | [Superpowers](https://github.com/obra/superpowers) |
 | Build an agent application | [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) |
+| Evaluate and deploy an agent | [Google Agents CLI](https://github.com/google/agents-cli) |
+| Investigate production errors with an agent | [Sentry for AI](https://github.com/getsentry/sentry-for-ai) |
 
 > Know the name? Use `Ctrl+F` / `⌘F` to search this page. Every project name links to its source repository; consult it for installation and compatibility.
 
 <a id="recent"></a>
 
-## Recently reviewed · 2026-09-07
+## Recently reviewed · 2026-09-09
 
-On [skills.sh Trending (24h)](https://skills.sh/trending), we observed **find-skills, agent-browser, Matt Pocock skills, Prisma, and Neon skills**. Their source repositories were checked before inclusion or description updates. Rankings change; popularity is not a quality assessment.
+On [skills.sh Trending and Hot](https://skills.sh/trending), we observed activity around **Google Agents CLI, Cloudflare Skills, Azure Skills, Momentic, and Playwright CLI**. We then checked each source repository for its actual scope and installation documentation. Rankings change continuously; popularity is not a quality assessment.
 
-Also selected for practical coverage: **Impeccable** (design), **Addy Osmani Agent Skills** (engineering workflows), **Context Engineering Skills** (context management), and **Context7** (documentation). These are editorial additions, not claims of recent ranking growth. Source links and example uses appear in the tables below.
+This update adds six resources with clear practical scope: **Google Agents CLI** (development, evaluation, deployment), **Cloudflare Skills** (Workers and Agents SDK), **Azure Skills Plugin** (deployment, diagnostics, cost), **Sentry for AI** (observability and production debugging), **Momentic Agent Skills** (web and mobile E2E), and **Playwright CLI** (browser verification).
+
+### Practical patterns to watch
+
+| Pattern | Why it helps | Resources |
+| --- | --- | --- |
+| **CLI + Skill** | Let the CLI execute concise commands while a skill supplies the workflow and decision criteria | [Playwright CLI](https://github.com/microsoft/playwright-cli), [agent-browser](https://github.com/vercel-labs/agent-browser) |
+| **Skill + MCP plugin** | Package domain guidance with tools that operate the service, reducing missing configuration | [Cloudflare Skills](https://github.com/cloudflare/skills), [Azure Skills Plugin](https://github.com/microsoft/azure-skills), [Sentry for AI](https://github.com/getsentry/sentry-for-ai) |
+| **Evaluate before deploy** | Compare changes with datasets and metrics, then analyze failure modes before deployment | [Google Agents CLI](https://github.com/google/agents-cli) |
+| **Production observe-and-repair loop** | Carry logs, traces, and issue context into code changes | [Sentry for AI](https://github.com/getsentry/sentry-for-ai), [Google Agents CLI](https://github.com/google/agents-cli) |
+| **Version-specific documentation** | Supply the agent with docs and examples for the library version actually in use | [Context7](https://github.com/upstash/context7) |
+
+According to [OpenAI's official skills guide](https://learn.chatgpt.com/docs/build-skills), a skill packages instructions, resources, and optional scripts; reusable skills and connectors can be distributed together as a plugin.
 
 <a id="skills"></a>
 
@@ -49,6 +63,8 @@ Add reusable workflows and domain knowledge to your agent.
 | [Context Engineering Skills](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering) | Context engineering | Patterns for context compression and degradation, memory, tool design, and agent evaluation | Investigate information loss and context costs in long tasks |
 | [Prisma Skills](https://github.com/prisma/skills) | ORM & database | Guidance for Prisma CLI, Client, schemas, migrations, and version upgrades | Prepare database changes or upgrades in a Prisma project |
 | [Neon Agent Skills](https://github.com/neondatabase/agent-skills) | Postgres & cloud | Neon and Postgres documentation plus branching and migration-testing workflows | Validate schema changes on an isolated database branch |
+| [Google Agents CLI](https://github.com/google/agents-cli) | Agent development & operations | Skills for Google ADK project creation, evaluation datasets and metrics, deployment, CI/CD, logs, and traces | Build an agent for Google Cloud, compare evaluation results, then deploy it |
+| [Cloudflare Skills](https://github.com/cloudflare/skills) | Edge & serverless | Practical guidance for Workers, Agents SDK, Durable Objects, Wrangler, web performance, and Cloudflare One | Build a stateful agent or Worker and review its deployment configuration |
 
 <a id="mcp"></a>
 
@@ -76,6 +92,7 @@ Find skills and connect tools to your agent workflow.
 | --- | --- | --- | --- |
 | [Skills CLI / find-skills](https://github.com/vercel-labs/skills) | Skill discovery & management | A CLI for discovering, installing, and updating skills, with a find-skills discovery skill | Find a skill by describing the task you want to perform |
 | [agent-browser](https://github.com/vercel-labs/agent-browser) | Browser CLI | Browser automation CLI with snapshots, element references, and a usage skill | Connect browser tasks through a CLI workflow |
+| [Playwright CLI](https://github.com/microsoft/playwright-cli) | Browser verification | A CLI and skill for persistent sessions, clicks, input, screenshots, network inspection, tracing, and code recording | Reproduce an interface in a browser and save evidence after an agent implements it |
 | [skills.sh](https://skills.sh/) | Skill directory | Skill discovery with All Time, Trending, and Hot listings | Discover new candidates and current interest signals |
 
 <a id="plugins"></a>
@@ -87,6 +104,9 @@ Install bundled skills and workflows.
 | Resource | Use case | What it offers | Example use |
 | --- | --- | --- | --- |
 | [Superpowers](https://github.com/obra/superpowers) | Development workflow | A skills-based methodology for planning, TDD, debugging, and verification | Structure feature work from design through tests and review |
+| [Azure Skills Plugin](https://github.com/microsoft/azure-skills) | Azure development & operations | Azure deployment, validation, diagnostics, cost, and security guidance bundled with Azure and Foundry MCP configuration | Inspect Azure resources, prepare and deploy an app, or analyze incidents and cost |
+| [Sentry for AI](https://github.com/getsentry/sentry-for-ai) | Observability & production debugging | Skills for Sentry setup, error, trace, and log analysis, issue repair, alerts, and OpenTelemetry configuration | Assess the impact of a production error and fix code using its runtime context |
+| [Momentic Agent Skills](https://github.com/momentic-ai/skills) | Web & mobile E2E | Skills for authoring, running, classifying, and repairing tests, bundled with browser and mobile MCP servers | Create and repair regression tests on a real browser or device after a feature change |
 
 Plugin packaging and installation vary by agent. Check the project's instructions for your environment.
 
@@ -157,4 +177,4 @@ We select for a clear use case, an identifiable source, and useful documentation
 
 [Browse the earlier visual map](https://yunsell.github.io/ai-agent-skills-korean/) · Korean visual companion using the previous category layout.
 
-Latest research update: 2026-09-07. New entries and the highlighted Matt Pocock entry were checked against their source repositories; example uses are editorial suggestions, not execution tests. Other existing entries were not comprehensively re-audited.
+Latest research update: 2026-09-09. New entries were checked against their source repositories for scope and installation guidance. Example uses are editorial suggestions, not execution tests. Other existing entries were not comprehensively re-audited.
