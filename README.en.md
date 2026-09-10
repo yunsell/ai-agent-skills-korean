@@ -4,7 +4,7 @@
 
 A curated collection of skills, MCP servers, plugins, frameworks, and learning resources for working with AI agents.
 
-[Recent update](#recent) · [Skills](#skills) · [MCP](#mcp) · [Discovery & CLI](#tools) · [Plugins](#plugins) · [Frameworks](#frameworks) · [Agents](#agents) · [Learning](#learning) · [Contributing](#contributing)
+[5-minute starter packs](#starter-packs) · [Field cards](#field-cards) · [Recent update](#recent) · [Skills](#skills) · [MCP](#mcp) · [Discovery & CLI](#tools) · [Plugins](#plugins) · [Frameworks](#frameworks) · [Agents](#agents) · [Learning](#learning) · [Contributing](#contributing)
 
 ## Find by task
 
@@ -21,6 +21,139 @@ A curated collection of skills, MCP servers, plugins, frameworks, and learning r
 | Investigate production errors with an agent | [Sentry for AI](https://github.com/getsentry/sentry-for-ai) |
 
 > Know the name? Use `Ctrl+F` / `⌘F` to search this page. Every project name links to its source repository; consult it for installation and compatibility.
+
+<a id="starter-packs"></a>
+
+## 5-minute starter packs
+
+If comparing tools one by one feels slow, start with a combination built around your goal. **Five minutes** is an approximate time to begin installation and send the first request; it does not include authentication, project setup, or completing the actual task. Review the source repository and files to be installed before running a command.
+
+<details>
+<summary><strong>01 · Frontend quality check</strong> — implementation guidance + current docs + real-browser verification</summary>
+
+**Stack:** [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) · [Context7](https://github.com/upstash/context7) · [Playwright CLI](https://github.com/microsoft/playwright-cli)
+
+**Get started**
+
+```bash
+npx skills add vercel-labs/agent-skills
+npx ctx7 setup
+npm install -g @playwright/cli@latest
+playwright-cli install --skills
+```
+
+**First request**
+
+> Review this React/Next.js interface against performance and UI guidance, then make the necessary changes. Use Context7 for documentation matching the versions in this project, verify the critical user flow with Playwright CLI, and preserve evidence for both successful and failing checks.
+
+**Done when:** change summary, checks run, critical-flow result, and screenshots or a reproducible failure record.
+
+</details>
+
+<details>
+<summary><strong>02 · Safer database change</strong> — schema analysis + migration + version-specific docs</summary>
+
+**Stack:** choose [Supabase Agent Skills](https://github.com/supabase/agent-skills) or [Prisma Skills](https://github.com/prisma/skills) for your stack · [Context7](https://github.com/upstash/context7)
+
+**Get started**
+
+```bash
+# Choose one of these for the stack you use.
+npx skills add supabase/agent-skills
+npx skills add prisma/skills
+
+npx ctx7 setup
+```
+
+**First request**
+
+> Inspect the current schema and its application usage first. Write a change plan and rollback procedure, warn me before any command that could lose data, and validate the migration against a development or isolated database before summarizing the result.
+
+**Done when:** impact assessment, migration and rollback steps, validation result, and a production-readiness checklist.
+
+</details>
+
+<details>
+<summary><strong>03 · Plan through test</strong> — requirements + task breakdown + TDD + completion checks</summary>
+
+**Stack:** [Superpowers](https://github.com/obra/superpowers)
+
+**Get started:** Superpowers uses a different install path for each agent. Choose your environment—Codex, Claude Code, Cursor, Copilot CLI, or another supported agent—from the source repository's **Quickstart**.
+
+**First request**
+
+> Do not implement this feature immediately. Clarify the requirements and constraints, break the work into small tasks, write a failing test first, and then implement it. Finish by reviewing the test results and diff against the completion criteria.
+
+**Done when:** agreed requirements, task plan, red-to-green test record, final diff, and verification result.
+
+</details>
+
+<details>
+<summary><strong>04 · Production incident investigation</strong> — impact + root cause + verified fix</summary>
+
+**Stack:** [Sentry for AI](https://github.com/getsentry/sentry-for-ai)
+
+**Get started**
+
+```bash
+npx @sentry/ai install
+```
+
+The installer guides you to the plugin for your agent. Accessing production data requires Sentry authentication.
+
+**First request**
+
+> Rank the major errors from the last 24 hours by user impact. Analyze the highest-impact error using its events, traces, and relevant code, then test a proposed fix. Do not resolve the issue or deploy anything without approval.
+
+**Done when:** error evidence, impact, root-cause hypothesis, code and test results, and pre-deployment checks.
+
+</details>
+
+<details>
+<summary><strong>05 · Agent development and evaluation</strong> — scaffold + eval dataset + failure analysis + deployment readiness</summary>
+
+**Stack:** [Google Agents CLI](https://github.com/google/agents-cli)
+
+**Get started**
+
+```bash
+uvx google-agents-cli setup
+
+# To install only the skills without the CLI
+npx skills add google/agents-cli
+```
+
+**First request**
+
+> Build a small ADK agent that runs locally. Create an evaluation dataset with happy-path, edge, and failure cases, run the evaluation, and summarize failure clusters and the before-and-after difference. Do not deploy it to the cloud yet.
+
+**Done when:** runnable agent, evaluation cases and metrics, failure analysis, and evidence for a deployment decision.
+
+</details>
+
+<a id="field-cards"></a>
+
+## Practical field cards
+
+These cards compare the starter-pack resources using one set of criteria. **Docs checked** means we reviewed the source installation, compatibility, and usage documentation; it does not mean this repository guarantees results in a live account or project.
+
+| Resource | Supported environments | Setup | Authentication | Primary access | Risk | Checked |
+| --- | --- | --- | --- | --- | --- | --- |
+| [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) | Codex, Claude Code, Cursor, Copilot, and other Agent Skills hosts | Easy · `npx skills` | Not for install | Project guidance, code and UI changes | Medium | Docs · 2026-09-10 |
+| [Context7](https://github.com/upstash/context7) | Codex, Claude Code, Cursor, VS Code, Copilot, and others | Easy · `npx ctx7 setup` | OAuth or API key | Remote documentation and agent config | Low | Docs · 2026-09-10 |
+| [Playwright CLI](https://github.com/microsoft/playwright-cli) | Coding agents that can use a CLI | Easy · npm | Not required¹ | Browser, page input, sessions, screenshots | Medium | Docs · 2026-09-10 |
+| [Supabase Agent Skills](https://github.com/supabase/agent-skills) | Agent Skills-compatible hosts | Easy · `npx skills` | Not for install² | Project code, schema and database guidance | High | Docs · 2026-09-10 |
+| [Prisma Skills](https://github.com/prisma/skills) | Agent Skills-compatible hosts | Easy · `npx skills` | Not for install² | Prisma schema, migrations and DB commands | High | Docs · 2026-09-10 |
+| [Superpowers](https://github.com/obra/superpowers) | Codex, Claude Code, Cursor, Copilot CLI, OpenCode, and others | Moderate · agent-specific plugin | Not required | Project files, commands, Git and test workflows | Medium | Docs · 2026-09-10 |
+| [Sentry for AI](https://github.com/getsentry/sentry-for-ai) | Codex, Claude Code, Cursor, Grok | Moderate · agent-specific plugin | Required for production queries | Errors, logs, traces and project code | High | Docs · 2026-09-10 |
+| [Google Agents CLI](https://github.com/google/agents-cli) | Codex, Claude Code, Antigravity, and other coding agents | Moderate · Python/uv/Node | AI Studio or Google Cloud to run | Local code and evals, cloud deployment and logs | High | Docs · 2026-09-10 |
+| [GitHub MCP Server](https://github.com/github/github-mcp-server) | Hosts supporting remote or local MCP | Moderate · host-specific setup | OAuth or PAT | Repositories, issues, PRs, and Actions³ | Medium–High | Docs · 2026-09-10 |
+
+¹ Risk increases when a task uses an authenticated browser profile or sensitive form.<br>
+² The corresponding service credentials are required for live remote database work.<br>
+³ GitHub MCP supports read-only mode and tool allowlists. Start with only the repository and read tools the task needs.
+
+**Risk legend:** Low = primarily reading or documentation retrieval · Medium = may change files, browser state, or external APIs · High = may affect production data, databases, cloud deployments, or cost. Risk describes the possible scope after connection, not project quality.
 
 <a id="recent"></a>
 
@@ -177,4 +310,4 @@ We select for a clear use case, an identifiable source, and useful documentation
 
 [Browse the earlier visual map](https://yunsell.github.io/ai-agent-skills-korean/) · Korean visual companion using the previous category layout.
 
-Latest research update: 2026-09-09. New entries were checked against their source repositories for scope and installation guidance. Example uses are editorial suggestions, not execution tests. Other existing entries were not comprehensively re-audited.
+Latest research update: 2026-09-10. Starter-pack commands and field cards were checked against source documentation. Example uses and risk labels are editorial judgments, not execution tests or security certifications. Other existing entries were not comprehensively re-audited.

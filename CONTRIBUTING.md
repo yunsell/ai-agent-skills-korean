@@ -23,6 +23,8 @@ AI 에이전트 사용에 도움이 되는 자료와 기존 항목의 오류 수
 4. 제공 기능과 구체적인 활용 예시를 각각 작성합니다. 트렌딩 자료에는 확인 날짜와 출처를 남기고, 인기 신호와 편집자 선정을 구분합니다. 순위·홍보 문구·변동이 잦은 수치는 목록에 고정하지 않습니다.
 5. 설치법은 원본으로 연결합니다. 지원 환경이나 공식 여부를 명시한다면 근거도 확인합니다.
 6. 보관된 프로젝트나 링크 변경을 발견하면 후속 자료 또는 상태를 설명합니다.
+7. 실무 검증 카드에는 확인 날짜와 확인 수준(`문서` 또는 `실행`)을 표시합니다. 위험도는 프로젝트의 품질이 아니라 연결 후 가능한 접근 범위를 기준으로 작성합니다.
+8. 스타터팩의 명령은 원본 설치 문서와 일치해야 하며, 첫 요청에는 승인 경계와 확인 가능한 완료 기준을 포함합니다.
 
 기존 시각화 페이지는 이전 분류의 보조 자료입니다. 현재 목록의 기준은 두 README입니다.
 
@@ -44,5 +46,7 @@ Include its source repository or official documentation, proposed category, spec
 4. Describe capabilities and a concrete example use separately. Date and source any trending observations, distinguishing popularity signals from editorial selections. Avoid fixed rankings, promotional claims, and frequently changing metrics.
 5. Link to upstream installation instructions. Verify any compatibility or official-status claims.
 6. Describe status changes or successors when a project is archived or moves.
+7. In a field card, record the review date and review level (`Docs` or `Executed`). Rate risk by possible access after connection, not by project quality.
+8. Keep starter-pack commands aligned with upstream installation docs, and include approval boundaries and verifiable completion criteria in the first request.
 
 The existing visual map is a companion with the previous categories. The two READMEs are the current catalog.

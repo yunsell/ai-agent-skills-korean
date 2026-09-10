@@ -4,7 +4,7 @@
 
 AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개발 도구와 학습 자료를 모았습니다.
 
-[최근 업데이트](#recent) · [Skills](#skills) · [MCP](#mcp) · [탐색·CLI](#tools) · [Plugins](#plugins) · [Frameworks](#frameworks) · [Agents](#agents) · [학습 자료](#learning) · [기여하기](#contributing)
+[5분 스타터팩](#starter-packs) · [실무 검증 카드](#field-cards) · [최근 업데이트](#recent) · [Skills](#skills) · [MCP](#mcp) · [탐색·CLI](#tools) · [Plugins](#plugins) · [Frameworks](#frameworks) · [Agents](#agents) · [학습 자료](#learning) · [기여하기](#contributing)
 
 ## 하고 싶은 일로 찾기
 
@@ -21,6 +21,139 @@ AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개
 | 운영 오류를 에이전트와 함께 분석하고 싶다 | [Sentry for AI](https://github.com/getsentry/sentry-for-ai) |
 
 > 이름을 알고 있다면 `Ctrl+F` / `⌘F`로 페이지를 검색하세요. 모든 프로젝트 이름은 원본 저장소로 연결되며, 설치법과 지원 환경은 해당 저장소에서 확인할 수 있습니다.
+
+<a id="starter-packs"></a>
+
+## 5분 스타터팩
+
+도구를 하나씩 비교하기 어렵다면 목적에 맞는 조합부터 시작하세요. 여기서 **5분**은 설치와 첫 요청을 시작하는 데 필요한 대략적인 시간이며, 로그인·프로젝트 설정·실제 작업 완료 시간은 포함하지 않습니다. 명령을 실행하기 전에 원본 저장소와 설치될 파일을 확인하세요.
+
+<details>
+<summary><strong>01 · 프런트엔드 품질 점검</strong> — 구현 기준 + 최신 문서 + 실제 브라우저 검증</summary>
+
+**구성:** [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) · [Context7](https://github.com/upstash/context7) · [Playwright CLI](https://github.com/microsoft/playwright-cli)
+
+**시작하기**
+
+```bash
+npx skills add vercel-labs/agent-skills
+npx ctx7 setup
+npm install -g @playwright/cli@latest
+playwright-cli install --skills
+```
+
+**첫 요청**
+
+> 현재 React/Next.js 화면을 성능과 UI 기준으로 검토하고 필요한 부분을 수정해 주세요. 사용 중인 버전의 문서는 Context7으로 확인하고, 핵심 사용자 흐름은 Playwright CLI로 검증한 뒤 성공·실패 증거를 남겨 주세요.
+
+**완료 기준:** 변경 요약, 실행한 검사, 핵심 흐름 결과, 스크린샷 또는 재현 가능한 실패 기록.
+
+</details>
+
+<details>
+<summary><strong>02 · 안전한 데이터베이스 변경</strong> — 스키마 분석 + 마이그레이션 + 버전별 문서</summary>
+
+**구성:** 사용하는 스택에 따라 [Supabase Agent Skills](https://github.com/supabase/agent-skills) 또는 [Prisma Skills](https://github.com/prisma/skills) · [Context7](https://github.com/upstash/context7)
+
+**시작하기**
+
+```bash
+# 둘 중 사용하는 스택 하나를 선택하세요.
+npx skills add supabase/agent-skills
+npx skills add prisma/skills
+
+npx ctx7 setup
+```
+
+**첫 요청**
+
+> 현재 스키마와 애플리케이션 사용 코드를 먼저 분석해 주세요. 변경 계획과 롤백 방법을 작성하고, 데이터 손실 가능성이 있는 명령은 실행 전에 알려 주세요. 개발용 또는 격리된 DB에서 마이그레이션을 검증한 뒤 결과를 정리해 주세요.
+
+**완료 기준:** 영향 범위, 마이그레이션과 롤백 절차, 검증 결과, 운영 적용 전 확인 항목.
+
+</details>
+
+<details>
+<summary><strong>03 · 계획부터 테스트까지</strong> — 요구사항 정리 + 작업 분해 + TDD + 완료 검증</summary>
+
+**구성:** [Superpowers](https://github.com/obra/superpowers)
+
+**시작하기:** Superpowers는 에이전트마다 설치 방식이 다릅니다. 원본 저장소의 **Quickstart**에서 Codex, Claude Code, Cursor, Copilot CLI 등 현재 환경을 선택해 설치하세요.
+
+**첫 요청**
+
+> 이 기능을 바로 구현하지 말고 요구사항과 제약을 먼저 확인해 주세요. 작은 작업으로 분해하고 실패하는 테스트부터 작성한 뒤 구현해 주세요. 마지막에는 테스트 결과와 변경 diff를 검토해 완료 조건을 확인해 주세요.
+
+**완료 기준:** 합의된 요구사항, 작업 계획, 실패→통과 테스트 기록, 최종 diff와 검증 결과.
+
+</details>
+
+<details>
+<summary><strong>04 · 운영 오류 조사</strong> — 영향도 파악 + 원인 분석 + 수정 검증</summary>
+
+**구성:** [Sentry for AI](https://github.com/getsentry/sentry-for-ai)
+
+**시작하기**
+
+```bash
+npx @sentry/ai install
+```
+
+설치기가 현재 에이전트에 맞는 플러그인을 안내합니다. 운영 데이터를 조회하려면 Sentry 로그인이 필요합니다.
+
+**첫 요청**
+
+> 최근 24시간의 주요 오류를 사용자 영향도 순으로 정리해 주세요. 가장 영향이 큰 오류의 이벤트·트레이스·관련 코드를 근거로 원인을 분석하고 수정안을 테스트해 주세요. 이슈 종료나 배포는 승인 없이 실행하지 마세요.
+
+**완료 기준:** 오류 근거, 영향 범위, 원인 가설, 코드 변경과 테스트 결과, 배포 전 확인 사항.
+
+</details>
+
+<details>
+<summary><strong>05 · 에이전트 개발과 평가</strong> — 생성 + 평가 데이터셋 + 실패 분석 + 배포 준비</summary>
+
+**구성:** [Google Agents CLI](https://github.com/google/agents-cli)
+
+**시작하기**
+
+```bash
+uvx google-agents-cli setup
+
+# CLI 없이 스킬만 설치하려면
+npx skills add google/agents-cli
+```
+
+**첫 요청**
+
+> 로컬에서 실행할 작은 ADK 에이전트를 만들어 주세요. 정상·경계·실패 사례가 포함된 평가 데이터셋을 만들고 평가를 실행한 뒤, 실패 유형과 개선 전후 차이를 정리해 주세요. 아직 클라우드에는 배포하지 마세요.
+
+**완료 기준:** 실행 가능한 에이전트, 평가 사례와 지표, 실패 유형 분석, 배포 여부를 판단할 근거.
+
+</details>
+
+<a id="field-cards"></a>
+
+## 실무 검증 카드
+
+스타터팩에 사용한 핵심 자료를 같은 기준으로 비교했습니다. **문서 확인**은 원본의 설치·지원 범위·사용법을 검토했다는 뜻이며, 이 저장소가 실제 계정과 프로젝트에서 실행 결과를 보증한다는 뜻은 아닙니다.
+
+| 자료 | 지원 환경 | 시작 난이도 | 로그인 | 주요 접근 범위 | 위험도 | 확인 |
+| --- | --- | --- | --- | --- | --- | --- |
+| [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) | Codex, Claude Code, Cursor, Copilot 등 Agent Skills 호환 환경 | 쉬움 · `npx skills` | 설치 시 불필요 | 프로젝트 지침, 코드·UI 수정 | 중간 | 문서 · 2026-09-10 |
+| [Context7](https://github.com/upstash/context7) | Codex, Claude Code, Cursor, VS Code, Copilot 등 | 쉬움 · `npx ctx7 setup` | OAuth 또는 API 키 | 외부 문서 조회, 에이전트 설정 파일 | 낮음 | 문서 · 2026-09-10 |
+| [Playwright CLI](https://github.com/microsoft/playwright-cli) | CLI를 사용할 수 있는 코딩 에이전트 | 쉬움 · npm | 불필요¹ | 브라우저, 페이지 입력, 세션·스크린샷 | 중간 | 문서 · 2026-09-10 |
+| [Supabase Agent Skills](https://github.com/supabase/agent-skills) | Agent Skills 호환 환경 | 쉬움 · `npx skills` | 설치 시 불필요² | 프로젝트 코드, 스키마·DB 작업 지침 | 높음 | 문서 · 2026-09-10 |
+| [Prisma Skills](https://github.com/prisma/skills) | Agent Skills 호환 환경 | 쉬움 · `npx skills` | 설치 시 불필요² | Prisma 스키마, 마이그레이션·DB 명령 | 높음 | 문서 · 2026-09-10 |
+| [Superpowers](https://github.com/obra/superpowers) | Codex, Claude Code, Cursor, Copilot CLI, OpenCode 등 | 보통 · 환경별 플러그인 | 불필요 | 프로젝트 파일, 명령, Git·테스트 흐름 | 중간 | 문서 · 2026-09-10 |
+| [Sentry for AI](https://github.com/getsentry/sentry-for-ai) | Codex, Claude Code, Cursor, Grok | 보통 · 환경별 플러그인 | 운영 조회 시 필요 | 오류·로그·트레이스, 프로젝트 코드 | 높음 | 문서 · 2026-09-10 |
+| [Google Agents CLI](https://github.com/google/agents-cli) | Codex, Claude Code, Antigravity 및 기타 코딩 에이전트 | 보통 · Python/uv/Node | 실행 시 AI Studio 또는 Google Cloud | 로컬 코드·평가, 클라우드 배포·로그 | 높음 | 문서 · 2026-09-10 |
+| [GitHub MCP Server](https://github.com/github/github-mcp-server) | Remote/Local MCP를 지원하는 호스트 | 보통 · 호스트별 설정 | OAuth 또는 PAT | 저장소·이슈·PR·Actions³ | 중간–높음 | 문서 · 2026-09-10 |
+
+¹ 로그인된 브라우저 프로필이나 민감한 폼을 다루면 위험도가 높아집니다.<br>
+² 실제 원격 DB 작업에는 해당 서비스 인증이 필요합니다.<br>
+³ GitHub MCP는 읽기 전용 모드와 도구 allowlist를 지원합니다. 처음에는 필요한 저장소와 읽기 도구만 허용하는 구성을 권장합니다.
+
+**위험도 기준:** 낮음 = 주로 읽기·문서 조회 · 중간 = 파일, 브라우저 또는 외부 API 변경 가능 · 높음 = 운영 데이터, DB, 클라우드 배포 또는 비용에 영향 가능. 위험도는 프로젝트 자체의 품질 평가가 아니라, 연결했을 때 가능한 작업 범위를 나타냅니다.
 
 <a id="recent"></a>
 
@@ -177,4 +310,4 @@ AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개
 
 [기존 시각화 지도 보기](https://yunsell.github.io/ai-agent-skills-korean/) · 이전 분류를 사용하는 한국어 보조 페이지입니다.
 
-최근 조사·추가: 2026-09-09. 이번에 추가한 항목은 원본 저장소의 기능·설치 안내를 확인했습니다. 활용 예시는 편집자의 제안으로 실행 검증 결과가 아니며, 나머지 기존 항목을 전면 재검증한 것은 아닙니다.
+최근 조사·추가: 2026-09-10. 스타터팩의 설치 명령과 검증 카드는 원본 저장소 문서를 기준으로 확인했습니다. 활용 예시와 위험도는 편집자의 판단이며 실행 검증이나 보안 인증 결과가 아닙니다. 나머지 기존 항목을 전면 재검증한 것은 아닙니다.
