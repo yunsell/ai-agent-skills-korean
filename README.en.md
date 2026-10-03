@@ -4,7 +4,11 @@
 
 A curated collection of skills, MCP servers, plugins, frameworks, and learning resources for working with AI agents.
 
-[5-minute starter packs](#starter-packs) · [Field cards](#field-cards) · [Recent update](#recent) · [Skills](#skills) · [MCP](#mcp) · [Discovery & CLI](#tools) · [Plugins](#plugins) · [Frameworks](#frameworks) · [Agents](#agents) · [Learning](#learning) · [Contributing](#contributing)
+Review date: **2026-10-03** · Installation and permissions are checked against documentation, not execution tests.
+
+**Start here:** [Quick starts](#starter-packs) · [Practical comparison](#field-cards) · [Updates & alternatives](#recent) · [Contributing](#contributing)
+
+**Browse:** [Skills](#skills) · [MCP](#mcp) · [CLI](#tools) · [Plugins](#plugins) · [Validation](#validation) · [Frameworks](#frameworks) · [Agents](#agents) · [Learning](#learning)
 
 ## Find by task
 
@@ -19,14 +23,17 @@ A curated collection of skills, MCP servers, plugins, frameworks, and learning r
 | Build an agent application | [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) |
 | Evaluate and deploy an agent | [Google Agents CLI](https://github.com/google/agents-cli) |
 | Investigate production errors with an agent | [Sentry for AI](https://github.com/getsentry/sentry-for-ai) |
+| Connect Gmail, Drive, and Calendar workflows | [Google Workspace CLI](https://github.com/googleworkspace/cli) · under development, not an officially supported product |
+| Review a skill for security risks before installing | [Cisco Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner) |
+| Compare results before and after prompt or model changes | [Promptfoo](https://github.com/promptfoo/promptfoo) |
 
 > Know the name? Use `Ctrl+F` / `⌘F` to search this page. Every project name links to its source repository; consult it for installation and compatibility.
 
 <a id="starter-packs"></a>
 
-## 5-minute starter packs
+## Task-based quick starts
 
-If comparing tools one by one feels slow, start with a combination built around your goal. **Five minutes** is an approximate time to begin installation and send the first request; it does not include authentication, project setup, or completing the actual task. Review the source repository and files to be installed before running a command.
+If comparing tools one by one feels slow, start with a combination built around your goal. Setup time depends on your environment and authentication. Review the source repository and files before running commands, and select only the skills you need. The `npx` commands require Node.js/npm.
 
 <details>
 <summary><strong>01 · Frontend quality check</strong> — implementation guidance + current docs + real-browser verification</summary>
@@ -57,13 +64,27 @@ playwright-cli install --skills
 
 **Get started**
 
-```bash
-# Choose one of these for the stack you use.
-npx skills add supabase/agent-skills
-npx skills add prisma/skills
+Run **only one** of the following.
 
+Supabase:
+
+```bash
+npx skills add supabase/agent-skills
+```
+
+Prisma:
+
+```bash
+npx skills add prisma/skills
+```
+
+To add documentation lookup:
+
+```bash
 npx ctx7 setup
 ```
+
+Check the installed Prisma version first. The source currently defaults new ORM projects to Prisma 8, but explicitly says that fixing connections in existing 6/7 projects does not require an upgrade. Select guidance from the [version-specific skills](https://github.com/prisma/skills#available-skills).
 
 **First request**
 
@@ -78,7 +99,7 @@ npx ctx7 setup
 
 **Stack:** [Superpowers](https://github.com/obra/superpowers)
 
-**Get started:** Superpowers uses a different install path for each agent. Choose your environment—Codex, Claude Code, Cursor, Copilot CLI, or another supported agent—from the source repository's **Quickstart**.
+**Get started:** Superpowers uses a different install path for each agent. Choose your environment in the source repository's [Installation](https://github.com/obra/superpowers#installation) section. Install it separately for each agent you use.
 
 **First request**
 
@@ -93,13 +114,7 @@ npx ctx7 setup
 
 **Stack:** [Sentry for AI](https://github.com/getsentry/sentry-for-ai)
 
-**Get started**
-
-```bash
-npx @sentry/ai install
-```
-
-The installer guides you to the plugin for your agent. Accessing production data requires Sentry authentication.
+**Get started:** This is the skill **source repository**, not a directly installable plugin. Follow the distribution instructions for [Codex](https://github.com/getsentry/plugin-codex), [Claude Code](https://github.com/getsentry/plugin-claude), [Cursor](https://github.com/getsentry/plugin-cursor), or [Grok](https://github.com/getsentry/plugin-grok). Production queries require Sentry authentication, and some workflows also require the GitHub CLI.
 
 **First request**
 
@@ -114,14 +129,19 @@ The installer guides you to the plugin for your agent. Accessing production data
 
 **Stack:** [Google Agents CLI](https://github.com/google/agents-cli)
 
-**Get started**
+**Get started:** requires Python 3.11+, uv, and Node.js.
 
 ```bash
 uvx google-agents-cli setup
+```
 
-# To install only the skills without the CLI
+To add **only the skills** without the CLI, use this instead:
+
+```bash
 npx skills add google/agents-cli
 ```
+
+This is not a coding agent itself: it helps your existing agent build, evaluate, and deploy ADK applications.
 
 **First request**
 
@@ -133,21 +153,38 @@ npx skills add google/agents-cli
 
 <a id="field-cards"></a>
 
-## Practical field cards
+## Practical comparison cards
 
-These cards compare the starter-pack resources using one set of criteria. **Docs checked** means we reviewed the source installation, compatibility, and usage documentation; it does not mean this repository guarantees results in a live account or project.
+Installation, compatibility, and permissions for these nine resources were checked on **2026-10-03**. **Docs checked ≠ execution tested.** Validate results separately in your account and project.
 
-| Resource | Supported environments | Setup | Authentication | Primary access | Risk | Checked |
-| --- | --- | --- | --- | --- | --- | --- |
-| [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) | Codex, Claude Code, Cursor, Copilot, and other Agent Skills hosts | Easy · `npx skills` | Not for install | Project guidance, code and UI changes | Medium | Docs · 2026-09-10 |
-| [Context7](https://github.com/upstash/context7) | Codex, Claude Code, Cursor, VS Code, Copilot, and others | Easy · `npx ctx7 setup` | OAuth or API key | Remote documentation and agent config | Low | Docs · 2026-09-10 |
-| [Playwright CLI](https://github.com/microsoft/playwright-cli) | Coding agents that can use a CLI | Easy · npm | Not required¹ | Browser, page input, sessions, screenshots | Medium | Docs · 2026-09-10 |
-| [Supabase Agent Skills](https://github.com/supabase/agent-skills) | Agent Skills-compatible hosts | Easy · `npx skills` | Not for install² | Project code, schema and database guidance | High | Docs · 2026-09-10 |
-| [Prisma Skills](https://github.com/prisma/skills) | Agent Skills-compatible hosts | Easy · `npx skills` | Not for install² | Prisma schema, migrations and DB commands | High | Docs · 2026-09-10 |
-| [Superpowers](https://github.com/obra/superpowers) | Codex, Claude Code, Cursor, Copilot CLI, OpenCode, and others | Moderate · agent-specific plugin | Not required | Project files, commands, Git and test workflows | Medium | Docs · 2026-09-10 |
-| [Sentry for AI](https://github.com/getsentry/sentry-for-ai) | Codex, Claude Code, Cursor, Grok | Moderate · agent-specific plugin | Required for production queries | Errors, logs, traces and project code | High | Docs · 2026-09-10 |
-| [Google Agents CLI](https://github.com/google/agents-cli) | Codex, Claude Code, Antigravity, and other coding agents | Moderate · Python/uv/Node | AI Studio or Google Cloud to run | Local code and evals, cloud deployment and logs | High | Docs · 2026-09-10 |
-| [GitHub MCP Server](https://github.com/github/github-mcp-server) | Hosts supporting remote or local MCP | Moderate · host-specific setup | OAuth or PAT | Repositories, issues, PRs, and Actions³ | Medium–High | Docs · 2026-09-10 |
+On small screens, scroll tables horizontally. Supported environments are in the expandable section below.
+
+| Resource | Setup & authentication | Access scope | Task risk |
+| --- | --- | --- | --- |
+| [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) | `npx skills` · no install credentials | Project code and UI | Medium |
+| [Context7](https://github.com/upstash/context7) | `npx ctx7 setup` · OAuth/API key | Remote docs and agent config | Low |
+| [Playwright CLI](https://github.com/microsoft/playwright-cli) | npm · no tool credentials¹ | Browser input, sessions, screenshots | Medium |
+| [Supabase Agent Skills](https://github.com/supabase/agent-skills) | `npx skills` · no install credentials² | Code, schema, DB tasks | High |
+| [Prisma Skills](https://github.com/prisma/skills) | `npx skills` · no install credentials² | Schema and migrations | High |
+| [Superpowers](https://github.com/obra/superpowers) | Agent-specific plugin · no separate service login | Files, commands, Git, tests | Medium |
+| [Sentry for AI](https://github.com/getsentry/sentry-for-ai) | Agent-specific distribution · Sentry login | Errors, logs, traces, code | High |
+| [Google Agents CLI](https://github.com/google/agents-cli) | uv · model/cloud credentials to run | Local evals and cloud deployment | High |
+| [GitHub MCP Server](https://github.com/github/github-mcp-server) | Host-specific setup · OAuth/PAT | Repos, issues, PRs, Actions³ | Medium–High |
+
+<details>
+<summary>Supported environments and prerequisites</summary>
+
+| Resource | Environment & preparation |
+| --- | --- |
+| Vercel / Supabase / Prisma Skills | Agent Skills-compatible hosts. Match Prisma skills to your installed ORM version |
+| Context7 | Node.js 18+ for `ctx7`. Other hosts: consult the source's manual MCP setup |
+| Playwright CLI | Node.js 18+ and a coding agent that can execute CLI commands |
+| Superpowers | Check Installation for each agent; install separately across environments |
+| Sentry for AI | Distributions for Codex, Claude Code, Cursor, Grok. Some workflows need GitHub CLI |
+| Google Agents CLI | Python 3.11+, uv, Node.js. Distinguish model credentials from cloud deployment credentials |
+| GitHub MCP Server | Remote/local MCP hosts. Local container setup requires Docker |
+
+</details>
 
 ¹ Risk increases when a task uses an authenticated browser profile or sensitive form.<br>
 ² The corresponding service credentials are required for live remote database work.<br>
@@ -157,11 +194,23 @@ These cards compare the starter-pack resources using one set of criteria. **Docs
 
 <a id="recent"></a>
 
-## Recently reviewed · 2026-09-09
+## Updates & alternatives · 2026-10-03
 
-On [skills.sh Trending and Hot](https://skills.sh/trending), we observed activity around **Google Agents CLI, Cloudflare Skills, Azure Skills, Momentic, and Playwright CLI**. We then checked each source repository for its actual scope and installation documentation. Rankings change continuously; popularity is not a quality assessment.
+We checked archival status and recent activity for existing GitHub resources, then reviewed source documentation for the quick starts and new candidates. Newly listed does **not** mean newly released. [skills.sh Trending](https://skills.sh/trending) is a reference for 24-hour interest; popularity or recent commits alone do not establish quality.
 
-This update adds six resources with clear practical scope: **Google Agents CLI** (development, evaluation, deployment), **Cloudflare Skills** (Workers and Agents SDK), **Azure Skills Plugin** (deployment, diagnostics, cost), **Sentry for AI** (observability and production debugging), **Momentic Agent Skills** (web and mobile E2E), and **Playwright CLI** (browser verification).
+This update adds **Google Workspace CLI** (office workflows), **Cisco Skill Scanner** (pre-install security review), and **Promptfoo** (evaluation and regression checks). It corrects Sentry installation and Prisma version guidance, moves Roo Code to an archived note, and updates Magentic-UI's description to its successor, **MagenticLite**.
+
+### Which alternative fits my task?
+
+Choose by **execution environment and task**, not a universal "best tool" ranking.
+
+| Task | Start with | Selection criteria |
+| --- | --- | --- |
+| Browser checks from a coding agent | [Playwright CLI](https://github.com/microsoft/playwright-cli) / [agent-browser](https://github.com/vercel-labs/agent-browser) | Shell access, CLI+Skill workflows, and recorded results |
+| Browser interaction from an MCP host | [Playwright MCP](https://github.com/microsoft/playwright-mcp) | MCP tool calls better fit your host |
+| ADK agent development, evals, deployment | [Google Agents CLI](https://github.com/google/agents-cli) | A Google ADK/Cloud-centered lifecycle |
+| Prompt, model, and RAG regression comparison | [Promptfoo](https://github.com/promptfoo/promptfoo) | Reuse eval cases and compare results in CI |
+| Security review before adopting external skills | [Cisco Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner) | Scan files before install; passing is not a safety guarantee |
 
 ### Practical patterns to watch
 
@@ -173,7 +222,7 @@ This update adds six resources with clear practical scope: **Google Agents CLI**
 | **Production observe-and-repair loop** | Carry logs, traces, and issue context into code changes | [Sentry for AI](https://github.com/getsentry/sentry-for-ai), [Google Agents CLI](https://github.com/google/agents-cli) |
 | **Version-specific documentation** | Supply the agent with docs and examples for the library version actually in use | [Context7](https://github.com/upstash/context7) |
 
-According to [OpenAI's official skills guide](https://learn.chatgpt.com/docs/build-skills), a skill packages instructions, resources, and optional scripts; reusable skills and connectors can be distributed together as a plugin.
+According to [OpenAI's official skills guide](https://developers.openai.com/plugins/build/skills), a skill packages instructions, resources, and optional scripts and can be distributed in a plugin. Connections such as MCP handle live data, authentication, and service actions.
 
 <a id="skills"></a>
 
@@ -188,7 +237,7 @@ Add reusable workflows and domain knowledge to your agent.
 | [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) | Frontend | React, Next.js, and web interface best practices | Use as a performance and UI checklist during React reviews |
 | [Supabase Agent Skills](https://github.com/supabase/agent-skills) | Database | Skills for Supabase and PostgreSQL development | Guide database work in an app built with Supabase |
 | [Remotion Skills](https://github.com/remotion-dev/skills) | Video | Compose and render videos with React | Create an explainer or product demo with React components |
-| [Matt Pocock Skills](https://github.com/mattpocock/skills) | Planning & development | Requirements, PRDs, and task breakdown | Clarify requirements with grill-me, then break down the work |
+| [Matt Pocock Skills](https://github.com/mattpocock/skills) | Planning & development | Requirements, PRDs, task breakdown, TDD, debugging, and code review | Clarify requirements with grill-me, then connect testing and review workflows |
 | [NVIDIA Skills](https://github.com/nvidia/skills) | GPU & AI | Specialized workflows for CUDA, simulation, and AI | Find domain guidance for GPU or simulation work |
 | [Awesome Copilot](https://github.com/github/awesome-copilot) | Copilot collection | Discover skills, instructions, and agent configurations | Find examples to adapt for your team's Copilot setup |
 | [Impeccable](https://github.com/pbakaus/impeccable) | UI & UX design | Skills and tools for design critique, accessibility checks, typography, layout, and motion | Improve hierarchy, spacing, and polish in an existing interface |
@@ -226,6 +275,7 @@ Find skills and connect tools to your agent workflow.
 | [Skills CLI / find-skills](https://github.com/vercel-labs/skills) | Skill discovery & management | A CLI for discovering, installing, and updating skills, with a find-skills discovery skill | Find a skill by describing the task you want to perform |
 | [agent-browser](https://github.com/vercel-labs/agent-browser) | Browser CLI | Browser automation CLI with snapshots, element references, and a usage skill | Connect browser tasks through a CLI workflow |
 | [Playwright CLI](https://github.com/microsoft/playwright-cli) | Browser verification | A CLI and skill for persistent sessions, clicks, input, screenshots, network inspection, tracing, and code recording | Reproduce an interface in a browser and save evidence after an agent implements it |
+| [Google Workspace CLI](https://github.com/googleworkspace/cli) | Office workflows | CLI for Gmail, Drive, Calendar, Sheets, and other APIs, JSON output, and workflow skills | Automate email, calendar, and document tasks. Under development; not officially supported by Google |
 | [skills.sh](https://skills.sh/) | Skill directory | Skill discovery with All Time, Trending, and Hot listings | Discover new candidates and current interest signals |
 
 <a id="plugins"></a>
@@ -242,6 +292,19 @@ Install bundled skills and workflows.
 | [Momentic Agent Skills](https://github.com/momentic-ai/skills) | Web & mobile E2E | Skills for authoring, running, classifying, and repairing tests, bundled with browser and mobile MCP servers | Create and repair regression tests on a real browser or device after a feature change |
 
 Plugin packaging and installation vary by agent. Check the project's instructions for your environment.
+
+<a id="validation"></a>
+
+## Validation & Evaluation
+
+Review safety before connecting more tools, and compare results before and after changes.
+
+| Resource | Use case | What it offers | Example use |
+| --- | --- | --- | --- |
+| [Cisco Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner) | Skill security review | Static, behavioral, and optional LLM analysis of skills and scripts, plus CI integration | Review suspicious behavior before installing or distributing third-party skills |
+| [Promptfoo](https://github.com/promptfoo/promptfoo) | Evals, regression, red teaming | Config-driven prompt, agent, and RAG evaluation, model comparison, security tests, and CI integration | Compare accuracy and failure cases across model or prompt changes |
+
+Scanner requires CPython 3.11–3.14. Distinguish default static analysis from external-service analysis, and check what code/files may be sent before enabling LLM, VirusTotal, or other external analyzers. Promptfoo may also require credentials, transmit data, and incur costs depending on the model and target. Run security tests only against systems you own or are authorized to test.
 
 <a id="frameworks"></a>
 
@@ -272,10 +335,11 @@ Choose an existing tool for coding or research.
 | [OpenHands](https://github.com/OpenHands/OpenHands) | Development automation | Run and extend software development agents | Extend development automation into a dedicated system |
 | [Aider](https://github.com/Aider-AI/aider) | Terminal & Git | Edit code through a terminal conversation | Review conversational code edits in a Git repository |
 | [Cline](https://github.com/cline/cline) | Coding | Coding and tool execution with approval controls | Inspect code changes and command execution step by step |
-| [Roo Code](https://github.com/RooCodeInc/Roo-Code) | IDE | Coding workflows with role-based modes | Organize work using planning and implementation modes |
 | [Continue](https://github.com/continuedev/continue) | Development workflows | Customize AI workflows for your development environment | Adapt AI workflows to an existing development setup |
-| [Magentic-UI](https://github.com/microsoft/magentic-ui) | Human-in-the-loop research | Research into collaborative web agents | Explore web tasks shared between humans and agents |
+| [MagenticLite (formerly Magentic-UI)](https://github.com/microsoft/magentic-ui) | Experimental browser & file agent | Browser/local file tasks, human approval and intervention, VM sandbox | Research human-in-the-loop automation; review limitations before production use |
 | [GPT Researcher](https://github.com/assafelovic/gpt-researcher) | Research & reports | Research multiple sources and produce reports | Draft a research report from multiple web sources |
+
+**Archived:** [Roo Code](https://github.com/RooCodeInc/Roo-Code) was archived when checked on 2026-10-03. Retained for reference to existing setups; for new adoption, compare current support in [Cline](https://github.com/cline/cline) and [Continue](https://github.com/continuedev/continue).
 
 <a id="learning"></a>
 
@@ -310,4 +374,4 @@ We select for a clear use case, an identifiable source, and useful documentation
 
 [Browse the earlier visual map](https://yunsell.github.io/ai-agent-skills-korean/) · Korean visual companion using the previous category layout.
 
-Latest research update: 2026-09-10. Starter-pack commands and field cards were checked against source documentation. Example uses and risk labels are editorial judgments, not execution tests or security certifications. Other existing entries were not comprehensively re-audited.
+Last checked: **2026-10-03 (Korea time)**. Repository status and activity were queried for all GitHub links; installation and permissions documentation was reviewed for the nine quick-start resources and new additions. This was not a feature-by-feature audit of every project. Examples, risk labels, and alternative selection are editorial judgments, not execution tests, benchmarks, or security certifications. The visual map was outside this update's scope.
