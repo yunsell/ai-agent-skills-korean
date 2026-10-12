@@ -4,7 +4,7 @@
 
 AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개발 도구와 학습 자료를 모았습니다.
 
-확인 기준일: **2026-10-03** · 설치·권한은 원본 문서 기준, 실행 테스트와는 구분합니다.
+확인 기준일: **2026-10-12** · 설치·권한은 원본 문서 기준, 실행 테스트와는 구분합니다.
 
 **시작하기:** [빠른 시작](#starter-packs) · [실무 비교](#field-cards) · [업데이트·대안 선택](#recent) · [기여하기](#contributing)
 
@@ -26,6 +26,8 @@ AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개
 | Gmail·Drive·Calendar 업무를 연결하고 싶다 | [Google Workspace CLI](https://github.com/googleworkspace/cli) · 개발 중, 공식 지원 제품 아님 |
 | 설치할 스킬의 보안 위험을 먼저 확인하고 싶다 | [Cisco Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner) |
 | 프롬프트·모델 변경 전후를 비교하고 싶다 | [Promptfoo](https://github.com/promptfoo/promptfoo) |
+| 웹 성능·네트워크 문제를 진단하고 싶다 | [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) |
+| PDF·Office 문서를 에이전트 입력으로 바꾸고 싶다 | [MarkItDown](https://github.com/microsoft/markitdown) |
 
 > 이름을 알고 있다면 `Ctrl+F` / `⌘F`로 페이지를 검색하세요. 모든 프로젝트 이름은 원본 저장소로 연결되며, 설치법과 지원 환경은 해당 저장소에서 확인할 수 있습니다.
 
@@ -155,7 +157,7 @@ npx skills add google/agents-cli
 
 ## 실무 비교 카드
 
-아래 9개 자료의 설치·지원·권한 문서를 **2026-10-03**에 확인했습니다. **문서 확인 ≠ 실행 검증**입니다. 실제 계정과 프로젝트에서의 결과는 별도로 확인해야 합니다.
+아래 9개 자료의 설치·지원·권한 문서를 **2026-10-12**에 확인했습니다. **문서 확인 ≠ 실행 검증**입니다. 실제 계정과 프로젝트에서의 결과는 별도로 확인해야 합니다.
 
 작은 화면에서는 표를 좌우로 스크롤하세요. 지원 환경은 아래 펼침 메뉴에 있습니다.
 
@@ -194,11 +196,23 @@ npx skills add google/agents-cli
 
 <a id="recent"></a>
 
-## 업데이트·대안 선택 · 2026-10-03
+## 업데이트·대안 선택 · 2026-10-12
 
-기존 GitHub 자료의 보관 상태·최근 활동을 조회하고, 스타터팩과 새 후보의 원본 문서를 확인했습니다. 신규 등록은 **새로 출시되었다는 뜻이 아닙니다**. [skills.sh Trending](https://skills.sh/trending)은 24시간 관심 흐름을 찾는 참고 자료이며, 인기·최근 커밋만으로 품질을 판단하지 않습니다.
+**이번 추가:** [HyperFrames](https://github.com/heygen-com/hyperframes)(HTML 영상), [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp)(성능 진단), [MarkItDown](https://github.com/microsoft/markitdown)(문서 입력), [Context Mode](https://github.com/mksglu/context-mode)(고급 컨텍스트 관리), [OpenAI Developers Plugin](https://developers.openai.com/learn/developers-codex-plugin)(API 개발 지원).
 
-이번 갱신: **Google Workspace CLI**(업무 연동), **Cisco Skill Scanner**(설치 전 보안 검토), **Promptfoo**(평가·회귀 검사) 추가. Sentry 설치 경로와 Prisma 버전 안내를 수정하고, Roo Code를 보관 항목으로 옮겼습니다. Magentic-UI의 후속 프로젝트 **MagenticLite**도 현재 설명으로 갱신했습니다.
+현재 [GitHub 주간 Trending](https://github.com/trending?since=weekly)에서 **HyperFrames·Matt Pocock Skills**를 확인했고, [skills.sh Trending](https://skills.sh/trending)에서도 관련 스킬의 관심 흐름을 확인했습니다. 나머지 추가 항목은 실무의 빈자리를 채우기 위한 편집자 선정입니다. 신규 등록은 새 출시나 품질 보증을 뜻하지 않으며 순위·설치 수는 고정하지 않습니다.
+
+### 업데이트 전에 확인할 사항
+
+날짜·버전은 이번 점검 시점 기준입니다. 최신 설치법과 호환성은 연결된 원본 릴리스에서 확인하세요.
+
+| 자료 | 확인한 변화 | 실무에서 확인할 것 |
+| --- | --- | --- |
+| [Skill Scanner 2.2.1](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.1) / [2.2.2](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.2) | 비신뢰 TAR·Markdown 처리 보안 수정 후, 정적 탐지와 의존성 수정 추가 | 2.2.0 사용 중이면 수정 릴리스로 갱신 검토. 스캔 통과는 안전 보장이 아님 |
+| [GitHub MCP 2.0.2](https://github.com/github/github-mcp-server/releases/tag/v2.0.2) | 도구 HTTP 헤더 검증 복원 | 로컬 서버 갱신 후 기존 인증·헤더·읽기 전용 설정 재확인 |
+| [agent-browser 0.39.0](https://github.com/vercel-labs/agent-browser/releases/tag/v0.39.0) | 실험적 Obscura 엔진, CLI HTTPS 요청의 사설 CA 지원 | 기본 브라우저를 바로 교체하지 않기. 인증서 검증을 끄지 않고 사설 CA 설정 검토 |
+
+기존 GitHub 자료의 상태·활동과 핵심 설치 명령을 다시 확인했습니다. 사용자 저장소에는 조회 시 열린 이슈가 없었고, 이전 링크 점검은 성공했습니다. **[이번 점검 기록·주의사항](docs/updates/2026-10-12.md#korean)**에서 출처와 확인 범위를 볼 수 있습니다.
 
 ### 어떤 대안이 내 작업에 맞나요?
 
@@ -211,6 +225,9 @@ npx skills add google/agents-cli
 | ADK 에이전트 개발·평가·배포 | [Google Agents CLI](https://github.com/google/agents-cli) | Google ADK·Cloud 중심의 개발 생명주기 |
 | 프롬프트·모델·RAG 회귀 비교 | [Promptfoo](https://github.com/promptfoo/promptfoo) | 평가 사례를 재사용하며 CI에서 결과를 비교 |
 | 외부 스킬 도입 전 보안 검토 | [Cisco Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner) | 설치 전에 파일 검사. 통과해도 안전 보장은 아님 |
+| 웹 성능·콘솔·네트워크 원인 진단 | [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) | 동작 재현을 넘어 DevTools 트레이스와 네트워크 근거가 필요할 때 |
+| HTML 기반 영상 제작 | [HyperFrames](https://github.com/heygen-com/hyperframes) / [Remotion Skills](https://github.com/remotion-dev/skills) | HTML·CSS 자산 중심이면 HyperFrames, React 컴포넌트 중심이면 Remotion |
+| 긴 도구 출력·세션 문맥 관리 | [Context Mode](https://github.com/mksglu/context-mode) | 고급 설정. 훅·로컬 저장·기존 도구 라우팅과의 충돌을 시험 프로젝트에서 확인 |
 
 ### 실무에서 주목할 흐름
 
@@ -261,6 +278,8 @@ npx skills add google/agents-cli
 | [Google MCP](https://github.com/google/mcp) | 클라우드 | Google Cloud 서비스 연결 | Cloud 데이터와 서비스를 사용하는 작업 연결 |
 | [Perplexity MCP](https://github.com/perplexityai/modelcontextprotocol) | 검색·조사 | 웹 검색과 출처 기반 조사 연결 | 기술 조사에 필요한 웹 근거 모으기 |
 | [Context7](https://github.com/upstash/context7) | 라이브러리 문서 | 라이브러리별·버전별 문서와 코드 예시 조회. MCP 또는 CLI+Skills 방식 제공 | 사용 중인 버전에 맞는 API 사용법을 확인할 때 |
+| [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) | 웹 성능·디버깅 | Chrome 성능 트레이스, 네트워크 요청, 콘솔·스크린샷 조회와 브라우저 조작 | 느린 화면·실패 요청의 원인을 분석할 때. 브라우저 데이터 노출·기본 통계 수집 확인 |
+| [Context Mode](https://github.com/mksglu/context-mode) | 고급 컨텍스트 관리 | 도구 출력의 실행·인덱싱·검색, 로컬 세션 저장, 환경별 라우팅 훅 | 출력이 큰 장기 작업을 시험할 때. 훅 지원·저장 정책은 환경별 확인 |
 
 **서버 더 찾기:** [공식 MCP Registry](https://registry.modelcontextprotocol.io/) · [Awesome MCP Servers](https://github.com/punkpeye/awesome-mcp-servers). 프로토콜 구현을 배우려면 [MCP Reference Servers](https://github.com/modelcontextprotocol/servers)를 참고하세요.
 
@@ -276,6 +295,8 @@ npx skills add google/agents-cli
 | [agent-browser](https://github.com/vercel-labs/agent-browser) | 브라우저 CLI | 페이지 스냅샷·요소 참조 기반 브라우저 조작 CLI와 사용 스킬 | MCP 외에 CLI 방식으로 웹 작업을 연결하고 싶을 때 |
 | [Playwright CLI](https://github.com/microsoft/playwright-cli) | 브라우저 검증 | 세션을 유지하며 클릭·입력·스크린샷·네트워크·트레이스·코드 기록을 실행하는 CLI와 스킬 | 에이전트가 구현한 화면을 브라우저에서 재현하고 증거를 남길 때 |
 | [Google Workspace CLI](https://github.com/googleworkspace/cli) | 업무 서비스 | Gmail·Drive·Calendar·Sheets 등 API의 CLI, JSON 출력, 업무 스킬 | 메일·일정·문서 업무를 자동화할 때. 개발 중이며 Google 공식 지원 제품은 아님 |
+| [HyperFrames](https://github.com/heygen-com/hyperframes) | HTML 영상 제작 | HTML·CSS·미디어를 MP4로 렌더링하는 CLI와 제작 스킬 | HTML 자산으로 제품 데모·설명 영상 제작. 로컬 렌더링에는 Node.js 22+·FFmpeg 필요 |
+| [MarkItDown](https://github.com/microsoft/markitdown) | 문서 입력·변환 | PDF·Office 등 파일을 Markdown으로 변환하는 Python 라이브러리·CLI와 MCP 패키지 | 검색·요약·RAG용 텍스트 준비. 시각적 원본 복원이 아닌 문서 구조·내용 추출 |
 | [skills.sh](https://skills.sh/) | 스킬 디렉터리 | 스킬 검색과 All Time·Trending·Hot 목록 제공 | 새 스킬 후보와 현재 관심 흐름을 찾아볼 때 |
 
 <a id="plugins"></a>
@@ -289,6 +310,7 @@ npx skills add google/agents-cli
 | [Superpowers](https://github.com/obra/superpowers) | 개발 워크플로 | 계획·TDD·디버깅·검증을 묶은 스킬 기반 개발 방법론 | 새 기능의 설계부터 테스트·리뷰까지 절차화 |
 | [Azure Skills Plugin](https://github.com/microsoft/azure-skills) | Azure 개발·운영 | Azure 배포·검증·진단·비용·보안 지침과 Azure·Foundry MCP 구성을 함께 제공 | Azure 리소스를 조회하고 앱을 준비·배포하거나 장애와 비용을 분석할 때 |
 | [Sentry for AI](https://github.com/getsentry/sentry-for-ai) | 관측·운영 디버깅 | Sentry 설치, 오류·트레이스·로그 분석, 이슈 수정, 알림과 OpenTelemetry 구성 스킬 | 운영 오류의 영향을 파악하고 원인 문맥을 바탕으로 코드까지 수정할 때 |
+| [OpenAI Developers Plugin](https://developers.openai.com/learn/developers-codex-plugin) | OpenAI API 개발 | Platform 연결, API 키 설정 지원, Agents SDK 개발 안내. 환경별 제공 기능은 다름 | OpenAI API 앱을 만들거나 오류를 조사할 때. 공식 문서에서 설치·지원 범위 확인 |
 | [Momentic Agent Skills](https://github.com/momentic-ai/skills) | 웹·모바일 E2E | 테스트 작성·실행·실패 분류·수리 스킬과 브라우저·모바일 MCP 서버 구성 | 기능 변경 뒤 실제 브라우저나 기기에서 회귀 테스트를 만들고 고칠 때 |
 
 플러그인 형식과 설치 방식은 에이전트마다 다릅니다. 프로젝트의 환경별 설치 안내를 확인하세요.
@@ -304,7 +326,7 @@ npx skills add google/agents-cli
 | [Cisco Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner) | 스킬 보안 검토 | 스킬·스크립트의 정적·행동·선택적 LLM 분석과 CI 연동 | 외부 스킬을 설치하거나 팀에 배포하기 전 의심 동작 검토 |
 | [Promptfoo](https://github.com/promptfoo/promptfoo) | 평가·회귀·레드팀 | 설정 기반 프롬프트·에이전트·RAG 평가, 모델 비교, 보안 테스트와 CI 연동 | 모델·프롬프트 변경 전후의 정확도와 실패 사례 비교 |
 
-Scanner는 CPython 3.11–3.14가 필요합니다. 기본 정적 분석과 외부 서비스 분석을 구분하고, LLM·VirusTotal 등 외부 분석을 켜기 전에 코드·파일의 전송 범위를 확인하세요. Promptfoo도 선택한 모델·대상에 따라 인증, 데이터 전송과 비용이 발생합니다. 보안 테스트는 소유하거나 허가받은 대상에만 수행하세요.
+Scanner는 CPython 3.11–3.14가 필요합니다. 2.2.0 사용자는 [2.2.1 보안 수정](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.1)과 [2.2.2 후속 수정](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.2)을 확인하세요. 기본 정적 분석과 외부 서비스 분석을 구분하고, LLM·VirusTotal 등 외부 분석을 켜기 전에 코드·파일의 전송 범위를 확인하세요. Promptfoo도 선택한 모델·대상에 따라 인증, 데이터 전송과 비용이 발생합니다. 보안 테스트는 소유하거나 허가받은 대상에만 수행하세요.
 
 <a id="frameworks"></a>
 
@@ -339,7 +361,7 @@ Scanner는 CPython 3.11–3.14가 필요합니다. 기본 정적 분석과 외�
 | [MagenticLite (구 Magentic-UI)](https://github.com/microsoft/magentic-ui) | 실험적 웹·파일 에이전트 | 브라우저·로컬 파일 작업, 사용자 승인·개입, VM 샌드박스 | 사람 참여형 자동화를 연구할 때. 운영 도입 전 제한 사항 검토 |
 | [GPT Researcher](https://github.com/assafelovic/gpt-researcher) | 조사·보고서 | 여러 출처를 조사해 보고서 작성 | 여러 웹 출처를 묶어 조사 보고서 초안 작성 |
 
-**보관 상태:** [Roo Code](https://github.com/RooCodeInc/Roo-Code)는 2026-10-03 확인 시 archived 상태입니다. 기존 설정 참고용으로 남기며, 신규 도입은 [Cline](https://github.com/cline/cline)·[Continue](https://github.com/continuedev/continue) 등의 현재 지원 범위를 비교하세요.
+**보관 상태:** [Roo Code](https://github.com/RooCodeInc/Roo-Code)는 2026-10-12 확인 시 archived 상태입니다. 기존 설정 참고용으로 남기며, 신규 도입은 [Cline](https://github.com/cline/cline)·[Continue](https://github.com/continuedev/continue) 등의 현재 지원 범위를 비교하세요.
 
 <a id="learning"></a>
 
@@ -374,4 +396,4 @@ Scanner는 CPython 3.11–3.14가 필요합니다. 기본 정적 분석과 외�
 
 [기존 시각화 지도 보기](https://yunsell.github.io/ai-agent-skills-korean/) · 이전 분류를 사용하는 한국어 보조 페이지입니다.
 
-최근 점검: **2026-10-03 (한국 시간)**. 전체 GitHub 링크의 저장소 상태·활동을 조회하고, 스타터팩 9개와 신규 자료의 설치·권한 문서를 확인했습니다. 전체 프로젝트의 모든 기능을 재검증한 것은 아닙니다. 활용 예시·위험도·대안 선택은 편집 판단이며, 실행 테스트·벤치마크·보안 인증 결과가 아닙니다. 시각화 지도는 이번 갱신 범위에 포함되지 않습니다.
+최근 점검: **2026-10-12 (한국 시간)**. 기존 GitHub 자료의 상태·활동, 핵심 9개 자료의 설치 안내, 신규 자료의 용도·설정 제한과 일부 릴리스 변경을 확인했습니다. 전체 프로젝트의 모든 기능을 재검증한 것은 아닙니다. 활용 예시·위험도·대안 선택은 편집 판단이며, 실행 테스트·벤치마크·보안 인증 결과가 아닙니다. 시각화 지도는 이번 갱신 범위에 포함되지 않습니다.

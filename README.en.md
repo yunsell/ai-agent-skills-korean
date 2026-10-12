@@ -4,7 +4,7 @@
 
 A curated collection of skills, MCP servers, plugins, frameworks, and learning resources for working with AI agents.
 
-Review date: **2026-10-03** · Installation and permissions are checked against documentation, not execution tests.
+Review date: **2026-10-12** · Installation and permissions are checked against documentation, not execution tests.
 
 **Start here:** [Quick starts](#starter-packs) · [Practical comparison](#field-cards) · [Updates & alternatives](#recent) · [Contributing](#contributing)
 
@@ -26,6 +26,8 @@ Review date: **2026-10-03** · Installation and permissions are checked against 
 | Connect Gmail, Drive, and Calendar workflows | [Google Workspace CLI](https://github.com/googleworkspace/cli) · under development, not an officially supported product |
 | Review a skill for security risks before installing | [Cisco Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner) |
 | Compare results before and after prompt or model changes | [Promptfoo](https://github.com/promptfoo/promptfoo) |
+| Diagnose web performance and network problems | [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) |
+| Turn PDF and Office files into agent inputs | [MarkItDown](https://github.com/microsoft/markitdown) |
 
 > Know the name? Use `Ctrl+F` / `⌘F` to search this page. Every project name links to its source repository; consult it for installation and compatibility.
 
@@ -155,7 +157,7 @@ This is not a coding agent itself: it helps your existing agent build, evaluate,
 
 ## Practical comparison cards
 
-Installation, compatibility, and permissions for these nine resources were checked on **2026-10-03**. **Docs checked ≠ execution tested.** Validate results separately in your account and project.
+Installation, compatibility, and permissions for these nine resources were checked on **2026-10-12**. **Docs checked ≠ execution tested.** Validate results separately in your account and project.
 
 On small screens, scroll tables horizontally. Supported environments are in the expandable section below.
 
@@ -194,11 +196,23 @@ On small screens, scroll tables horizontally. Supported environments are in the 
 
 <a id="recent"></a>
 
-## Updates & alternatives · 2026-10-03
+## Updates & alternatives · 2026-10-12
 
-We checked archival status and recent activity for existing GitHub resources, then reviewed source documentation for the quick starts and new candidates. Newly listed does **not** mean newly released. [skills.sh Trending](https://skills.sh/trending) is a reference for 24-hour interest; popularity or recent commits alone do not establish quality.
+**Added:** [HyperFrames](https://github.com/heygen-com/hyperframes) (HTML video), [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) (performance debugging), [MarkItDown](https://github.com/microsoft/markitdown) (document input), [Context Mode](https://github.com/mksglu/context-mode) (advanced context management), and [OpenAI Developers Plugin](https://developers.openai.com/learn/developers-codex-plugin) (API development).
 
-This update adds **Google Workspace CLI** (office workflows), **Cisco Skill Scanner** (pre-install security review), and **Promptfoo** (evaluation and regression checks). It corrects Sentry installation and Prisma version guidance, moves Roo Code to an archived note, and updates Magentic-UI's description to its successor, **MagenticLite**.
+**HyperFrames and Matt Pocock Skills** appeared in the live [GitHub weekly Trending](https://github.com/trending?since=weekly) list; related skills also appeared on [skills.sh Trending](https://skills.sh/trending). The other additions are editorial selections for practical gaps. Newly listed does not mean newly released or quality-certified. Rankings and installation counts are not fixed here.
+
+### Check before upgrading
+
+Dates and versions reflect this review. Consult the linked upstream releases for current installation and compatibility.
+
+| Resource | Observed change | Practical check |
+| --- | --- | --- |
+| [Skill Scanner 2.2.1](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.1) / [2.2.2](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.2) | Security fixes for untrusted TAR/Markdown, followed by static detection and dependency fixes | If using 2.2.0, review upgrading to a patched release. Passing a scan is not a safety guarantee |
+| [GitHub MCP 2.0.2](https://github.com/github/github-mcp-server/releases/tag/v2.0.2) | Restores tool HTTP header validation | After updating a local server, recheck auth, headers, and read-only settings |
+| [agent-browser 0.39.0](https://github.com/vercel-labs/agent-browser/releases/tag/v0.39.0) | Experimental Obscura engine and private CA support for CLI HTTPS | Do not immediately replace your default browser. Review private CA settings without disabling certificate verification |
+
+Existing GitHub resource status, activity, and core installation commands were rechecked. This repository had no open issues at query time, and its previous link check passed. See the **[review record and cautions](docs/updates/2026-10-12.md#english)** for sources and scope.
 
 ### Which alternative fits my task?
 
@@ -211,6 +225,9 @@ Choose by **execution environment and task**, not a universal "best tool" rankin
 | ADK agent development, evals, deployment | [Google Agents CLI](https://github.com/google/agents-cli) | A Google ADK/Cloud-centered lifecycle |
 | Prompt, model, and RAG regression comparison | [Promptfoo](https://github.com/promptfoo/promptfoo) | Reuse eval cases and compare results in CI |
 | Security review before adopting external skills | [Cisco Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner) | Scan files before install; passing is not a safety guarantee |
+| Web performance, console, and network diagnosis | [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) | Need DevTools traces and network evidence beyond interaction checks |
+| HTML-based video creation | [HyperFrames](https://github.com/heygen-com/hyperframes) / [Remotion Skills](https://github.com/remotion-dev/skills) | HyperFrames for HTML/CSS assets; Remotion for React compositions |
+| Long tool output and session context | [Context Mode](https://github.com/mksglu/context-mode) | Advanced setup: test hooks, local storage, and routing conflicts in a trial project |
 
 ### Practical patterns to watch
 
@@ -261,6 +278,8 @@ Connect agents to external services and data.
 | [Google MCP](https://github.com/google/mcp) | Cloud | Connect Google Cloud services | Connect a workflow to Cloud data and services |
 | [Perplexity MCP](https://github.com/perplexityai/modelcontextprotocol) | Search & research | Connect web search and source-based research | Gather web sources for a technical investigation |
 | [Context7](https://github.com/upstash/context7) | Library documentation | Retrieve library- and version-specific docs and examples through MCP or CLI + Skills | Check API usage against the version used by your project |
+| [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) | Web performance & debugging | Chrome performance traces, network requests, console, screenshots, and browser interaction | Investigate slow pages and failed requests; review browser data access and default usage statistics |
+| [Context Mode](https://github.com/mksglu/context-mode) | Advanced context management | Tool-output execution, indexing and search, local session storage, and host-specific routing hooks | Trial long tasks with large output; check host-specific hook support and storage policy |
 
 **Find more servers:** [Official MCP Registry](https://registry.modelcontextprotocol.io/) · [Awesome MCP Servers](https://github.com/punkpeye/awesome-mcp-servers). For educational implementations, see [MCP Reference Servers](https://github.com/modelcontextprotocol/servers).
 
@@ -276,6 +295,8 @@ Find skills and connect tools to your agent workflow.
 | [agent-browser](https://github.com/vercel-labs/agent-browser) | Browser CLI | Browser automation CLI with snapshots, element references, and a usage skill | Connect browser tasks through a CLI workflow |
 | [Playwright CLI](https://github.com/microsoft/playwright-cli) | Browser verification | A CLI and skill for persistent sessions, clicks, input, screenshots, network inspection, tracing, and code recording | Reproduce an interface in a browser and save evidence after an agent implements it |
 | [Google Workspace CLI](https://github.com/googleworkspace/cli) | Office workflows | CLI for Gmail, Drive, Calendar, Sheets, and other APIs, JSON output, and workflow skills | Automate email, calendar, and document tasks. Under development; not officially supported by Google |
+| [HyperFrames](https://github.com/heygen-com/hyperframes) | HTML video creation | CLI and skills for rendering HTML, CSS, and media into MP4 | Create product demos and explainers from HTML assets; local rendering needs Node.js 22+ and FFmpeg |
+| [MarkItDown](https://github.com/microsoft/markitdown) | Document input & conversion | Python library, CLI, and MCP package for converting PDF, Office, and other files to Markdown | Prepare text for search, summarization, or RAG; extracts structure/content rather than preserving visual fidelity |
 | [skills.sh](https://skills.sh/) | Skill directory | Skill discovery with All Time, Trending, and Hot listings | Discover new candidates and current interest signals |
 
 <a id="plugins"></a>
@@ -289,6 +310,7 @@ Install bundled skills and workflows.
 | [Superpowers](https://github.com/obra/superpowers) | Development workflow | A skills-based methodology for planning, TDD, debugging, and verification | Structure feature work from design through tests and review |
 | [Azure Skills Plugin](https://github.com/microsoft/azure-skills) | Azure development & operations | Azure deployment, validation, diagnostics, cost, and security guidance bundled with Azure and Foundry MCP configuration | Inspect Azure resources, prepare and deploy an app, or analyze incidents and cost |
 | [Sentry for AI](https://github.com/getsentry/sentry-for-ai) | Observability & production debugging | Skills for Sentry setup, error, trace, and log analysis, issue repair, alerts, and OpenTelemetry configuration | Assess the impact of a production error and fix code using its runtime context |
+| [OpenAI Developers Plugin](https://developers.openai.com/learn/developers-codex-plugin) | OpenAI API development | Platform connection, API key setup, and Agents SDK guidance; capabilities differ by environment | Build OpenAI API apps or diagnose errors; check official installation and compatibility documentation |
 | [Momentic Agent Skills](https://github.com/momentic-ai/skills) | Web & mobile E2E | Skills for authoring, running, classifying, and repairing tests, bundled with browser and mobile MCP servers | Create and repair regression tests on a real browser or device after a feature change |
 
 Plugin packaging and installation vary by agent. Check the project's instructions for your environment.
@@ -304,7 +326,7 @@ Review safety before connecting more tools, and compare results before and after
 | [Cisco Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner) | Skill security review | Static, behavioral, and optional LLM analysis of skills and scripts, plus CI integration | Review suspicious behavior before installing or distributing third-party skills |
 | [Promptfoo](https://github.com/promptfoo/promptfoo) | Evals, regression, red teaming | Config-driven prompt, agent, and RAG evaluation, model comparison, security tests, and CI integration | Compare accuracy and failure cases across model or prompt changes |
 
-Scanner requires CPython 3.11–3.14. Distinguish default static analysis from external-service analysis, and check what code/files may be sent before enabling LLM, VirusTotal, or other external analyzers. Promptfoo may also require credentials, transmit data, and incur costs depending on the model and target. Run security tests only against systems you own or are authorized to test.
+Scanner requires CPython 3.11–3.14. Users of 2.2.0 should review the [2.2.1 security fix](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.1) and [2.2.2 follow-up](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.2). Distinguish default static analysis from external-service analysis, and check what code/files may be sent before enabling LLM, VirusTotal, or other external analyzers. Promptfoo may also require credentials, transmit data, and incur costs depending on the model and target. Run security tests only against systems you own or are authorized to test.
 
 <a id="frameworks"></a>
 
@@ -339,7 +361,7 @@ Choose an existing tool for coding or research.
 | [MagenticLite (formerly Magentic-UI)](https://github.com/microsoft/magentic-ui) | Experimental browser & file agent | Browser/local file tasks, human approval and intervention, VM sandbox | Research human-in-the-loop automation; review limitations before production use |
 | [GPT Researcher](https://github.com/assafelovic/gpt-researcher) | Research & reports | Research multiple sources and produce reports | Draft a research report from multiple web sources |
 
-**Archived:** [Roo Code](https://github.com/RooCodeInc/Roo-Code) was archived when checked on 2026-10-03. Retained for reference to existing setups; for new adoption, compare current support in [Cline](https://github.com/cline/cline) and [Continue](https://github.com/continuedev/continue).
+**Archived:** [Roo Code](https://github.com/RooCodeInc/Roo-Code) was archived when checked on 2026-10-12. Retained for reference to existing setups; for new adoption, compare current support in [Cline](https://github.com/cline/cline) and [Continue](https://github.com/continuedev/continue).
 
 <a id="learning"></a>
 
@@ -374,4 +396,4 @@ We select for a clear use case, an identifiable source, and useful documentation
 
 [Browse the earlier visual map](https://yunsell.github.io/ai-agent-skills-korean/) · Korean visual companion using the previous category layout.
 
-Last checked: **2026-10-03 (Korea time)**. Repository status and activity were queried for all GitHub links; installation and permissions documentation was reviewed for the nine quick-start resources and new additions. This was not a feature-by-feature audit of every project. Examples, risk labels, and alternative selection are editorial judgments, not execution tests, benchmarks, or security certifications. The visual map was outside this update's scope.
+Last checked: **2026-10-12 (Korea time)**. We checked status and activity of existing GitHub resources, installation guidance for nine core resources, purpose and setup limitations of new additions, and selected release changes. This was not a feature-by-feature audit of every project. Examples, risk labels, and alternative selection are editorial judgments, not execution tests, benchmarks, or security certifications. The visual map was outside this update's scope.
