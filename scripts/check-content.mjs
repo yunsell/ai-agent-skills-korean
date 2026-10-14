@@ -13,8 +13,14 @@ const walk = (directory) => fs.readdirSync(directory, { withFileTypes: true })
     return entry.isDirectory() ? walk(target) : target.endsWith(".md") ? [target] : [];
   });
 const withoutCode = (text) => text.replace(/^```[^\n]*\n[\s\S]*?^```[ \t]*$/gm, "");
-const links = (text) => [...withoutCode(text).matchAll(/!?\[[^\]]*\]\(([^)\n]+)\)/g)]
-  .map((match) => match[1].trim().replace(/^<|>$/g, ""));
+const links = (text) => {
+  const clean = withoutCode(text);
+  return [
+    ...[...clean.matchAll(/!?\[[^\]]*\]\(([^)\n]+)\)/g)]
+      .map((match) => match[1].trim().replace(/^<|>$/g, "")),
+    ...[...clean.matchAll(/\b(?:href|src|srcset)="([^"]+)"/g)].map((match) => match[1]),
+  ];
+};
 const anchors = (text) => {
   const found = [...text.matchAll(/<a id="([^"]+)"/g)].map((match) => match[1]);
   assert.equal(new Set(found).size, found.length, "Duplicate explicit anchor");
@@ -33,6 +39,9 @@ for (const file of markdown) {
   const text = fs.readFileSync(file, "utf8");
   const label = path.relative(root, file);
   anchors(text);
+  for (const image of text.matchAll(/<img\b[^>]*>/g)) {
+    assert(/\balt="[^"]+"/.test(image[0]), label + ": image needs meaningful alt text");
+  }
   assert.equal((text.match(/^```/gm) || []).length % 2, 0, label + ": unbalanced fences");
   assert.equal((text.match(/<details>/g) || []).length,
     (text.match(/<\/details>/g) || []).length, label + ": unbalanced details");
@@ -72,6 +81,10 @@ for (const issue of manifest.issues) {
   assert(issue.topics.length > 0, "Issue needs at least one topic");
   assert.equal(new Set(issue.topics).size, issue.topics.length, "Duplicate topic");
   assert(issue.topics.every((topic) => ["skills", "mcp", "harness"].includes(topic)), "Unknown topic");
+  if (issue.cover) {
+    assert.equal(issue.cover.labels.length, 3, "Cover needs exactly three topic labels");
+    assert(issue.cover.labels.every((label) => /^[A-Z][A-Z /-]{1,12}$/.test(label)), "Invalid cover label");
+  }
   paired.push(["newsletter/" + issue.files.ko, "newsletter/" + issue.files.en]);
   for (const language of ["ko", "en"]) {
     assert.equal(path.basename(issue.files[language]), issue.files[language], "Invalid issue filename");
@@ -107,5 +120,13 @@ for (const home of ["README.md", "README.en.md"]) {
     assert(anchors(read(home)).has(anchor), "Legacy README anchor missing: " + anchor);
   }
 }
+const artwork = fs.readdirSync(path.join(root, "assets/brief")).filter((file) => file.endsWith(".svg"));
+for (const file of artwork) {
+  const source = read("assets/brief/" + file);
+  assert(source.includes('role="img"') && source.includes("viewBox="), file + ": inaccessible SVG");
+  assert(source.includes("<title ") && source.includes("<desc "), file + ": missing SVG descriptions");
+  assert(!/<script|<foreignObject|<image|javascript:|@font-face|@import/i.test(source), file + ": unsafe SVG");
+}
 console.log("PASS: " + markdown.length + " Markdown files, " + paired.length
-  + " bilingual pairs, " + manifest.issues.length + " issue(s); local links, anchors, tables, commands, and latest issue.");
+  + " bilingual pairs, " + manifest.issues.length + " issue(s), " + artwork.length
+  + " SVGs; links, image paths, alt text, anchors, tables, commands, and latest issue.");

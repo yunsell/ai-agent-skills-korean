@@ -25,3 +25,4 @@
 3. 발행호 본문, 양쪽 아카이브, `issues.json`, 양쪽 홈의 최신호를 함께 갱신합니다. / Update issue files, both archives, the manifest, and both home-page previews.
 4. `node scripts/check-content.mjs`와 링크 점검을 통과시킵니다. / Pass content validation and link checks.
 5. 도구를 카탈로그에 추가한다면 두 언어를 함께 수정하되, 실제 재확인하지 않은 기존 자료의 날짜는 바꾸지 않습니다. / Update both catalogs for new tools without advancing unrelated review dates.
+6. 표지를 사용한다면 발행 기록에 세 개의 짧은 `cover.labels`를 기록하고 [디자인 가이드](../assets/brief/README.md)에 따라 변형을 생성합니다. 본문 제목·날짜·출처는 이미지 밖에 유지합니다. / For a cover, add three short `cover.labels` to the manifest and follow the [visual guide](../assets/brief/README.md). Keep titles, dates, and sources outside images.

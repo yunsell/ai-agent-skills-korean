@@ -20,7 +20,9 @@ jobs:
         with:
           node-version: "22"
       - name: Check bilingual content and issue navigation
-        run: node scripts/check-content.mjs
+        run: |
+          node scripts/check-content.mjs
+          node scripts/build-brand.mjs --check
       - name: Check Markdown links
         uses: lycheeverse/lychee-action@v2
         with:

@@ -1,4 +1,12 @@
-# Agent Stack Brief
+<a id="agent-stack-brief"></a>
+<h1>
+  <picture>
+    <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/brief/masthead-mobile-dark.svg">
+    <source media="(max-width: 600px)" srcset="assets/brief/masthead-mobile-light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/brief/masthead-dark.svg">
+    <img src="assets/brief/masthead-light.svg" alt="Agent Stack Brief" width="1200">
+  </picture>
+</h1>
 
 [한국어](README.md) · **English**
 
@@ -10,14 +18,22 @@ An agent-tool briefing and resource catalog for practitioners. Read the changes,
 
 ---
 
-<a id="latest"></a>
-<a id="recent"></a>
-
-**ISSUE 001 · 2026-10-14 · INAUGURAL EDITION**
+<a id="latest"></a><a id="recent"></a> **FIELD NOTES / 001** · 2026-10-14 · INAUGURAL EDITION
 
 ## Before adding tools, check the boundaries
 
 Three checks before new features: **retries, path permissions, and pre-install skill review**. Recent releases, rechecked today for our first edition.
+
+**[Read the full first issue →](newsletter/2026-10-14.en.md)** · [한국어판](newsletter/2026-10-14.md)
+
+<a href="newsletter/2026-10-14.en.md">
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/brief/issue-001-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/brief/issue-001-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/brief/issue-001-dark.svg">
+  <img src="assets/brief/issue-001-light.svg" alt="Issue 001 cover: retries, paths, and trust" width="1200">
+</picture>
+</a>
 
 **01 / MCP·CLI — no response does not mean nothing happened**<br>
 agent-browser 0.39.1 addresses duplicate execution; inspect outcomes before retrying. [Read the story →](newsletter/2026-10-14.en.md#browser)
@@ -27,8 +43,6 @@ Deep Agents 0.7.25 updates symlink-aware path checks. [Read the story →](newsl
 
 **03 / SKILLS — scanners need updates too**<br>
 Skill Scanner 2.2.1 and 2.2.2 fixes, and what to review. [Read the story →](newsletter/2026-10-14.en.md#skills)
-
-**[Read the full first issue →](newsletter/2026-10-14.en.md)** · [한국어판](newsletter/2026-10-14.md)
 
 > Editor's note: we focus on practical changes, not popularity rankings. This issue is **documentation-reviewed**, not execution-tested.
 
