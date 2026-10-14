@@ -16,6 +16,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check bilingual content and issue navigation
+        run: node scripts/check-content.mjs
       - name: Check Markdown links
         uses: lycheeverse/lychee-action@v2
         with:

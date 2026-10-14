@@ -1,0 +1,111 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const read = (file) => fs.readFileSync(path.resolve(root, file), "utf8");
+const ignored = new Set([".git", "node_modules"]);
+const walk = (directory) => fs.readdirSync(directory, { withFileTypes: true })
+  .flatMap((entry) => {
+    if (ignored.has(entry.name)) return [];
+    const target = path.join(directory, entry.name);
+    return entry.isDirectory() ? walk(target) : target.endsWith(".md") ? [target] : [];
+  });
+const withoutCode = (text) => text.replace(/^```[^\n]*\n[\s\S]*?^```[ \t]*$/gm, "");
+const links = (text) => [...withoutCode(text).matchAll(/!?\[[^\]]*\]\(([^)\n]+)\)/g)]
+  .map((match) => match[1].trim().replace(/^<|>$/g, ""));
+const anchors = (text) => {
+  const found = [...text.matchAll(/<a id="([^"]+)"/g)].map((match) => match[1]);
+  assert.equal(new Set(found).size, found.length, "Duplicate explicit anchor");
+  const seen = new Map();
+  for (const match of withoutCode(text).matchAll(/^#{1,6} (.+)$/gm)) {
+    const slug = match[1].toLowerCase().replace(/<[^>]*>/g, "")
+      .replace(/[^\p{L}\p{N}_\-\s]/gu, "").replace(/\s/g, "-");
+    const count = seen.get(slug) || 0;
+    found.push(slug + (count ? "-" + count : ""));
+    seen.set(slug, count + 1);
+  }
+  return new Set(found);
+};
+const markdown = walk(root);
+for (const file of markdown) {
+  const text = fs.readFileSync(file, "utf8");
+  const label = path.relative(root, file);
+  anchors(text);
+  assert.equal((text.match(/^```/gm) || []).length % 2, 0, label + ": unbalanced fences");
+  assert.equal((text.match(/<details>/g) || []).length,
+    (text.match(/<\/details>/g) || []).length, label + ": unbalanced details");
+  for (const line of withoutCode(text).split("\n").filter((line) => line.startsWith("|"))) {
+    assert(line.split("|").length - 2 <= 4, label + ": table wider than four columns");
+  }
+  for (const link of links(text)) {
+    if (/^(https?:|mailto:)/.test(link)) continue;
+    const [destination, fragment] = link.split("#");
+    const target = destination ? path.resolve(path.dirname(file), decodeURIComponent(destination)) : file;
+    assert(target.startsWith(root + path.sep), label + ": link outside repository " + link);
+    assert(fs.existsSync(target), label + ": missing target " + link);
+    if (fragment && target.endsWith(".md")) {
+      assert(anchors(fs.readFileSync(target, "utf8")).has(decodeURIComponent(fragment)),
+        label + ": missing anchor " + link);
+    }
+  }
+}
+
+const paired = [
+  ["README.md", "README.en.md"],
+  ["catalog/README.md", "catalog/README.en.md"],
+  ["newsletter/README.md", "newsletter/README.en.md"],
+  ["guides/first-stack.md", "guides/first-stack.en.md"],
+];
+const manifest = JSON.parse(read("newsletter/issues.json"));
+assert(manifest.issues.length > 0, "Empty newsletter manifest");
+assert.equal(new Set(manifest.issues.map((issue) => issue.id)).size,
+  manifest.issues.length, "Duplicate issue ID");
+const latest = manifest.issues.find((issue) => issue.id === manifest.latest);
+assert(latest, "Latest issue missing");
+assert.equal(latest.date, [...manifest.issues.map((issue) => issue.date)].sort().at(-1),
+  "Latest issue is not the newest date");
+for (const issue of manifest.issues) {
+  assert.match(issue.id, /^\d{3,}$/);
+  assert.match(issue.date, /^\d{4}-\d{2}-\d{2}$/);
+  assert(issue.topics.length > 0, "Issue needs at least one topic");
+  assert.equal(new Set(issue.topics).size, issue.topics.length, "Duplicate topic");
+  assert(issue.topics.every((topic) => ["skills", "mcp", "harness"].includes(topic)), "Unknown topic");
+  paired.push(["newsletter/" + issue.files.ko, "newsletter/" + issue.files.en]);
+  for (const language of ["ko", "en"]) {
+    assert.equal(path.basename(issue.files[language]), issue.files[language], "Invalid issue filename");
+    const file = "newsletter/" + issue.files[language];
+    const text = read(file);
+    assert(text.startsWith("# " + issue.id + " · " + issue.title[language]), file + ": wrong title");
+    assert(text.includes(issue.date), file + ": missing date");
+    const home = read(language === "ko" ? "README.md" : "README.en.md");
+    if (issue.id === manifest.latest) {
+      assert(home.includes("newsletter/" + issue.files[language]), "Home latest link mismatch");
+      assert(home.includes(issue.title[language]), "Home latest title mismatch");
+      assert(home.includes(issue.date), "Home latest date mismatch");
+    }
+    assert(read(language === "ko" ? "newsletter/README.md" : "newsletter/README.en.md")
+      .includes(issue.files[language]), "Issue missing from archive");
+  }
+}
+const normalized = (file) => [...new Set(links(read(file)).map((link) => {
+  if (/^https?:/.test(link)) return link;
+  const [destination, fragment] = link.split("#");
+  return path.relative(root, destination ? path.resolve(root, path.dirname(file), destination)
+    : path.resolve(root, file)).replace(/\.en\.md$/, ".md")
+    + (fragment ? "#" + fragment.replace(/^(korean|english)$/, "language") : "");
+}))].sort();
+for (const [ko, en] of paired) {
+  assert.deepEqual(normalized(ko), normalized(en), "Language link mismatch: " + ko);
+  const code = (file) => [...read(file).matchAll(/```bash\n([\s\S]*?)```/g)].map((match) => match[1].trim());
+  assert.deepEqual(code(ko), code(en), "Language command mismatch: " + ko);
+}
+for (const home of ["README.md", "README.en.md"]) {
+  for (const anchor of ["starter-packs", "field-cards", "recent", "skills", "mcp",
+    "tools", "plugins", "validation", "frameworks", "agents", "learning", "contributing"]) {
+    assert(anchors(read(home)).has(anchor), "Legacy README anchor missing: " + anchor);
+  }
+}
+console.log("PASS: " + markdown.length + " Markdown files, " + paired.length
+  + " bilingual pairs, " + manifest.issues.length + " issue(s); local links, anchors, tables, commands, and latest issue.");

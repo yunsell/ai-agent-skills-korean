@@ -1,0 +1,18 @@
+{
+  "latest": "001",
+  "issues": [
+    {
+      "id": "001",
+      "date": "2026-10-14",
+      "topics": ["skills", "mcp", "harness"],
+      "title": {
+        "ko": "도구를 더 붙이기 전에, 실행 경계부터",
+        "en": "Before adding tools, check the boundaries"
+      },
+      "files": {
+        "ko": "2026-10-14.md",
+        "en": "2026-10-14.en.md"
+      }
+    }
+  ]
+}
