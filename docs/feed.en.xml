@@ -11,7 +11,7 @@
       <link>https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-10-19.en.md</link>
       <guid isPermaLink="true">https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-10-19.en.md</guid>
       <pubDate>Sun, 18 Oct 2026 15:00:00 GMT</pubDate>
-      <description>&lt;ul&gt;&lt;li&gt;Skill Scanner 2.3.0 reports unscanned symlinks and load failures; review CI rules.&lt;/li&gt;&lt;li&gt;Chrome DevTools MCP 1.11.0 recording/diagnostic changes, plus a separate DevTools UI case.&lt;/li&gt;&lt;li&gt;Deep Agents 0.7.26–0.7.28 improves async status reporting and glob path handling.&lt;/li&gt;&lt;/ul&gt;</description>
+      <description>&lt;ul&gt;&lt;li&gt;Skill Scanner 2.3.0 reports unscanned symlinks and load failures; review CI rules.&lt;/li&gt;&lt;li&gt;Chrome DevTools MCP 1.11.0 diagnostics; separate DevTools UI and Docs MCP documentation-review cases.&lt;/li&gt;&lt;li&gt;Deep Agents 0.7.26–0.7.28 improves async status reporting and glob path handling.&lt;/li&gt;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>001 · Before adding tools, check the boundaries</title>

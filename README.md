@@ -30,7 +30,9 @@ Skill Scanner 검사 누락 보고 · Chrome 화면 녹화 · Deep Agents 대기
 
 ### 오늘 해볼 것 하나
 
-검색 **3 → 2 → 0 → 3**을 직접 확인한 [실행 사례와 화면 근거](guides/cases/002-browser-evidence.md)부터 보세요. DevTools UI로 기록한 사례이며 MCP 실행 결과는 아닙니다. [같은 흐름 따라 하기 →](guides/web-validation.md)
+[실제 MCP 업무 사례 →](guides/cases/docs-mcp-review.md) OpenAI Docs MCP로 공식 설정 문서를 찾아 가이드를 검수한 과정과 호출 기록을 공개했습니다. 브라우저 도구 실행과는 구분합니다.
+
+화면 검증을 해보고 싶다면 [검색 실습과 UI 실행 근거](guides/web-validation.md)를 보세요.
 
 ## 내 작업에 맞는 시작점
 
@@ -39,6 +41,9 @@ Skill Scanner 검사 누락 보고 · Chrome 화면 녹화 · Deep Agents 대기
 | 쓸 만한 도구 고르기 | [네 가지 작업으로 찾는 카탈로그](catalog/README.md) |
 | Skills·MCP·Harness 이해하기 | [첫 스택 가이드](guides/first-stack.md) |
 | 설치·인증·접근 범위 비교 | [실무 비교](catalog/README.md#field-cards) · [빠른 시작](guides/quick-starts.md) |
+| 디자인 검토·Figma·컴포넌트 구현 | [디자인 작업 가이드](guides/design-workflows.md) |
+
+실행이 막혔다면 [등록·시작·호출·검색 결과별 복구 안내](guides/mcp-recovery.md)를 보세요.
 
 <details>
 <summary>분류별 전체 목록</summary>

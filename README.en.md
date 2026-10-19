@@ -30,7 +30,9 @@ Skill Scanner coverage gaps · Chrome recordings · Deep Agents wait states
 
 ### One thing to try today
 
-Start with an [executed case and screen evidence](guides/cases/002-browser-evidence.en.md) for **3 → 2 → 0 → 3** search results. It was recorded in DevTools UI, not through MCP. [Reproduce the flow →](guides/web-validation.en.md)
+[Executed MCP workflow →](guides/cases/docs-mcp-review.en.md) Follow OpenAI Docs MCP retrieval through a setup-guide review, with actual call records. This is distinct from browser-tool execution.
+
+For screen validation, see the [search exercise and UI evidence](guides/web-validation.en.md).
 
 ## Start with your task
 
@@ -39,6 +41,9 @@ Start with an [executed case and screen evidence](guides/cases/002-browser-evide
 | Choose a useful tool | [Catalog with four task groups](catalog/README.en.md) |
 | Understand Skills, MCP, and Harness | [Your first agent stack](guides/first-stack.en.md) |
 | Compare setup, auth, and access | [Practical comparison](catalog/README.en.md#field-cards) · [Quick starts](guides/quick-starts.en.md) |
+| Design review, Figma, or component implementation | [Design workflow guide](guides/design-workflows.en.md) |
+
+Stuck? Use [recovery by registration, startup, call, or search-result symptom](guides/mcp-recovery.en.md).
 
 <details>
 <summary>All resource categories</summary>

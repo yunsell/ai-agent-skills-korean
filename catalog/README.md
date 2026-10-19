@@ -16,6 +16,8 @@ AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개
 
 **추천 시작점:** [프런트엔드 빠른 시작](../guides/quick-starts.md#frontend).
 
+[디자인 검토·Figma·컴포넌트 작업으로 찾기](../guides/design-workflows.md)
+
 - 화면 구현: [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills)
 - 브라우저 동작 검사: [Playwright MCP](https://github.com/microsoft/playwright-mcp), 성능 진단: [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp)
 - 계획·테스트 절차: [Superpowers](https://github.com/obra/superpowers)
@@ -88,46 +90,139 @@ AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개
 
 <a id="field-cards"></a>
 
-## 실무 비교 카드
+## 실무 비교 · 작업을 고르고 하나만 펼치세요
 
-아래 9개 자료의 설치·지원·권한 문서를 **2026-10-12**에 확인했습니다. **문서 확인 ≠ 실행 검증**입니다. 실제 계정과 프로젝트에서의 결과는 별도로 확인해야 합니다.
+아래 9개 자료의 설치·지원·권한 문서 확인일은 **2026-10-12**입니다. **문서 확인 ≠ 실행 검증**입니다. 이번 변경은 표시 방식 개선이며 기존 확인일은 갱신하지 않았습니다.
 
-작은 화면에서는 표를 좌우로 스크롤하세요. 지원 환경은 아래 펼침 메뉴에 있습니다.
+[화면·코드](#compare-code) · [DB·운영](#compare-data) · [문서·에이전트](#compare-workflows)
 
-| 자료 | 설치·인증 | 접근 범위 | 작업 위험도 |
-| --- | --- | --- | --- |
-| [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) | `npx skills` · 설치 인증 없음 | 프로젝트 코드·UI | 중간 |
-| [Context7](https://github.com/upstash/context7) | `npx ctx7 setup` · OAuth/API 키 | 외부 문서·에이전트 설정 | 낮음 |
-| [Playwright CLI](https://github.com/microsoft/playwright-cli) | npm · 도구 인증 없음¹ | 브라우저 입력·세션·스크린샷 | 중간 |
-| [Supabase Agent Skills](https://github.com/supabase/agent-skills) | `npx skills` · 설치 인증 없음² | 코드·스키마·DB 작업 | 높음 |
-| [Prisma Skills](https://github.com/prisma/skills) | `npx skills` · 설치 인증 없음² | 스키마·마이그레이션 | 높음 |
-| [Superpowers](https://github.com/obra/superpowers) | 환경별 플러그인 · 별도 서비스 인증 없음 | 파일·명령·Git·테스트 | 중간 |
-| [Sentry for AI](https://github.com/getsentry/sentry-for-ai) | 환경별 배포본 · Sentry 인증 | 오류·로그·트레이스·코드 | 높음 |
-| [Google Agents CLI](https://github.com/google/agents-cli) | uv · 실행에 모델/클라우드 인증 | 로컬 평가·클라우드 배포 | 높음 |
-| [GitHub MCP Server](https://github.com/github/github-mcp-server) | 호스트별 설정 · OAuth/PAT | 저장소·이슈·PR·Actions³ | 중간–높음 |
+각 항목의 준비·인증·접근 범위·위험도를 세로로 읽을 수 있습니다. 설치가 막혔다면 [증상별 복구 안내](../guides/mcp-recovery.md)를 보세요.
+
+<a id="compare-code"></a>
+
+### 화면·코드
 
 <details>
-<summary>지원 환경·사전 준비 자세히 보기</summary>
+<summary>Vercel Agent Skills · React·Next.js 점검</summary>
 
-| 자료 | 환경·준비 사항 |
-| --- | --- |
-| Vercel / Supabase / Prisma Skills | Agent Skills 호환 환경. Prisma는 설치된 ORM 버전에 맞는 스킬 선택 |
-| Context7 | `ctx7`는 Node.js 18+. 자동 설정 대상 외 호스트는 원본의 수동 MCP 안내 확인 |
-| Playwright CLI | Node.js 18+, CLI를 실행할 수 있는 코딩 에이전트 |
-| Superpowers | 에이전트별 Installation 확인. 여러 환경에 쓰면 각각 설치 |
-| Sentry for AI | Codex·Claude Code·Cursor·Grok용 배포본. 일부 작업은 GitHub CLI 필요 |
-| Google Agents CLI | Python 3.11+, uv, Node.js. 로컬 모델 실행과 클라우드 배포 인증 구분 |
-| GitHub MCP Server | Remote/Local MCP 호스트. 로컬 컨테이너 방식에는 Docker 필요 |
+[원본 설치 안내](https://github.com/vercel-labs/agent-skills)
+
+- **준비:** Agent Skills 호환 환경 · npx skills
+- **인증:** 설치 인증 없음
+- **접근 범위:** 프로젝트 코드·UI
+- **작업 위험도:** 중간
 
 </details>
 
-¹ 로그인된 브라우저 프로필이나 민감한 폼을 다루면 위험도가 높아집니다.<br>
-² 실제 원격 DB 작업에는 해당 서비스 인증이 필요합니다.<br>
-³ GitHub MCP는 읽기 전용 모드와 도구 allowlist를 지원합니다. 처음에는 필요한 저장소와 읽기 도구만 허용하는 구성을 권장합니다.
+<details>
+<summary>Playwright CLI · 브라우저 검증</summary>
 
-**위험도 기준:** 낮음 = 주로 읽기·문서 조회 · 중간 = 파일, 브라우저 또는 외부 API 변경 가능 · 높음 = 운영 데이터, DB, 클라우드 배포 또는 비용에 영향 가능. 위험도는 프로젝트 자체의 품질 평가가 아니라, 연결했을 때 가능한 작업 범위를 나타냅니다.
+[원본 설치 안내](https://github.com/microsoft/playwright-cli)
+
+- **준비:** Node.js 18+ · 셸 실행이 가능한 에이전트 · npm
+- **인증:** 도구 인증 없음. 로그인된 프로필·민감한 폼은 별도 검토
+- **접근 범위:** 브라우저 입력·세션·스크린샷
+- **작업 위험도:** 중간
+
+</details>
+
+<details>
+<summary>Superpowers · 계획·테스트 절차</summary>
+
+[원본 설치 안내](https://github.com/obra/superpowers)
+
+- **준비:** 에이전트별 Installation 확인 · 환경별 설치
+- **인증:** 별도 서비스 인증 없음
+- **접근 범위:** 파일·명령·Git·테스트
+- **작업 위험도:** 중간
+
+</details>
+
+<a id="compare-data"></a>
+
+### DB·운영
+
+<details>
+<summary>Supabase Agent Skills · Supabase·PostgreSQL</summary>
+
+[원본 설치 안내](https://github.com/supabase/agent-skills)
+
+- **준비:** Agent Skills 호환 환경 · npx skills
+- **인증:** 설치 인증 없음. 실제 원격 DB 작업은 서비스 인증 필요
+- **접근 범위:** 코드·스키마·DB 작업
+- **작업 위험도:** 높음
+
+</details>
+
+<details>
+<summary>Prisma Skills · Prisma 스키마·마이그레이션</summary>
+
+[원본 설치 안내](https://github.com/prisma/skills)
+
+- **준비:** Agent Skills 호환 환경 · 설치된 ORM 버전에 맞는 스킬 선택
+- **인증:** 설치 인증 없음. 실제 원격 DB 작업은 서비스 인증 필요
+- **접근 범위:** 스키마·마이그레이션
+- **작업 위험도:** 높음
+
+</details>
+
+<details>
+<summary>Sentry for AI · 운영 오류 조사</summary>
+
+[원본 설치 안내](https://github.com/getsentry/sentry-for-ai)
+
+- **준비:** Codex·Claude Code·Cursor·Grok용 배포본 · 일부 작업은 GitHub CLI 필요
+- **인증:** Sentry 인증
+- **접근 범위:** 오류·로그·트레이스·코드
+- **작업 위험도:** 높음
+
+</details>
+
+<a id="compare-workflows"></a>
+
+### 문서·에이전트
+
+<details>
+<summary>Context7 · 버전별 문서 조회</summary>
+
+[원본 설치 안내](https://github.com/upstash/context7)
+
+- **준비:** ctx7는 Node.js 18+ · npx ctx7 setup · 기타 호스트는 수동 MCP 안내 확인
+- **인증:** OAuth/API 키
+- **접근 범위:** 외부 문서·에이전트 설정
+- **작업 위험도:** 낮음
+
+</details>
+
+<details>
+<summary>Google Agents CLI · ADK 앱 개발·평가</summary>
+
+[원본 설치 안내](https://github.com/google/agents-cli)
+
+- **준비:** Python 3.11+ · uv · Node.js
+- **인증:** 로컬 모델 실행과 클라우드 배포 인증 구분
+- **접근 범위:** 로컬 평가·클라우드 배포
+- **작업 위험도:** 높음
+
+</details>
+
+<details>
+<summary>GitHub MCP Server · 저장소·이슈·PR 연결</summary>
+
+[원본 설치 안내](https://github.com/github/github-mcp-server)
+
+- **준비:** Remote/Local MCP 호스트 · 로컬 컨테이너 방식은 Docker 필요
+- **인증:** OAuth/PAT
+- **접근 범위:** 저장소·이슈·PR·Actions. 처음에는 필요한 저장소·읽기 도구만 허용
+- **작업 위험도:** 중간–높음
+
+</details>
+
+**위험도 기준:** 낮음 = 읽기·문서 조회 · 중간 = 파일·브라우저·외부 API 변경 가능 · 높음 = 운영 데이터·DB·배포·비용 영향 가능. 프로젝트 품질 점수가 아니라 접근 범위입니다. 인증 정보와 실제 허용 권한은 별도로 검토하세요.
 
 <a id="recent"></a>
+
+**디자인·문서 연결 추가 확인 · 2026-10-19:** Figma MCP·shadcn MCP·OpenAI Docs MCP의 원본 안내를 확인했습니다. Docs MCP는 별도 사례에서 실제 조회했고, Figma·shadcn은 문서 확인입니다. 기존 Impeccable과 함께 [디자인 작업 가이드](../guides/design-workflows.md)로 연결했습니다.
 
 ## 점검 기록과 최신 소식
 
@@ -197,6 +292,9 @@ AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개
 | [Google MCP](https://github.com/google/mcp) | 클라우드 | Google Cloud 서비스 연결 | Cloud 데이터와 서비스를 사용하는 작업 연결 |
 | [Perplexity MCP](https://github.com/perplexityai/modelcontextprotocol) | 검색·조사 | 웹 검색과 출처 기반 조사 연결 | 기술 조사에 필요한 웹 근거 모으기 |
 | [Context7](https://github.com/upstash/context7) | 라이브러리 문서 | 라이브러리별·버전별 문서와 코드 예시 조회. MCP 또는 CLI+Skills 방식 제공 | 사용 중인 버전에 맞는 API 사용법을 확인할 때 |
+| [OpenAI Docs MCP](https://developers.openai.com/learn/docs-mcp) | 공식 문서 조회 | 읽기 전용 OpenAI 문서 검색과 본문 조회 | 설정·API 설명을 원문과 대조할 때. [실제 업무 사례](../guides/cases/docs-mcp-review.md) |
+| [Figma MCP](https://developers.figma.com/docs/figma-mcp-server/) | 디자인 연결 | Figma 디자인 문맥 제공. 구성에 따라 캔버스 변경도 가능 | 디자인·토큰을 코드와 대응할 때. 파일 권한·쓰기 범위 확인 |
+| [shadcn MCP](https://ui.shadcn.com/docs/mcp) | UI 컴포넌트 | 레지스트리 컴포넌트 탐색·검색·설치 | 호환 컴포넌트를 찾고 설치 diff를 검토할 때 |
 | [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) | 웹 성능·디버깅 | Chrome 성능 트레이스, 네트워크 요청, 콘솔·스크린샷 조회와 브라우저 조작 | 느린 화면·실패 요청의 원인을 분석할 때. 브라우저 데이터 노출·기본 통계 수집 확인 |
 | [Context Mode](https://github.com/mksglu/context-mode) | 고급 컨텍스트 관리 | 도구 출력의 실행·인덱싱·검색, 로컬 세션 저장, 환경별 라우팅 훅 | 출력이 큰 장기 작업을 시험할 때. 훅 지원·저장 정책은 환경별 확인 |
 
@@ -331,4 +429,4 @@ Scanner는 CPython 3.11–3.14가 필요합니다. 2.2.0 사용자는 [2.2.1 보
 
 [이전 분류의 시각화 지도 보기](https://yunsell.github.io/ai-agent-skills-korean/) · 이전 분류를 사용하는 한국어 보조 페이지입니다.
 
-최근 점검: **2026-10-12 (한국 시간)**. 기존 GitHub 자료의 상태·활동, 핵심 9개 자료의 설치 안내, 신규 자료의 용도·설정 제한과 일부 릴리스 변경을 확인했습니다. 전체 프로젝트의 모든 기능을 재검증한 것은 아닙니다. 활용 예시·위험도·대안 선택은 편집 판단이며, 실행 테스트·벤치마크·보안 인증 결과가 아닙니다. 시각화 지도는 이번 갱신 범위에 포함되지 않습니다.
+기본 점검: **2026-10-12 (한국 시간)**. 기존 자료의 상태·활동과 핵심 9개 자료의 설치 안내를 확인한 기록입니다. 이후 추가 확인은 해당 절의 날짜를 보세요. 별도 연결한 Docs MCP 사례 외의 목록은 문서 확인이며, 활용 예시·위험도·대안 선택은 편집 판단입니다. 전체 기능 실행 테스트·벤치마크·보안 인증이 아닙니다. 시각화 지도는 이번 갱신 범위에 포함되지 않습니다.

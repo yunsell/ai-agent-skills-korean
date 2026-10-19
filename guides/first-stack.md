@@ -19,6 +19,7 @@
 - 화면 품질 점검: [프런트엔드 빠른 시작](quick-starts.md#frontend) · [검색 검증 실습](web-validation.md)
 - DB 변경 준비: [DB 빠른 시작](quick-starts.md#database). 운영 DB 대신 격리 환경 사용
 - 이슈 원인 조사: [창간호의 읽기 전용 실험](../newsletter/2026-10-14.md#experiment)
+- 디자인 검토·구현: [디자인 작업별 가이드](design-workflows.md)
 - 다른 작업: [네 가지 작업으로 찾기](../catalog/README.md)
 
 각 조합의 설치 원본·인증·접근 범위는 [실무 비교 카드](../catalog/README.md#field-cards)에 있습니다. 호스트 지원 여부를 확인하고 기존 지침·훅과 겹치지 않게 추가하세요.
@@ -36,5 +37,7 @@
 첫 요청은 읽기·계획까지만 수행하고, 변경 작업은 검토 후 진행하세요. 오류가 나면 무조건 재시도하지 말고 현재 상태와 마지막 요청 결과를 확인하세요. 실제로 실행했다면 환경·버전·수행한 검사와 한계를 함께 남기세요.
 
 **체크리스트:** 필요한 지침만 선택했는가 · 최소 권한인가 · 격리된 시험인가 · 완료 증거가 있는가.
+
+[실제 MCP 문서 검수 사례](cases/docs-mcp-review.md) · [실패 단계별 복구 안내](mcp-recovery.md)
 
 [뉴스레터로 돌아가기](../newsletter/README.md) · [자료 제안·정정](../CONTRIBUTING.md#korean)

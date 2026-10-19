@@ -16,12 +16,12 @@
       "summary": {
         "ko": [
           "Skill Scanner 2.3.0의 미검사 링크·로드 실패 보고와 CI 규칙 점검.",
-          "Chrome DevTools MCP 1.11.0의 녹화·진단 변화와 별도 DevTools UI 실행 사례.",
+          "Chrome DevTools MCP 1.11.0의 진단 변화. 별도 DevTools UI 사례와 Docs MCP 문서 검수 실행 기록.",
           "Deep Agents 0.7.26–0.7.28의 비동기 상태 보고·glob 경로 처리 개선."
         ],
         "en": [
           "Skill Scanner 2.3.0 reports unscanned symlinks and load failures; review CI rules.",
-          "Chrome DevTools MCP 1.11.0 recording/diagnostic changes, plus a separate DevTools UI case.",
+          "Chrome DevTools MCP 1.11.0 diagnostics; separate DevTools UI and Docs MCP documentation-review cases.",
           "Deep Agents 0.7.26–0.7.28 improves async status reporting and glob path handling."
         ]
       },

@@ -30,7 +30,7 @@ codex mcp add chrome-devtools -- npx -y chrome-devtools-mcp@1.11.0 --isolated --
 codex mcp list
 ```
 
-Codex의 MCP 설정은 `~/.codex/config.toml`을 사용하며 데스크톱·CLI·IDE에서 공유합니다. `mcp list`는 등록 확인이지 실습 통과를 뜻하지 않습니다. [공식 Codex MCP 안내](https://developers.openai.com/codex/mcp)
+Codex의 MCP 설정은 `~/.codex/config.toml`을 사용하며 같은 호스트의 데스크톱·CLI·IDE에서 공유합니다. `mcp list`는 등록 확인이지 실습 통과를 뜻하지 않습니다. [공식 Codex MCP 안내](https://learn.chatgpt.com/docs/extend/mcp)
 
 ### Claude Code · Cursor · VS Code 등
 
@@ -67,7 +67,7 @@ https://yunsell.github.io/ai-agent-skills-korean/labs/search.html?lang=ko 를 �
 사용한 도구와 버전도 적어 주세요. 실행하지 못한 단계는 미확인으로 표시하세요.
 ```
 
-도구 연결이 실패하면 [공식 문제 해결 안내](https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/troubleshooting.md)에서 시작하세요. 명령 실행 전 파일 수정이나 계정 연결이 추가로 필요하다면 그 이유부터 확인하세요.
+도구 연결이 실패하면 [증상별 복구 안내](mcp-recovery.md)에서 등록·시작·호출 단계를 구분하세요. [공식 문제 해결 안내](https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/troubleshooting.md)도 함께 대조합니다. 파일 수정·계정 연결·권한 변경이 필요하다면 그 이유부터 확인하세요.
 
 ## 4. 결과를 이 형식으로 남기세요
 
@@ -92,5 +92,7 @@ https://yunsell.github.io/ai-agent-skills-korean/labs/search.html?lang=ko 를 �
 </details>
 
 [도구 비교](../catalog/README.md#field-cards) · [이번 호로 돌아가기](../newsletter/2026-10-19.md)
+
+브라우저 외의 읽기 업무부터 시작하려면 [Docs MCP로 가이드 검수한 실제 사례](cases/docs-mcp-review.md)를 보세요.
 
 **확인 범위 · 2026-10-19:** macOS의 Chrome 155.0.8059.82에서 예제의 한·영 검색 네 단계와 영문 Enter 검색을 직접 확인했습니다. 별도 사례에는 한국어 화면의 Performance UI 기록을 공개했습니다. MCP·Codex 설정은 원본 문서 기준이며, 이 실습을 Chrome DevTools MCP로 실행한 결과는 아직 없습니다.

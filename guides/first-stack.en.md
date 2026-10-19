@@ -19,6 +19,7 @@ These are this repository's navigation categories. A plugin is an installable pa
 - Interface quality: [frontend quick start](quick-starts.en.md#frontend) · [search validation exercise](web-validation.en.md)
 - Database changes: [database quick start](quick-starts.en.md#database). Use isolation, not a production database
 - Issue investigation: [the first issue's read-only experiment](../newsletter/2026-10-14.en.md#experiment)
+- Design review and implementation: [task-based design guide](design-workflows.en.md)
 - Other work: [choose from four task groups](../catalog/README.en.md)
 
 Check installation sources, authentication, and access in the [comparison cards](../catalog/README.en.md#field-cards). Verify host compatibility and avoid conflicts with existing instructions and hooks.
@@ -36,5 +37,7 @@ A prohibition in a prompt is not an access control. Inspect the actual tools and
 Start with reading and planning; review before making changes. On errors, inspect current state and the last request's outcome before retrying. If you run a test, record environment, versions, checks, and limitations.
 
 **Checklist:** only needed instructions · minimum permissions · isolated trial · completion evidence.
+
+[Executed MCP documentation review](cases/docs-mcp-review.en.md) · [Recovery by failure stage](mcp-recovery.en.md)
 
 [Back to briefings](../newsletter/README.en.md) · [Suggest or correct a resource](../CONTRIBUTING.md#english)

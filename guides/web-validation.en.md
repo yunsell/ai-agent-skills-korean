@@ -30,7 +30,7 @@ codex mcp add chrome-devtools -- npx -y chrome-devtools-mcp@1.11.0 --isolated --
 codex mcp list
 ```
 
-Codex uses `~/.codex/config.toml` for MCP settings, shared across desktop, CLI, and IDE. A listing confirms registration, not a passing exercise. [Official Codex MCP documentation](https://developers.openai.com/codex/mcp)
+Codex uses `~/.codex/config.toml` for MCP settings, shared across desktop, CLI, and IDE on the same host. A listing confirms registration, not a passing exercise. [Official Codex MCP documentation](https://learn.chatgpt.com/docs/extend/mcp)
 
 ### Claude Code · Cursor · VS Code and others
 
@@ -67,7 +67,7 @@ Record expected and actual outcomes, pass/fail, and screen evidence locations fo
 Include the tool and version. Mark any step you could not execute as unverified.
 ```
 
-If the connection fails, start with [official troubleshooting](https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/troubleshooting.md). If setup needs additional file changes or account connections, check the reason first.
+If connection fails, use the [symptom-based recovery guide](mcp-recovery.en.md) to separate registration, startup, and calls. Compare with [official troubleshooting](https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/troubleshooting.md). Check the reason before additional file, account, or permission changes.
 
 ## 4. Record results in this format
 
@@ -92,5 +92,7 @@ After checking behavior, record the same flow and collect a performance trace wi
 </details>
 
 [Tool comparison](../catalog/README.en.md#field-cards) · [Back to this issue](../newsletter/2026-10-19.en.md)
+
+For a non-browser reading task, see the [executed Docs MCP guide-review case](cases/docs-mcp-review.en.md).
 
 **Review scope · 2026-10-19:** the four search steps in both languages and English Enter-key submission were checked in Chrome 155.0.8059.82 on macOS. A separate case publishes a Performance UI recording of the Korean page. MCP and Codex configuration are based on primary documentation; this exercise has not yet been executed through Chrome DevTools MCP.

@@ -1,0 +1,96 @@
+{
+  "schema": "agent-stack-brief/docs-mcp-review/v1",
+  "reviewedOn": "2026-10-19",
+  "host": "Codex desktop session",
+  "server": "OpenAI Docs MCP (connected tool namespace: mcp__openaiDeveloperDocs)",
+  "serverBuild": "Not exposed by these tool responses",
+  "execution": "Actual MCP search and fetch calls; no CLI installation or browser MCP execution",
+  "scope": "Editor-written request/result index, not raw server logs or a benchmark",
+  "calls": [
+    {
+      "step": 1,
+      "tool": "search_openai_docs",
+      "requestedAtUtc": "2026-10-19 02:27:11 UTC",
+      "input": {
+        "query": "Codex MCP configuration startup_timeout_sec tool_timeout_sec",
+        "limit": 5
+      },
+      "isError": false,
+      "result": {
+        "returnedHits": 5,
+        "returnedUrls": [
+          "https://developers.openai.com/api/docs/guides/tools",
+          "https://developers.openai.com/api/docs/guides/tools-connectors-mcp",
+          "https://learn.chatgpt.com/docs/changelog#security-fixes",
+          "https://learn.chatgpt.com/docs/extend/mcp#other-configuration-options",
+          "https://learn.chatgpt.com/docs/agent-approvals-security#automatic-approval-reviews"
+        ],
+        "selectionNote": "Selected the MCP configuration result, not the API tools or changelog results."
+      }
+    },
+    {
+      "step": 2,
+      "tool": "fetch_openai_doc",
+      "requestedAtUtc": "2026-10-19 02:27:18 UTC",
+      "input": {
+        "url": "https://learn.chatgpt.com/docs/extend/mcp"
+      },
+      "isError": false,
+      "result": {
+        "returnedHeading": "# Model Context Protocol",
+        "returnedCharacters": 30612
+      }
+    },
+    {
+      "step": 3,
+      "tool": "search_openai_docs",
+      "requestedAtUtc": "2026-10-19 02:27:27 UTC",
+      "input": {
+        "query": "OpenAI Docs MCP server setup",
+        "limit": 3
+      },
+      "isError": false,
+      "result": {
+        "returnedHits": 3,
+        "returnedUrls": [
+          "https://developers.openai.com/api/docs/guides/tools-connectors-mcp",
+          "https://developers.openai.com/learn/developers-codex-plugin#use-the-plugin",
+          "https://learn.chatgpt.com/docs/changelog#month-2026-10"
+        ],
+        "selectionNote": "No precise Docs MCP guide in the returned hits; followed its link from the fetched MCP configuration page."
+      }
+    },
+    {
+      "step": 4,
+      "tool": "fetch_openai_doc",
+      "requestedAtUtc": "2026-10-19 02:27:33 UTC",
+      "input": {
+        "url": "https://developers.openai.com/learn/docs-mcp"
+      },
+      "isError": false,
+      "result": {
+        "returnedHeading": "# Docs MCP",
+        "returnedCharacters": 4900
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "check": "Configuration format",
+      "result": "Confirmed TOML mcp_servers tables; existing generic JSON must not be pasted into Codex config."
+    },
+    {
+      "check": "Timeout diagnosis",
+      "result": "Confirmed separate startup_timeout_sec (default 10) and tool_timeout_sec (default 60). Used to distinguish failure paths in the recovery guide."
+    },
+    {
+      "check": "Documentation server scope",
+      "result": "Confirmed read-only search/page retrieval; not OpenAI API execution."
+    }
+  ],
+  "limitations": [
+    "Search ranking was noisy; search results alone were insufficient.",
+    "No controlled before/after timing or productivity claim.",
+    "No new server registration, authentication change, Chrome MCP launch, or production incident reproduction."
+  ]
+}

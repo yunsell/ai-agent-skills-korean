@@ -16,6 +16,7 @@
 | 발행호와 아카이브 | `newsletter/` · `newsletter/issues.json` |
 | 상시 도구 목록·비교 카드 | `catalog/README.md` · `catalog/README.en.md` |
 | 빠른 시작·실습·실행 사례 | `guides/quick-starts*.md` · `guides/web-validation*.md` · `guides/cases/` |
+| 디자인 선택·실패 복구 | `guides/design-workflows*.md` · `guides/mcp-recovery*.md` |
 | 개편 이전 점검 근거 | `docs/updates/` — 기존 기록 보존 |
 
 ### 뉴스레터 편집 기준
@@ -57,6 +58,7 @@ News tips, resource suggestions, and corrections are welcome. This repository co
 | Issues and archive | `newsletter/` · `newsletter/issues.json` |
 | Evergreen resources and comparison cards | `catalog/README.md` · `catalog/README.en.md` |
 | Quick starts, exercises, and execution cases | `guides/quick-starts*.md` · `guides/web-validation*.md` · `guides/cases/` |
+| Design choices and failure recovery | `guides/design-workflows*.md` · `guides/mcp-recovery*.md` |
 | Pre-redesign review evidence | `docs/updates/` — preserve existing records |
 
 ### Editorial guidelines

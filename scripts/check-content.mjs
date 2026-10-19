@@ -76,6 +76,9 @@ const paired = [
   ["guides/web-validation.md", "guides/web-validation.en.md"],
   ["guides/quick-starts.md", "guides/quick-starts.en.md"],
   ["guides/cases/002-browser-evidence.md", "guides/cases/002-browser-evidence.en.md"],
+  ["guides/cases/docs-mcp-review.md", "guides/cases/docs-mcp-review.en.md"],
+  ["guides/mcp-recovery.md", "guides/mcp-recovery.en.md"],
+  ["guides/design-workflows.md", "guides/design-workflows.en.md"],
 ];
 const manifest = JSON.parse(read("newsletter/issues.json"));
 assert(manifest.issues.length > 0, "Empty newsletter manifest");
@@ -139,6 +142,9 @@ for (const [ko, en] of paired) {
 for (const suffix of ["", ".en"]) {
   const guide = "guides/quick-starts" + suffix + ".md";
   const catalog = "catalog/README" + suffix + ".md";
+  const comparison = read(catalog).split('<a id="field-cards"></a>')[1]?.split('<a id="recent"></a>')[0];
+  assert(comparison && !/^\|/m.test(comparison), catalog + ": comparison must not use wide tables");
+  assert.equal((comparison.match(/<details>/g) || []).length, 9, catalog + ": preserve nine comparison entries");
   assert(!read(guide).includes("<details>"), guide + ": keep quick-start instructions visible");
   for (const [old, current] of [["frontend", "frontend"], ["db", "database"],
     ["process", "process"], ["ops", "operations"], ["agent", "agent"]]) {
@@ -152,6 +158,17 @@ for (const home of ["README.md", "README.en.md"]) {
     "tools", "plugins", "validation", "frameworks", "agents", "learning", "contributing"]) {
     assert(anchors(read(home)).has(anchor), "Legacy README anchor missing: " + anchor);
   }
+}
+const docsCase = JSON.parse(read("docs/evidence/docs-mcp-review/calls.json"));
+assert.equal(docsCase.calls.length, 4, "Docs MCP case needs four actual call records");
+assert.deepEqual(docsCase.calls.map(call => call.tool),
+  ["search_openai_docs", "fetch_openai_doc", "search_openai_docs", "fetch_openai_doc"]);
+for (const call of docsCase.calls) {
+  assert(!call.isError && call.requestedAtUtc && call.input, "Invalid MCP call record");
+  if (call.tool === "search_openai_docs") {
+    assert.equal(call.result.returnedHits, call.result.returnedUrls.length);
+    assert(call.result.returnedUrls.every(url => /^https:\/\/(developers\.openai\.com|learn\.chatgpt\.com|platform\.openai\.com)\//.test(url)));
+  } else assert(call.result.returnedHeading && call.result.returnedCharacters > 0);
 }
 const artwork = fs.readdirSync(path.join(root, "assets/brief")).filter((file) => file.endsWith(".svg"));
 for (const file of artwork) {

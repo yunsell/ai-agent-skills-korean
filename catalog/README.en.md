@@ -16,6 +16,8 @@ Open one group for a starting point. If you know a name, use Ctrl+F / ⌘F. Proj
 
 **Start with:** [Frontend quick start](../guides/quick-starts.en.md#frontend).
 
+[Find design review, Figma, or component workflows](../guides/design-workflows.en.md)
+
 - UI implementation: [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills)
 - Browser interaction: [Playwright MCP](https://github.com/microsoft/playwright-mcp); performance diagnosis: [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp)
 - Planning and tests: [Superpowers](https://github.com/obra/superpowers)
@@ -88,46 +90,139 @@ Each link opens the instructions directly.
 
 <a id="field-cards"></a>
 
-## Practical comparison cards
+## Practical comparison · choose, then expand
 
-Installation, compatibility, and permissions for these nine resources were checked on **2026-10-12**. **Docs checked ≠ execution tested.** Validate results separately in your account and project.
+These nine resources' setup, compatibility, and permissions were docs-reviewed on **2026-10-12**. **Docs reviewed ≠ execution tested.** This pass changes presentation, not their review dates.
 
-On small screens, scroll tables horizontally. Supported environments are in the expandable section below.
+[Code and browsers](#compare-code) · [Databases and operations](#compare-data) · [Docs and agent workflows](#compare-workflows)
 
-| Resource | Setup & authentication | Access scope | Task risk |
-| --- | --- | --- | --- |
-| [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) | `npx skills` · no install credentials | Project code and UI | Medium |
-| [Context7](https://github.com/upstash/context7) | `npx ctx7 setup` · OAuth/API key | Remote docs and agent config | Low |
-| [Playwright CLI](https://github.com/microsoft/playwright-cli) | npm · no tool credentials¹ | Browser input, sessions, screenshots | Medium |
-| [Supabase Agent Skills](https://github.com/supabase/agent-skills) | `npx skills` · no install credentials² | Code, schema, DB tasks | High |
-| [Prisma Skills](https://github.com/prisma/skills) | `npx skills` · no install credentials² | Schema and migrations | High |
-| [Superpowers](https://github.com/obra/superpowers) | Agent-specific plugin · no separate service login | Files, commands, Git, tests | Medium |
-| [Sentry for AI](https://github.com/getsentry/sentry-for-ai) | Agent-specific distribution · Sentry login | Errors, logs, traces, code | High |
-| [Google Agents CLI](https://github.com/google/agents-cli) | uv · model/cloud credentials to run | Local evals and cloud deployment | High |
-| [GitHub MCP Server](https://github.com/github/github-mcp-server) | Host-specific setup · OAuth/PAT | Repos, issues, PRs, Actions³ | Medium–High |
+Each item shows prerequisites, credentials, access, and risk vertically—no wide comparison table. For setup problems, use the [symptom-based recovery guide](../guides/mcp-recovery.en.md).
+
+<a id="compare-code"></a>
+
+### Code and browsers
 
 <details>
-<summary>Supported environments and prerequisites</summary>
+<summary>Vercel Agent Skills · React/Next.js review</summary>
 
-| Resource | Environment & preparation |
-| --- | --- |
-| Vercel / Supabase / Prisma Skills | Agent Skills-compatible hosts. Match Prisma skills to your installed ORM version |
-| Context7 | Node.js 18+ for `ctx7`. Other hosts: consult the source's manual MCP setup |
-| Playwright CLI | Node.js 18+ and a coding agent that can execute CLI commands |
-| Superpowers | Check Installation for each agent; install separately across environments |
-| Sentry for AI | Distributions for Codex, Claude Code, Cursor, Grok. Some workflows need GitHub CLI |
-| Google Agents CLI | Python 3.11+, uv, Node.js. Distinguish model credentials from cloud deployment credentials |
-| GitHub MCP Server | Remote/local MCP hosts. Local container setup requires Docker |
+[Upstream setup](https://github.com/vercel-labs/agent-skills)
+
+- **Preparation:** Agent Skills-compatible host · npx skills
+- **Authentication:** No install credentials
+- **Access:** Project code and UI
+- **Risk:** Medium
 
 </details>
 
-¹ Risk increases when a task uses an authenticated browser profile or sensitive form.<br>
-² The corresponding service credentials are required for live remote database work.<br>
-³ GitHub MCP supports read-only mode and tool allowlists. Start with only the repository and read tools the task needs.
+<details>
+<summary>Playwright CLI · Browser validation</summary>
 
-**Risk legend:** Low = primarily reading or documentation retrieval · Medium = may change files, browser state, or external APIs · High = may affect production data, databases, cloud deployments, or cost. Risk describes the possible scope after connection, not project quality.
+[Upstream setup](https://github.com/microsoft/playwright-cli)
+
+- **Preparation:** Node.js 18+ · shell-capable agent · npm
+- **Authentication:** No tool credentials; review authenticated profiles and sensitive forms separately
+- **Access:** Browser input, sessions, screenshots
+- **Risk:** Medium
+
+</details>
+
+<details>
+<summary>Superpowers · Planning and tests</summary>
+
+[Upstream setup](https://github.com/obra/superpowers)
+
+- **Preparation:** Check Installation per agent; install for each environment
+- **Authentication:** No separate service login
+- **Access:** Files, commands, Git, tests
+- **Risk:** Medium
+
+</details>
+
+<a id="compare-data"></a>
+
+### Databases and operations
+
+<details>
+<summary>Supabase Agent Skills · Supabase/PostgreSQL</summary>
+
+[Upstream setup](https://github.com/supabase/agent-skills)
+
+- **Preparation:** Agent Skills-compatible host · npx skills
+- **Authentication:** No install credentials; service credentials required for live remote DB work
+- **Access:** Code, schema, DB tasks
+- **Risk:** High
+
+</details>
+
+<details>
+<summary>Prisma Skills · Prisma schema/migrations</summary>
+
+[Upstream setup](https://github.com/prisma/skills)
+
+- **Preparation:** Agent Skills-compatible host; match skills to the installed ORM version
+- **Authentication:** No install credentials; service credentials required for live remote DB work
+- **Access:** Schema and migrations
+- **Risk:** High
+
+</details>
+
+<details>
+<summary>Sentry for AI · Production error investigation</summary>
+
+[Upstream setup](https://github.com/getsentry/sentry-for-ai)
+
+- **Preparation:** Codex/Claude Code/Cursor/Grok distributions; some tasks need GitHub CLI
+- **Authentication:** Sentry login
+- **Access:** Errors, logs, traces, code
+- **Risk:** High
+
+</details>
+
+<a id="compare-workflows"></a>
+
+### Docs and agent workflows
+
+<details>
+<summary>Context7 · Version-specific documentation</summary>
+
+[Upstream setup](https://github.com/upstash/context7)
+
+- **Preparation:** Node.js 18+ for ctx7 · npx ctx7 setup; other hosts: manual MCP guidance
+- **Authentication:** OAuth/API key
+- **Access:** Remote docs and agent config
+- **Risk:** Low
+
+</details>
+
+<details>
+<summary>Google Agents CLI · ADK app development/evaluation</summary>
+
+[Upstream setup](https://github.com/google/agents-cli)
+
+- **Preparation:** Python 3.11+ · uv · Node.js
+- **Authentication:** Distinguish local model credentials from cloud deployment credentials
+- **Access:** Local evaluation and cloud deployment
+- **Risk:** High
+
+</details>
+
+<details>
+<summary>GitHub MCP Server · Repository, issue, and PR access</summary>
+
+[Upstream setup](https://github.com/github/github-mcp-server)
+
+- **Preparation:** Remote/local MCP host; local container setup requires Docker
+- **Authentication:** OAuth/PAT
+- **Access:** Repos, issues, PRs, Actions; start with the needed repo and read tools only
+- **Risk:** Medium–High
+
+</details>
+
+**Risk legend:** Low = reading/docs · Medium = possible file, browser, or API changes · High = possible production-data, DB, deployment, or cost impact. This describes access scope, not project quality. Review credentials and granted permissions separately.
 
 <a id="recent"></a>
+
+**Design/docs additions reviewed · 2026-10-19:** checked primary guidance for Figma MCP, shadcn MCP, and OpenAI Docs MCP. Docs MCP retrieval was executed separately; Figma/shadcn remain docs-reviewed. The [design workflow guide](../guides/design-workflows.en.md) connects these paths with the existing Impeccable resource.
 
 ## Review records and latest news
 
@@ -197,6 +292,9 @@ Connect agents to external services and data.
 | [Google MCP](https://github.com/google/mcp) | Cloud | Connect Google Cloud services | Connect a workflow to Cloud data and services |
 | [Perplexity MCP](https://github.com/perplexityai/modelcontextprotocol) | Search & research | Connect web search and source-based research | Gather web sources for a technical investigation |
 | [Context7](https://github.com/upstash/context7) | Library documentation | Retrieve library- and version-specific docs and examples through MCP or CLI + Skills | Check API usage against the version used by your project |
+| [OpenAI Docs MCP](https://developers.openai.com/learn/docs-mcp) | Official docs | Read-only documentation search and page retrieval | Check setup/API guidance against its source. [Executed workflow](../guides/cases/docs-mcp-review.en.md) |
+| [Figma MCP](https://developers.figma.com/docs/figma-mcp-server/) | Design connection | Design context; some configurations also allow canvas changes | Map designs/tokens to code; check file access and write scope |
+| [shadcn MCP](https://ui.shadcn.com/docs/mcp) | UI components | Browse, search, and install registry components | Find compatible components and review installation diffs |
 | [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) | Web performance & debugging | Chrome performance traces, network requests, console, screenshots, and browser interaction | Investigate slow pages and failed requests; review browser data access and default usage statistics |
 | [Context Mode](https://github.com/mksglu/context-mode) | Advanced context management | Tool-output execution, indexing and search, local session storage, and host-specific routing hooks | Trial long tasks with large output; check host-specific hook support and storage policy |
 
@@ -331,4 +429,4 @@ We select for a clear use case, an identifiable source, and useful documentation
 
 [Browse the earlier visual map](https://yunsell.github.io/ai-agent-skills-korean/) · Korean visual companion using the previous category layout.
 
-Last checked: **2026-10-12 (Korea time)**. We checked status and activity of existing GitHub resources, installation guidance for nine core resources, purpose and setup limitations of new additions, and selected release changes. This was not a feature-by-feature audit of every project. Examples, risk labels, and alternative selection are editorial judgments, not execution tests, benchmarks, or security certifications. The visual map was outside this update's scope.
+Baseline review: **2026-10-12 (Korea time)**, covering existing resource status/activity and nine core setup guides. Later checks are dated in their own sections. Apart from the separately linked Docs MCP case, entries are docs-reviewed; examples, risk labels, and alternatives are editorial judgments. This is not a full execution audit, benchmark, or security certification. The visual map was outside this update's scope.
