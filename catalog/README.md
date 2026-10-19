@@ -6,6 +6,8 @@ AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개
 
 카탈로그 확인 기준일: **2026-10-12** · 설치·권한은 원본 문서 기준, 실행 테스트와는 구분합니다.
 
+**부분 갱신 · 2026-10-19:** Chrome DevTools MCP, Skill Scanner, Deep Agents의 릴리스 안내를 갱신했습니다. 다른 항목의 확인일은 변경하지 않았습니다. [관련 브리핑 002](../newsletter/2026-10-19.md)
+
 **시작하기:** [빠른 시작](#starter-packs) · [실무 비교](#field-cards) · [업데이트·대안 선택](#recent) · [기여하기](#contributing)
 
 **자료 찾기:** [Skills](#skills) · [MCP](#mcp) · [CLI](#tools) · [Plugins](#plugins) · [검증·평가](#validation) · [Harnesses](#harnesses) · [Frameworks](#frameworks) · [Agents](#agents) · [학습](#learning)
@@ -269,6 +271,8 @@ npx skills add google/agents-cli
 
 **서버 더 찾기:** [공식 MCP Registry](https://registry.modelcontextprotocol.io/) · [Awesome MCP Servers](https://github.com/punkpeye/awesome-mcp-servers). 프로토콜 구현을 배우려면 [MCP Reference Servers](https://github.com/modelcontextprotocol/servers)를 참고하세요.
 
+Chrome DevTools MCP 추가 문서 확인: **2026-10-19**. [1.11.0](https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v1.11.0)은 FFmpeg 없는 화면 녹화, 캐시 무시 옵션과 실패 감사 항목·DOM 노드의 직접 반환을 추가했습니다. 비민감 시험 브라우저에서 진단 자료를 검토하세요. 실행 검증은 하지 않았습니다.
+
 <a id="tools"></a>
 
 ## 탐색·CLI 도구
@@ -312,7 +316,7 @@ npx skills add google/agents-cli
 | [Cisco Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner) | 스킬 보안 검토 | 스킬·스크립트의 정적·행동·선택적 LLM 분석과 CI 연동 | 외부 스킬을 설치하거나 팀에 배포하기 전 의심 동작 검토 |
 | [Promptfoo](https://github.com/promptfoo/promptfoo) | 평가·회귀·레드팀 | 설정 기반 프롬프트·에이전트·RAG 평가, 모델 비교, 보안 테스트와 CI 연동 | 모델·프롬프트 변경 전후의 정확도와 실패 사례 비교 |
 
-Scanner는 CPython 3.11–3.14가 필요합니다. 2.2.0 사용자는 [2.2.1 보안 수정](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.1)과 [2.2.2 후속 수정](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.2)을 확인하세요. 기본 정적 분석과 외부 서비스 분석을 구분하고, LLM·VirusTotal 등 외부 분석을 켜기 전에 코드·파일의 전송 범위를 확인하세요. Promptfoo도 선택한 모델·대상에 따라 인증, 데이터 전송과 비용이 발생합니다. 보안 테스트는 소유하거나 허가받은 대상에만 수행하세요.
+Scanner는 CPython 3.11–3.14가 필요합니다. 2.2.0 사용자는 [2.2.1 보안 수정](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.1)과 [2.2.2 후속 수정](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.2)을 확인하세요. **2026-10-19 추가 문서 확인:** [2.3.0](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.3.0)은 미검사 링크·로드 실패를 보고하고 분류 코드를 변경하므로, CI 필터·종료 코드도 함께 검토하세요. 기본 정적 분석과 외부 서비스 분석을 구분하고, LLM·VirusTotal 등 외부 분석을 켜기 전에 코드·파일의 전송 범위를 확인하세요. Promptfoo도 선택한 모델·대상에 따라 인증, 데이터 전송과 비용이 발생합니다. 보안 테스트는 소유하거나 허가받은 대상에만 수행하세요.
 
 <a id="harnesses"></a>
 
@@ -325,6 +329,8 @@ Scanner는 CPython 3.11–3.14가 필요합니다. 2.2.0 사용자는 [2.2.1 보
 | [Deep Agents](https://github.com/langchain-ai/deepagents) | 에이전트 하네스 | 파일시스템, 컨텍스트 관리, 서브에이전트, 스킬·도구와 승인 흐름을 묶은 실행 구성 | 여러 단계 작업의 실행 골격이 필요할 때. 도구·샌드박스 경계는 별도로 설계 |
 
 추가 문서 확인: **2026-10-14**. [0.7.25 릴리스](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.25)의 경로 권한 수정과 [공식 개요](https://docs.langchain.com/oss/python/deepagents/overview)를 확인하세요. 이 카탈로그에서 실행 검증하지 않았습니다.
+
+**2026-10-19 추가 문서 확인:** [0.7.26](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.26)·[0.7.27](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.27)은 비동기 서브에이전트의 대기·진행 상태 관측을, [0.7.28](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.28)은 ContextHubBackend의 glob 경로 처리를 개선했습니다. 버전을 고정하고 승인 대기·하위 경로 결과를 회귀 검사하세요.
 
 <a id="frameworks"></a>
 

@@ -1,6 +1,22 @@
 {
-  "latest": "001",
+  "latest": "002",
   "issues": [
+    {
+      "id": "002",
+      "date": "2026-10-19",
+      "topics": ["skills", "mcp", "harness"],
+      "cover": {
+        "labels": ["SCAN", "EVIDENCE", "STATUS"]
+      },
+      "title": {
+        "ko": "더 많은 도구보다, 더 잘 보이는 실행",
+        "en": "Make agent work observable"
+      },
+      "files": {
+        "ko": "2026-10-19.md",
+        "en": "2026-10-19.en.md"
+      }
+    },
     {
       "id": "001",
       "date": "2026-10-14",

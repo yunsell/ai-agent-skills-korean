@@ -18,33 +18,33 @@ Skills · MCP · Harness — 무엇이 바뀌었고, 내 작업에는 무엇이 
 
 ---
 
-<a id="latest"></a><a id="recent"></a> **FIELD NOTES / 001** · 2026-10-14 · 창간호
+<a id="latest"></a><a id="recent"></a> **FIELD NOTES / 002** · 2026-10-19
 
-## 도구를 더 붙이기 전에, 실행 경계부터
+## 더 많은 도구보다, 더 잘 보이는 실행
 
-새 기능보다 먼저 챙길 세 가지: **재시도, 경로 권한, 스킬 도입 전 검사**. 최근 릴리스를 오늘 다시 확인해 창간호로 묶었습니다.
+**검사 범위, 실행 근거, 진행 상태**. 001호 이후 나온 릴리스에서 실무에 필요한 변화를 골랐습니다.
 
-**[창간호 전체 읽기 →](newsletter/2026-10-14.md)** · [English edition](newsletter/2026-10-14.en.md)
+**[이번 호 전체 읽기 →](newsletter/2026-10-19.md)** · [English edition](newsletter/2026-10-19.en.md)
 
-<a href="newsletter/2026-10-14.md">
+<a href="newsletter/2026-10-19.md">
 <picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/brief/issue-001-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/brief/issue-001-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/brief/issue-001-dark.svg">
-  <img src="assets/brief/issue-001-light.svg" alt="재시도·경로·신뢰를 다루는 001호 표지" width="1200">
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/brief/issue-002-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/brief/issue-002-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/brief/issue-002-dark.svg">
+  <img src="assets/brief/issue-002-light.svg" alt="검사 범위·실행 근거·진행 상태를 다루는 002호 표지" width="1200">
 </picture>
 </a>
 
-**01 / MCP·CLI — 응답이 없다고 다시 실행해도 될까요?**<br>
-agent-browser 0.39.1의 중복 실행 방지 수정과 결과 확인 원칙. [소식 읽기 →](newsletter/2026-10-14.md#browser)
+**01 / SKILLS — 검사하지 못한 파일도 결과에 표시됩니다**<br>
+Skill Scanner 2.3.0의 누락 보고와 CI 규칙 점검. [소식 읽기 →](newsletter/2026-10-19.md#skills)
 
-**02 / HARNESS — 승인한 경로와 실제 경로가 다를 때**<br>
-Deep Agents 0.7.25의 심볼릭 링크 경로 검사 수정. [소식 읽기 →](newsletter/2026-10-14.md#harness)
+**02 / MCP — ‘동작합니다’에 진단 근거를 붙이세요**<br>
+Chrome DevTools MCP 1.11.0의 녹화·성능·감사 결과 개선. [소식 읽기 →](newsletter/2026-10-19.md#mcp)
 
-**03 / SKILLS — 검사 도구도 업데이트 대상입니다**<br>
-Skill Scanner 2.2.1·2.2.2의 수정사항과 확인할 범위. [소식 읽기 →](newsletter/2026-10-14.md#skills)
+**03 / HARNESS — 멈춘 것과 기다리는 것은 다릅니다**<br>
+Deep Agents 0.7.26–0.7.28의 비동기 상태·경로 처리 개선. [소식 읽기 →](newsletter/2026-10-19.md#harness)
 
-> 편집 노트: 인기 순위보다 실제 작업에 생기는 변화에 집중합니다. 이번 호는 **원본 문서 확인**이며 직접 실행 테스트는 아닙니다.
+> 편집 노트: 인기 순위보다 작업에 미치는 변화를 다룹니다. 이번 호는 **원본 문서 확인**이며 실행 테스트가 아닙니다.
 
 ## 읽은 다음, 내 작업으로
 

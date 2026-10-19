@@ -6,6 +6,8 @@ A curated collection of skills, MCP servers, plugins, frameworks, and learning r
 
 Review date: **2026-10-12** · Installation and permissions are checked against documentation, not execution tests.
 
+**Partial update · 2026-10-19:** release guidance for Chrome DevTools MCP, Skill Scanner, and Deep Agents was refreshed. Other review dates are unchanged. [Related briefing 002](../newsletter/2026-10-19.en.md)
+
 **Start here:** [Quick starts](#starter-packs) · [Practical comparison](#field-cards) · [Updates & alternatives](#recent) · [Contributing](#contributing)
 
 **Browse:** [Skills](#skills) · [MCP](#mcp) · [CLI](#tools) · [Plugins](#plugins) · [Validation](#validation) · [Harnesses](#harnesses) · [Frameworks](#frameworks) · [Agents](#agents) · [Learning](#learning)
@@ -269,6 +271,8 @@ Connect agents to external services and data.
 
 **Find more servers:** [Official MCP Registry](https://registry.modelcontextprotocol.io/) · [Awesome MCP Servers](https://github.com/punkpeye/awesome-mcp-servers). For educational implementations, see [MCP Reference Servers](https://github.com/modelcontextprotocol/servers).
 
+Additional Chrome DevTools MCP docs review: **2026-10-19**. [1.11.0](https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v1.11.0) adds FFmpeg-free recordings, a cache-bypass option, and inline failing audits with DOM nodes. Review diagnostic evidence in a non-sensitive test browser. Not execution-tested.
+
 <a id="tools"></a>
 
 ## Discovery & CLI Tools
@@ -312,7 +316,7 @@ Review safety before connecting more tools, and compare results before and after
 | [Cisco Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner) | Skill security review | Static, behavioral, and optional LLM analysis of skills and scripts, plus CI integration | Review suspicious behavior before installing or distributing third-party skills |
 | [Promptfoo](https://github.com/promptfoo/promptfoo) | Evals, regression, red teaming | Config-driven prompt, agent, and RAG evaluation, model comparison, security tests, and CI integration | Compare accuracy and failure cases across model or prompt changes |
 
-Scanner requires CPython 3.11–3.14. Users of 2.2.0 should review the [2.2.1 security fix](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.1) and [2.2.2 follow-up](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.2). Distinguish default static analysis from external-service analysis, and check what code/files may be sent before enabling LLM, VirusTotal, or other external analyzers. Promptfoo may also require credentials, transmit data, and incur costs depending on the model and target. Run security tests only against systems you own or are authorized to test.
+Scanner requires CPython 3.11–3.14. Users of 2.2.0 should review the [2.2.1 security fix](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.1) and [2.2.2 follow-up](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.2). **Additional docs review, 2026-10-19:** [2.3.0](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.3.0) reports unscanned symlinks and load failures and changes taxonomy codes; review CI filters and exit codes too. Distinguish default static analysis from external-service analysis, and check what code/files may be sent before enabling LLM, VirusTotal, or other external analyzers. Promptfoo may also require credentials, transmit data, and incur costs depending on the model and target. Run security tests only against systems you own or are authorized to test.
 
 <a id="harnesses"></a>
 
@@ -325,6 +329,8 @@ Execution scaffolding that combines an agent loop with files, tools, memory, and
 | [Deep Agents](https://github.com/langchain-ai/deepagents) | Agent harness | Filesystem, context management, subagents, skills/tools, and approval workflows | Start a multi-step agent workflow; enforce tool and sandbox boundaries separately |
 
 Added from documentation on **2026-10-14**. Review the path-permission fix in [0.7.25](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.25) and the [official overview](https://docs.langchain.com/oss/python/deepagents/overview). Not execution-tested by this catalog.
+
+**Additional docs review, 2026-10-19:** [0.7.26](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.26) and [0.7.27](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.27) improve async-subagent wait/status observability; [0.7.28](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.28) fixes ContextHubBackend glob path handling. Pin versions and regression-test approval waits and subdirectory results.
 
 <a id="frameworks"></a>
 
