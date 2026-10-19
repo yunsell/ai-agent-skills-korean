@@ -4,34 +4,73 @@
 
 A curated collection of skills, MCP servers, plugins, frameworks, and learning resources for working with AI agents.
 
-Review date: **2026-10-12** · Installation and permissions are checked against documentation, not execution tests.
+Core documentation reviewed **2026-10-12**; selected releases updated **2026-10-19**. [Latest briefing](../newsletter/2026-10-19.en.md).
 
-**Partial update · 2026-10-19:** release guidance for Chrome DevTools MCP, Skill Scanner, and Deep Agents was refreshed. Other review dates are unchanged. [Related briefing 002](../newsletter/2026-10-19.en.md)
+## What are you working on?
 
-**Start here:** [Quick starts](#starter-packs) · [Practical comparison](#field-cards) · [Updates & alternatives](#recent) · [Contributing](#contributing)
+Open one group for a starting point. If you know a name, use Ctrl+F / ⌘F. Project names link to upstream sources.
 
-**Browse:** [Skills](#skills) · [MCP](#mcp) · [CLI](#tools) · [Plugins](#plugins) · [Validation](#validation) · [Harnesses](#harnesses) · [Frameworks](#frameworks) · [Agents](#agents) · [Learning](#learning)
+<a id="task-code"></a>
+<details>
+<summary><strong>01 · Build and test</strong> — interfaces, browsers, and code quality</summary>
 
-## Find by task
+**Start with:** [Frontend quick start](#starter-frontend).
 
-| I want to… | Start here |
-| --- | --- |
-| Improve frontend quality | [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) |
-| Find document and design skills | [Anthropic Skills](https://github.com/anthropics/skills) |
-| Find skills for database work | [Supabase Agent Skills](https://github.com/supabase/agent-skills) |
-| Connect GitHub issues and PRs | [GitHub MCP Server](https://github.com/github/github-mcp-server) |
-| Let an agent interact with a browser | [Playwright MCP](https://github.com/microsoft/playwright-mcp) |
-| Adopt planning and testing workflows | [Superpowers](https://github.com/obra/superpowers) |
-| Build an agent application | [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) |
-| Evaluate and deploy an agent | [Google Agents CLI](https://github.com/google/agents-cli) |
-| Investigate production errors with an agent | [Sentry for AI](https://github.com/getsentry/sentry-for-ai) |
-| Connect Gmail, Drive, and Calendar workflows | [Google Workspace CLI](https://github.com/googleworkspace/cli) · under development, not an officially supported product |
-| Review a skill for security risks before installing | [Cisco Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner) |
-| Compare results before and after prompt or model changes | [Promptfoo](https://github.com/promptfoo/promptfoo) |
-| Diagnose web performance and network problems | [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) |
-| Turn PDF and Office files into agent inputs | [MarkItDown](https://github.com/microsoft/markitdown) |
+- UI implementation: [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills)
+- Browser interaction: [Playwright MCP](https://github.com/microsoft/playwright-mcp); performance diagnosis: [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp)
+- Planning and tests: [Superpowers](https://github.com/obra/superpowers)
+- Prompt/model regression: [Promptfoo](https://github.com/promptfoo/promptfoo)
 
-> Know the name? Use `Ctrl+F` / `⌘F` to search this page. Every project name links to its source repository; consult it for installation and compatibility.
+[Try the search validation exercise](../guides/web-validation.en.md)
+
+</details>
+
+<a id="task-work"></a>
+<details>
+<summary><strong>02 · Work with documents</strong> — design, source files, and office tasks</summary>
+
+**Start with:** [Anthropic Skills](https://github.com/anthropics/skills) for document and design workflows.
+
+- Convert PDF and Office files: [MarkItDown](https://github.com/microsoft/markitdown)
+- Gmail, Drive, and Calendar: [Google Workspace CLI](https://github.com/googleworkspace/cli) — under development; not an officially supported Google product
+
+</details>
+
+<a id="task-ops"></a>
+<details>
+<summary><strong>03 · Operate and manage data</strong> — databases, GitHub, errors, and skill review</summary>
+
+**Start with:** [Database quick start](#starter-db) or [Error investigation](#starter-ops).
+
+- Database guidance: [Supabase Agent Skills](https://github.com/supabase/agent-skills)
+- Issues and PRs: [GitHub MCP Server](https://github.com/github/github-mcp-server)
+- Production errors: [Sentry for AI](https://github.com/getsentry/sentry-for-ai)
+- Review third-party skills: [Cisco Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner)
+
+</details>
+
+<a id="task-build"></a>
+<details>
+<summary><strong>04 · Build an agent</strong> — application frameworks, evaluation, and execution</summary>
+
+**Start with:** [Agent development quick start](#starter-agent) for an ADK app and evaluation workflow.
+
+- Agent applications: [OpenAI Agents SDK](https://github.com/openai/openai-agents-python)
+- ADK development and evaluation: [Google Agents CLI](https://github.com/google/agents-cli)
+- Execution, files, context, and approvals: [Deep Agents](https://github.com/langchain-ai/deepagents)
+
+[Understand Skills, MCP, and Harness](../guides/first-stack.en.md)
+
+</details>
+
+**Already know what you need?** [Quick starts](#starter-packs) · [Setup and access](#field-cards) · [Updates and alternatives](#recent)
+
+<details>
+<summary>Jump to a resource category</summary>
+
+[Skills](#skills) · [MCP](#mcp) · [CLI](#tools) · [Plugins](#plugins) · [Validation](#validation) · [Harnesses](#harnesses) · [Frameworks](#frameworks) · [Agents](#agents) · [Learning](#learning)
+
+</details>
 
 <a id="starter-packs"></a>
 
@@ -39,6 +78,7 @@ Review date: **2026-10-12** · Installation and permissions are checked against 
 
 If comparing tools one by one feels slow, start with a combination built around your goal. Setup time depends on your environment and authentication. Review the source repository and files before running commands, and select only the skills you need. The `npx` commands require Node.js/npm.
 
+<a id="starter-frontend"></a>
 <details>
 <summary><strong>01 · Frontend quality check</strong> — implementation guidance + current docs + real-browser verification</summary>
 
@@ -61,6 +101,7 @@ playwright-cli install --skills
 
 </details>
 
+<a id="starter-db"></a>
 <details>
 <summary><strong>02 · Safer database change</strong> — schema analysis + migration + version-specific docs</summary>
 
@@ -98,6 +139,7 @@ Check the installed Prisma version first. The source currently defaults new ORM 
 
 </details>
 
+<a id="starter-process"></a>
 <details>
 <summary><strong>03 · Plan through test</strong> — requirements + task breakdown + TDD + completion checks</summary>
 
@@ -113,6 +155,7 @@ Check the installed Prisma version first. The source currently defaults new ORM 
 
 </details>
 
+<a id="starter-ops"></a>
 <details>
 <summary><strong>04 · Production incident investigation</strong> — impact + root cause + verified fix</summary>
 
@@ -128,6 +171,7 @@ Check the installed Prisma version first. The source currently defaults new ORM 
 
 </details>
 
+<a id="starter-agent"></a>
 <details>
 <summary><strong>05 · Agent development and evaluation</strong> — scaffold + eval dataset + failure analysis + deployment readiness</summary>
 

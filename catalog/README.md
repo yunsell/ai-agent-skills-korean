@@ -4,34 +4,73 @@
 
 AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개발 도구와 학습 자료를 모았습니다.
 
-카탈로그 확인 기준일: **2026-10-12** · 설치·권한은 원본 문서 기준, 실행 테스트와는 구분합니다.
+기본 자료 문서 확인 **2026-10-12** · 일부 릴리스 갱신 **2026-10-19**. [관련 브리핑](../newsletter/2026-10-19.md)
 
-**부분 갱신 · 2026-10-19:** Chrome DevTools MCP, Skill Scanner, Deep Agents의 릴리스 안내를 갱신했습니다. 다른 항목의 확인일은 변경하지 않았습니다. [관련 브리핑 002](../newsletter/2026-10-19.md)
+## 지금 어떤 작업을 하나요?
 
-**시작하기:** [빠른 시작](#starter-packs) · [실무 비교](#field-cards) · [업데이트·대안 선택](#recent) · [기여하기](#contributing)
+하나를 펼치면 추천 시작점이 나옵니다. 이름을 알고 있다면 Ctrl+F / ⌘F로 검색하세요. 프로젝트 이름은 원본 자료로 연결됩니다.
 
-**자료 찾기:** [Skills](#skills) · [MCP](#mcp) · [CLI](#tools) · [Plugins](#plugins) · [검증·평가](#validation) · [Harnesses](#harnesses) · [Frameworks](#frameworks) · [Agents](#agents) · [학습](#learning)
+<a id="task-code"></a>
+<details>
+<summary><strong>01 · 개발·검증</strong> — 화면 구현, 브라우저, 코드 품질</summary>
 
-## 하고 싶은 일로 찾기
+**추천 시작점:** [프런트엔드 빠른 시작](#starter-frontend).
 
-| 하고 싶은 일 | 바로가기 |
-| --- | --- |
-| 웹 개발 품질을 높이고 싶다 | [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) |
-| 문서·디자인 스킬을 찾고 싶다 | [Anthropic Skills](https://github.com/anthropics/skills) |
-| DB 작업을 돕는 스킬이 필요하다 | [Supabase Agent Skills](https://github.com/supabase/agent-skills) |
-| GitHub 이슈·PR을 연결하고 싶다 | [GitHub MCP Server](https://github.com/github/github-mcp-server) |
-| 에이전트로 브라우저를 조작하고 싶다 | [Playwright MCP](https://github.com/microsoft/playwright-mcp) |
-| 계획·테스트·검증 흐름을 도입하고 싶다 | [Superpowers](https://github.com/obra/superpowers) |
-| 에이전트 앱을 직접 만들고 싶다 | [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) |
-| 만든 에이전트를 평가하고 배포하고 싶다 | [Google Agents CLI](https://github.com/google/agents-cli) |
-| 운영 오류를 에이전트와 함께 분석하고 싶다 | [Sentry for AI](https://github.com/getsentry/sentry-for-ai) |
-| Gmail·Drive·Calendar 업무를 연결하고 싶다 | [Google Workspace CLI](https://github.com/googleworkspace/cli) · 개발 중, 공식 지원 제품 아님 |
-| 설치할 스킬의 보안 위험을 먼저 확인하고 싶다 | [Cisco Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner) |
-| 프롬프트·모델 변경 전후를 비교하고 싶다 | [Promptfoo](https://github.com/promptfoo/promptfoo) |
-| 웹 성능·네트워크 문제를 진단하고 싶다 | [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) |
-| PDF·Office 문서를 에이전트 입력으로 바꾸고 싶다 | [MarkItDown](https://github.com/microsoft/markitdown) |
+- 화면 구현: [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills)
+- 브라우저 동작 검사: [Playwright MCP](https://github.com/microsoft/playwright-mcp), 성능 진단: [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp)
+- 계획·테스트 절차: [Superpowers](https://github.com/obra/superpowers)
+- 프롬프트·모델 변경 전후 비교: [Promptfoo](https://github.com/promptfoo/promptfoo)
 
-> 이름을 알고 있다면 `Ctrl+F` / `⌘F`로 페이지를 검색하세요. 모든 프로젝트 이름은 원본 저장소로 연결되며, 설치법과 지원 환경은 해당 저장소에서 확인할 수 있습니다.
+[검색 검증 실습으로 시작하기](../guides/web-validation.md)
+
+</details>
+
+<a id="task-work"></a>
+<details>
+<summary><strong>02 · 업무·자료</strong> — 문서, 디자인, 파일 변환, 업무 서비스</summary>
+
+**추천 시작점:** [Anthropic Skills](https://github.com/anthropics/skills)에서 문서·디자인 작업 절차를 찾으세요.
+
+- PDF·Office 파일 변환: [MarkItDown](https://github.com/microsoft/markitdown)
+- Gmail·Drive·Calendar: [Google Workspace CLI](https://github.com/googleworkspace/cli) — 개발 중이며 Google 공식 지원 제품은 아님
+
+</details>
+
+<a id="task-ops"></a>
+<details>
+<summary><strong>03 · 운영·데이터</strong> — DB, GitHub, 오류 조사, 스킬 점검</summary>
+
+**추천 시작점:** [DB 빠른 시작](#starter-db) 또는 [운영 오류 조사](#starter-ops).
+
+- DB 작업 지침: [Supabase Agent Skills](https://github.com/supabase/agent-skills)
+- 이슈·PR 연결: [GitHub MCP Server](https://github.com/github/github-mcp-server)
+- 운영 오류 분석: [Sentry for AI](https://github.com/getsentry/sentry-for-ai)
+- 외부 스킬 검토: [Cisco Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner)
+
+</details>
+
+<a id="task-build"></a>
+<details>
+<summary><strong>04 · 에이전트 구축</strong> — 앱 개발, 평가, 실행 흐름</summary>
+
+**추천 시작점:** [에이전트 개발 빠른 시작](#starter-agent)에서 ADK 앱과 평가 흐름을 준비하세요.
+
+- 에이전트 앱 개발: [OpenAI Agents SDK](https://github.com/openai/openai-agents-python)
+- ADK 개발·평가: [Google Agents CLI](https://github.com/google/agents-cli)
+- 실행·파일·문맥·승인 흐름: [Deep Agents](https://github.com/langchain-ai/deepagents)
+
+[Skills·MCP·Harness 역할 이해하기](../guides/first-stack.md)
+
+</details>
+
+**이미 필요한 것을 안다면:** [빠른 시작](#starter-packs) · [설치·접근 범위](#field-cards) · [업데이트·대안](#recent)
+
+<details>
+<summary>자료 분류로 바로 가기</summary>
+
+[Skills](#skills) · [MCP](#mcp) · [CLI](#tools) · [Plugins](#plugins) · [검증·평가](#validation) · [Harnesses](#harnesses) · [Frameworks](#frameworks) · [Agents](#agents) · [학습](#learning)
+
+</details>
 
 <a id="starter-packs"></a>
 
@@ -39,6 +78,7 @@ AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개
 
 도구를 하나씩 비교하기 어렵다면 목적에 맞는 조합부터 시작하세요. 설치 시간은 환경과 로그인에 따라 달라집니다. 명령을 실행하기 전에 원본 저장소와 설치될 파일을 확인하고, 스킬은 필요한 것만 선택하세요. `npx` 명령에는 Node.js/npm이 필요합니다.
 
+<a id="starter-frontend"></a>
 <details>
 <summary><strong>01 · 프런트엔드 품질 점검</strong> — 구현 기준 + 최신 문서 + 실제 브라우저 검증</summary>
 
@@ -61,6 +101,7 @@ playwright-cli install --skills
 
 </details>
 
+<a id="starter-db"></a>
 <details>
 <summary><strong>02 · 안전한 데이터베이스 변경</strong> — 스키마 분석 + 마이그레이션 + 버전별 문서</summary>
 
@@ -98,6 +139,7 @@ Prisma는 프로젝트에 설치된 버전을 먼저 확인하세요. 현재 원
 
 </details>
 
+<a id="starter-process"></a>
 <details>
 <summary><strong>03 · 계획부터 테스트까지</strong> — 요구사항 정리 + 작업 분해 + TDD + 완료 검증</summary>
 
@@ -113,6 +155,7 @@ Prisma는 프로젝트에 설치된 버전을 먼저 확인하세요. 현재 원
 
 </details>
 
+<a id="starter-ops"></a>
 <details>
 <summary><strong>04 · 운영 오류 조사</strong> — 영향도 파악 + 원인 분석 + 수정 검증</summary>
 
@@ -128,6 +171,7 @@ Prisma는 프로젝트에 설치된 버전을 먼저 확인하세요. 현재 원
 
 </details>
 
+<a id="starter-agent"></a>
 <details>
 <summary><strong>05 · 에이전트 개발과 평가</strong> — 생성 + 평가 데이터셋 + 실패 분석 + 배포 준비</summary>
 

@@ -10,58 +10,40 @@
 
 **한국어** · [English](README.en.md)
 
-Skills · MCP · Harness — 무엇이 바뀌었고, 내 작업에는 무엇이 달라질까요?
+AI 에이전트 도구의 변화와, 내 작업에 적용하는 방법을 읽습니다.
 
-실무자를 위한 에이전트 도구 브리핑과 리소스 카탈로그. 새 소식을 읽고, 필요한 도구를 찾고, 작은 실험으로 확인합니다.
-
-[최신호](#latest) · [지난호](newsletter/README.md) · [전체 카탈로그](catalog/README.md) · [기여하기](CONTRIBUTING.md#korean)
+[최신호](#latest) · [도구 찾기](catalog/README.md) · [처음 시작하기](guides/first-stack.md) · [지난호](newsletter/README.md)
 
 ---
 
-<a id="latest"></a><a id="recent"></a> **FIELD NOTES / 002** · 2026-10-19
+<a id="latest"></a><a id="recent"></a> **BRIEF 002** · 2026-10-19 · 원본 문서 확인
 
 ## 더 많은 도구보다, 더 잘 보이는 실행
 
-**검사 범위, 실행 근거, 진행 상태**. 001호 이후 나온 릴리스에서 실무에 필요한 변화를 골랐습니다.
+Skill Scanner 검사 누락 보고 · Chrome 화면 녹화 · Deep Agents 대기 상태
+
+- **스킬을 검사한다면:** [Skill Scanner 2.3.0 — 검사하지 못한 파일까지 확인](newsletter/2026-10-19.md#skills). 업데이트할 때 CI 규칙도 함께 점검하세요.
+- **웹을 개발한다면:** [Chrome DevTools MCP 1.11.0 — 녹화와 진단 근거 남기기](newsletter/2026-10-19.md#mcp). 예제 페이지로 시작할 수 있습니다.
+- **비동기 에이전트를 운영한다면:** [Deep Agents 0.7.26–0.7.28 — 승인 대기와 실패 구분](newsletter/2026-10-19.md#harness). 상태 기록과 경로 결과를 확인하세요.
 
 **[이번 호 전체 읽기 →](newsletter/2026-10-19.md)** · [English edition](newsletter/2026-10-19.en.md)
 
-<a href="newsletter/2026-10-19.md">
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/brief/issue-002-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/brief/issue-002-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/brief/issue-002-dark.svg">
-  <img src="assets/brief/issue-002-light.svg" alt="검사 범위·실행 근거·진행 상태를 다루는 002호 표지" width="1200">
-</picture>
-</a>
+### 오늘 해볼 것 하나
 
-**01 / SKILLS — 검사하지 못한 파일도 결과에 표시됩니다**<br>
-Skill Scanner 2.3.0의 누락 보고와 CI 규칙 점검. [소식 읽기 →](newsletter/2026-10-19.md#skills)
+검색 예제에서 **재현 단계·기대 결과·실제 결과**를 남겨 보세요. [예제와 복사할 프롬프트 →](guides/web-validation.md)
 
-**02 / MCP — ‘동작합니다’에 진단 근거를 붙이세요**<br>
-Chrome DevTools MCP 1.11.0의 녹화·성능·감사 결과 개선. [소식 읽기 →](newsletter/2026-10-19.md#mcp)
+## 내 작업에 맞는 시작점
 
-**03 / HARNESS — 멈춘 것과 기다리는 것은 다릅니다**<br>
-Deep Agents 0.7.26–0.7.28의 비동기 상태·경로 처리 개선. [소식 읽기 →](newsletter/2026-10-19.md#harness)
-
-> 편집 노트: 인기 순위보다 작업에 미치는 변화를 다룹니다. 이번 호는 **원본 문서 확인**이며 실행 테스트가 아닙니다.
-
-## 읽은 다음, 내 작업으로
-
-| 지금 필요한 것 | 바로가기 |
+| 필요한 것 | 바로가기 |
 | --- | --- |
-| 도구를 찾고 싶다 | [용도별 전체 카탈로그](catalog/README.md) |
-| 처음 조합해 보고 싶다 | [첫 스택 가이드](guides/first-stack.md) · [기존 빠른 시작 5개](catalog/README.md#starter-packs) |
-| 설치·인증·권한을 비교하고 싶다 | [실무 비교 카드](catalog/README.md#field-cards) |
-
-카탈로그의 기존 자료·설치 예시는 유지했습니다. 뉴스의 확인일과 카탈로그의 확인일은 별개입니다.
+| 쓸 만한 도구 고르기 | [네 가지 작업으로 찾는 카탈로그](catalog/README.md) |
+| Skills·MCP·Harness 이해하기 | [첫 스택 가이드](guides/first-stack.md) |
+| 설치·인증·접근 범위 비교 | [실무 비교](catalog/README.md#field-cards) · [빠른 시작](catalog/README.md#starter-packs) |
 
 <details>
-<summary>분류별 카탈로그 · 이전 README 바로가기</summary>
+<summary>분류별 전체 목록</summary>
 
-기존 README의 분류 링크를 찾으셨나요? 아래에서 같은 항목으로 이동할 수 있습니다.
-
-| 분류 | 카탈로그 |
+| 분류 | 바로가기 |
 | --- | --- |
 | <a id="starter-packs"></a>빠른 시작 | [목적별 조합](catalog/README.md#starter-packs) |
 | <a id="field-cards"></a>실무 비교 | [설치·인증·권한](catalog/README.md#field-cards) |
@@ -77,17 +59,19 @@ Deep Agents 0.7.26–0.7.28의 비동기 상태·경로 처리 개선. [소식 �
 
 </details>
 
-## 이 브리프의 약속
+## 다음 호 다시 만나기
 
-- **변화 → 의미 → 다음 행동** 순서로 설명합니다. 발표일과 확인일을 구분합니다.
-- 사실·편집 의견, 문서 확인·직접 실행·미확인을 구분합니다. 원본 출처를 연결합니다.
-- 발행호는 날짜별 기록으로 남기고, 카탈로그는 현재 쓰임을 찾는 자료집으로 관리합니다.
-- 한국어·영문판의 소식·출처·자료 목록을 함께 유지합니다.
-
-GitHub에서 읽는 뉴스레터입니다. 현재 이메일 발송이나 자동 발행은 제공하지 않습니다.
+부정기 발행합니다. [한국어 RSS](https://yunsell.github.io/ai-agent-skills-korean/feed.xml)를 피드 리더에 추가하거나 [지난호](newsletter/README.md)를 저장해 두세요. [English RSS](https://yunsell.github.io/ai-agent-skills-korean/feed.en.xml)
 
 <a id="contributing"></a>
 
-소식 제보·정정은 [Issue](https://github.com/yunsell/ai-agent-skills-korean/issues) 또는 PR로 보내 주세요. [편집·기여 기준](CONTRIBUTING.md#korean)을 확인할 수 있습니다.
+제안·정정은 [Issue](https://github.com/yunsell/ai-agent-skills-korean/issues)로 보내 주세요. [편집·기여 기준](CONTRIBUTING.md#korean)
+
+<details>
+<summary>편집 기준과 확인 범위</summary>
+
+변화·의미·다음 행동을 원본 출처와 함께 설명합니다. 사실과 의견, 문서 확인과 직접 실행을 구분하고 확인한 범위에 날짜를 붙입니다. 한·영판을 함께 관리하며, 이메일 발송은 제공하지 않습니다.
 
 [지난 점검 기록](docs/updates/2026-10-12.md#korean) · [이전 분류의 시각화 지도](https://yunsell.github.io/ai-agent-skills-korean/)
+
+</details>

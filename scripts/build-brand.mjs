@@ -43,26 +43,36 @@ const wrap = (width, height, title, description, body) =>
 
 function masthead(p, mobile) {
   const width = mobile ? 600 : 1200;
-  const height = mobile ? 196 : 238;
+  const height = mobile ? 108 : 144;
   const margin = mobile ? 26 : 48;
-  const top = mobile ? 35 : 38;
+  const top = mobile ? 24 : 26;
   let body = '<path fill="' + p.paper + '" d="M0 0H' + width + "V" + height + 'H0Z"/>';
-  body += text(margin, top, mobile ? 22 : 19, p.accent, "THE PRACTITIONER'S EDITION", 'letter-spacing="2" font-weight="700"');
+  body += text(margin, top, mobile ? 17 : 17, p.accent, "THE PRACTITIONER'S EDITION", 'letter-spacing="2" font-weight="700"');
   if (!mobile) {
-    body += text(1152, 38, 18, p.ink, "EST. 2026 / SEOUL", 'text-anchor="end" letter-spacing="2"');
+    body += text(1152, 26, 17, p.ink, "EST. 2026 / SEOUL", 'text-anchor="end" letter-spacing="2"');
   }
-  body += paths(type.wordmark, margin - 2, mobile ? 116 : 159, mobile ? 548 : 988, p.ink);
-  if (!mobile) {
-    body += '<g fill="none" stroke="' + p.accent + '" stroke-width="3">'
-      + '<path d="M1082 79h64v27h-64zM1070 114h64v27h-64zM1058 149h64v27h-64z"/></g>';
-  }
-  body += line(margin, mobile ? 143 : 187, width - margin, mobile ? 143 : 187, p.ink, 2);
-  body += text(margin, mobile ? 177 : 218, mobile ? 23 : 20, p.ink, "SKILLS / MCP / HARNESS", 'letter-spacing="3"');
-  if (!mobile) body += text(1152, 218, 18, p.accent, "SIGNAL, NOT NOISE.", 'text-anchor="end" letter-spacing="2"');
+  body += paths(type.wordmark, margin - 2, mobile ? 74 : 102, mobile ? 548 : 880, p.ink);
+  body += line(margin, mobile ? 88 : 118, width - margin, mobile ? 88 : 118, p.ink, 2);
+  if (!mobile) body += text(1152, 94, 17, p.accent, "SKILLS / MCP / HARNESS", 'text-anchor="end" letter-spacing="1"');
   return wrap(width, height, "Agent Stack Brief", "An editorial masthead in paper, ink, and vermilion. Skills, MCP, and Harness.", body);
 }
 
 function cover(issue, p, mobile) {
+  if (issue.cover.layout === "index") {
+    const width = mobile ? 600 : 1200;
+    const height = mobile ? 172 : 148;
+    const margin = mobile ? 26 : 48;
+    let body = '<path fill="' + p.paper + '" d="M0 0H' + width + 'V' + height + 'H0Z"/>';
+    body += text(margin, 34, 19, p.accent, "FIELD NOTE / " + issue.id, 'letter-spacing="2" font-weight="700"');
+    body += text(width - margin, 34, 18, p.ink, issue.date.replaceAll("-", "."), 'text-anchor="end"');
+    body += line(margin, 50, width - margin, 50, p.ink);
+    for (const [i, label] of issue.cover.labels.entries()) {
+      body += text(mobile ? margin : margin + i * 376, mobile ? 82 + i * 34 : 102,
+        mobile ? 24 : 28, p.ink, "0" + (i + 1) + " / " + label, 'letter-spacing="2"');
+    }
+    return wrap(width, height, "Field note " + issue.id,
+      "Issue " + issue.id + ": " + issue.cover.labels.join(", ") + ". Editorial contents, not interactive controls.", body);
+  }
   const width = mobile ? 600 : 1200;
   const height = mobile ? 252 : 300;
   let body = '<path fill="' + p.paper + '" d="M0 0H' + width + "V" + height + 'H0Z"/>';

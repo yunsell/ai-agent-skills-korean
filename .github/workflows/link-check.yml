@@ -23,12 +23,16 @@ jobs:
         run: |
           node scripts/check-content.mjs
           node scripts/build-brand.mjs --check
+          node scripts/build-feeds.mjs --check
       - name: Check Markdown links
+        # Pages URLs are checked against docs/ by check-content.mjs.
+        # A Pages deployment may still be running when this job starts.
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
             --verbose
             --no-progress
             --accept 200,206,429
+            --exclude '^https://yunsell.github.io/ai-agent-skills-korean/'
             "**/*.md"
           fail: true

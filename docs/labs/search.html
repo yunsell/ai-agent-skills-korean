@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>검색 검증 연습 · Agent Stack Brief</title>
+  <style>
+    :root { --paper: #f5f0e7; --ink: #233b32; --accent: #ad402d; --line: #b7b8a7; }
+    @media (prefers-color-scheme: dark) {
+      :root { --paper: #172b26; --ink: #f0e9da; --accent: #f0a184; --line: #607367; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.65 system-ui, sans-serif; }
+    main { max-width: 760px; padding: 32px 24px 64px; margin: auto; }
+    header { display: flex; justify-content: space-between; gap: 16px; border-bottom: 2px solid var(--ink); padding-bottom: 16px; }
+    a { color: var(--accent); text-underline-offset: 4px; }
+    header a { display: inline-flex; align-items: center; min-height: 44px; }
+    .eyebrow { color: var(--accent); font-size: 14px; letter-spacing: 2px; font-weight: 700; margin: 32px 0 8px; }
+    h1 { font-size: clamp(30px, 6vw, 44px); line-height: 1.2; margin: 0 0 16px; }
+    p { margin: 0 0 24px; }
+    label { display: block; font-weight: 700; margin-bottom: 8px; }
+    .fields { display: flex; flex-wrap: wrap; gap: 8px; }
+    input, button { min-height: 48px; border: 1px solid var(--ink); border-radius: 0; font: inherit; padding: 8px 16px; }
+    input { flex: 1 1 220px; width: 100%; min-width: 0; background: var(--paper); color: var(--ink); }
+    button { cursor: pointer; background: var(--ink); color: var(--paper); }
+    button[type="reset"] { background: transparent; color: var(--ink); }
+    button:hover { text-decoration: underline; text-underline-offset: 4px; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    #status { font-weight: 700; margin: 24px 0 8px; }
+    ul { list-style: none; padding: 0; margin: 0 0 32px; }
+    li { border-top: 1px solid var(--line); padding: 16px 0; }
+    li strong { display: block; }
+    li span { display: block; }
+    aside { border-top: 2px solid var(--ink); padding-top: 24px; }
+    code { font-size: 0.95em; }
+    @media (max-width: 440px) { main { padding: 16px 20px 40px; } header { flex-wrap: wrap; gap: 4px 16px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <a id="home" href="https://github.com/yunsell/ai-agent-skills-korean">Agent Stack Brief</a>
+      <a id="language" href="?lang=en" lang="en">English</a>
+    </header>
+    <p class="eyebrow">PRACTICE / 002</p>
+    <h1 id="title">검색 결과를 검증해 보세요</h1>
+    <p id="intro">고정된 예제 3개에서 검색하고, 기대 결과와 실제 결과를 비교합니다. 검색은 이 페이지 안에서 처리됩니다.</p>
+    <form id="search-form">
+      <label id="query-label" for="query">검색어</label>
+      <div class="fields">
+        <input id="query" name="query" type="search" placeholder="agent" autocomplete="off" aria-describedby="hint">
+        <button id="submit" type="submit">검색</button>
+        <button id="reset" type="reset">초기화</button>
+      </div>
+    </form>
+    <p id="status" role="status" aria-live="polite" aria-atomic="true">3개 결과</p>
+    <p id="empty" hidden>결과가 없습니다. 검색어를 바꾸거나 초기화하세요.</p>
+    <ul id="results">
+      <li data-search="agent ui browser"><strong>에이전트 UI 점검</strong><span>화면 동작과 기대 결과를 비교합니다.</span></li>
+      <li data-search="agent tools skills"><strong>에이전트 도구 검토</strong><span>연결된 도구와 검사 범위를 확인합니다.</span></li>
+      <li data-search="document notes"><strong>문서 정리</strong><span>자료를 읽고 작업 메모를 만듭니다.</span></li>
+    </ul>
+    <aside>
+      <p id="hint">확인 순서: 처음 3개 → agent 검색 2개 → zzzz 검색 0개 → 초기화 3개</p>
+      <a id="guide" href="https://github.com/yunsell/ai-agent-skills-korean/blob/main/guides/web-validation.md">실습 가이드와 결과 기록 양식 →</a>
+    </aside>
+  </main>
+  <script>
+    const english = new URLSearchParams(location.search).get("lang") === "en";
+    const copy = english ? {
+      title: "Verify the search results", intro: "Search three fixed examples and compare expected with actual outcomes. Searches run within this page.",
+      label: "Search term", submit: "Search", reset: "Reset", empty: "No results. Change the search term or reset.",
+      hint: "Check: initial 3 → search agent 2 → search zzzz 0 → reset 3", guide: "Practice guide and result template →",
+      items: [["Agent UI checks", "Compare interface behavior with expected outcomes."], ["Agent tool review", "Check connected tools and scan coverage."], ["Document notes", "Read sources and prepare working notes."]],
+      count: n => `${n} results`
+    } : { count: n => `${n}개 결과` };
+    const rows = [...document.querySelectorAll("#results li")];
+    if (english) {
+      document.documentElement.lang = "en";
+      document.title = "Search validation practice · Agent Stack Brief";
+      for (const [id, key] of [["title", "title"], ["intro", "intro"], ["query-label", "label"], ["submit", "submit"], ["reset", "reset"], ["empty", "empty"], ["hint", "hint"], ["guide", "guide"]]) document.getElementById(id).textContent = copy[key];
+      rows.forEach((row, i) => { row.querySelector("strong").textContent = copy.items[i][0]; row.querySelector("span").textContent = copy.items[i][1]; });
+      document.getElementById("home").href = "https://github.com/yunsell/ai-agent-skills-korean/blob/main/README.en.md";
+      document.getElementById("guide").href = "https://github.com/yunsell/ai-agent-skills-korean/blob/main/guides/web-validation.en.md";
+      const language = document.getElementById("language"); language.textContent = "한국어"; language.href = "?lang=ko"; language.lang = "ko";
+    }
+    function search(term) {
+      const query = term.trim().toLocaleLowerCase();
+      let count = 0;
+      for (const row of rows) {
+        row.hidden = !(row.dataset.search + " " + row.textContent).toLocaleLowerCase().includes(query);
+        if (!row.hidden) count++;
+      }
+      document.getElementById("status").textContent = copy.count(count);
+      document.getElementById("empty").hidden = count !== 0;
+    }
+    document.getElementById("search-form").addEventListener("submit", event => { event.preventDefault(); search(document.getElementById("query").value); });
+    document.getElementById("search-form").addEventListener("reset", () => search(""));
+    search("");
+  </script>
+</body>
+</html>

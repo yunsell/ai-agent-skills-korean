@@ -1,4 +1,4 @@
-name: Deploy interactive map to Pages
+name: Deploy brief assets to Pages
 
 on:
   push:

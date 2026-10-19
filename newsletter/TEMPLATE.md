@@ -6,9 +6,10 @@
 
 - 호수·제목·발행일·확인일·시간대 / Issue ID, title, publication/review dates, timezone
 - 주제 태그와 확인 수준 / Topics and review level
-- 핵심 소식 1–3개: 발표일 → 사실·원본 → 편집 의견 → 영향 대상 → 다음 행동 / 1–3 stories: announcement date → fact/source → commentary → affected users → next action
+- 핵심 소식 1–3개: 발표일 → 사실·원본 → 편집 의견 → 영향 대상·적용 판단 → 시작 링크 → 확인할 결과 / 1–3 stories: announcement date → fact/source → commentary → audience/decision → starting link → outcome to check
 - 선택: 살펴볼 레포 1개, 작은 실험 1개 / Optional: one repository and one small experiment
 - 정정 이력, 아카이브·카탈로그·언어 전환 / Corrections, archive/catalog links, language switch
+- 구체적인 도구·작업 부제, 첫 화면의 독자별 소식 선택, 매호 실습의 기대 결과와 기록 양식 / Concrete tool/task subtitle, audience-based story selection, expected outcomes and a result template for the issue's exercise
 
 ## 확인 수준 / Review levels
 
@@ -26,3 +27,4 @@
 4. `node scripts/check-content.mjs`와 링크 점검을 통과시킵니다. / Pass content validation and link checks.
 5. 도구를 카탈로그에 추가한다면 두 언어를 함께 수정하되, 실제 재확인하지 않은 기존 자료의 날짜는 바꾸지 않습니다. / Update both catalogs for new tools without advancing unrelated review dates.
 6. 표지를 사용한다면 발행 기록에 세 개의 짧은 `cover.labels`를 기록하고 [디자인 가이드](../assets/brief/README.md)에 따라 변형을 생성합니다. 본문 제목·날짜·출처는 이미지 밖에 유지합니다. / For a cover, add three short `cover.labels` to the manifest and follow the [visual guide](../assets/brief/README.md). Keep titles, dates, and sources outside images.
+7. `node scripts/build-feeds.mjs --patch`로 한·영 RSS 변경을 생성해 적용하고 `node scripts/build-feeds.mjs --check`로 확인합니다. `docs/feed*.xml` 변경은 Pages 배포를 실행합니다. / Generate and apply both RSS feeds with `node scripts/build-feeds.mjs --patch`; validate with `node scripts/build-feeds.mjs --check`. Changes to `docs/feed*.xml` trigger Pages deployment.

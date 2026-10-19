@@ -10,58 +10,40 @@
 
 [한국어](README.md) · **English**
 
-Skills · MCP · Harness — what changed, and what does it mean for your work?
+Changes in AI agent tools, with practical ways to apply them.
 
-An agent-tool briefing and resource catalog for practitioners. Read the changes, find the tools, and validate them with a small experiment.
-
-[Latest issue](#latest) · [Archive](newsletter/README.en.md) · [Full catalog](catalog/README.en.md) · [Contribute](CONTRIBUTING.md#english)
+[Latest issue](#latest) · [Find a tool](catalog/README.en.md) · [Get started](guides/first-stack.en.md) · [Archive](newsletter/README.en.md)
 
 ---
 
-<a id="latest"></a><a id="recent"></a> **FIELD NOTES / 002** · 2026-10-19
+<a id="latest"></a><a id="recent"></a> **BRIEF 002** · 2026-10-19 · Docs reviewed
 
 ## Make agent work observable
 
-**Scan coverage, execution evidence, and task status.** Practical changes from releases published after issue 001.
+Skill Scanner coverage gaps · Chrome recordings · Deep Agents wait states
+
+- **Scanning skills?** [Skill Scanner 2.3.0 — account for unscanned files](newsletter/2026-10-19.en.md#skills). Check CI rules when updating.
+- **Building websites?** [Chrome DevTools MCP 1.11.0 — retain recordings and diagnostics](newsletter/2026-10-19.en.md#mcp). Start with the practice page.
+- **Running async agents?** [Deep Agents 0.7.26–0.7.28 — distinguish waits from failures](newsletter/2026-10-19.en.md#harness). Check status records and path results.
 
 **[Read the full issue →](newsletter/2026-10-19.en.md)** · [한국어판](newsletter/2026-10-19.md)
 
-<a href="newsletter/2026-10-19.en.md">
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/brief/issue-002-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/brief/issue-002-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/brief/issue-002-dark.svg">
-  <img src="assets/brief/issue-002-light.svg" alt="Issue 002 cover: scan coverage, execution evidence, and task status" width="1200">
-</picture>
-</a>
+### One thing to try today
 
-**01 / SKILLS — unscanned files appear in results too**<br>
-Skill Scanner 2.3.0 reports coverage gaps; check CI rules. [Read the story →](newsletter/2026-10-19.en.md#skills)
+Record **steps, expected outcomes, and actual outcomes** for a search example. [Practice page and copyable prompt →](guides/web-validation.en.md)
 
-**02 / MCP — give ‘it works’ supporting evidence**<br>
-Chrome DevTools MCP 1.11.0 improves recordings, traces, and audit results. [Read the story →](newsletter/2026-10-19.en.md#mcp)
-
-**03 / HARNESS — stopped and waiting are different**<br>
-Deep Agents 0.7.26–0.7.28 improves async status and path handling. [Read the story →](newsletter/2026-10-19.en.md#harness)
-
-> Editor's note: we focus on practical changes, not popularity rankings. This issue is **documentation-reviewed**, not execution-tested.
-
-## From reading to doing
+## Start with your task
 
 | What you need | Start here |
 | --- | --- |
-| Find a tool | [Full task-based catalog](catalog/README.en.md) |
-| Try a first combination | [First-stack guide](guides/first-stack.en.md) · [Five existing quick starts](catalog/README.en.md#starter-packs) |
-| Compare setup, auth, and permissions | [Practical comparison cards](catalog/README.en.md#field-cards) |
-
-Existing resources and installation examples remain in the catalog. Issue review dates and catalog review dates are separate.
+| Choose a useful tool | [Catalog with four task groups](catalog/README.en.md) |
+| Understand Skills, MCP, and Harness | [Your first agent stack](guides/first-stack.en.md) |
+| Compare setup, auth, and access | [Practical comparison](catalog/README.en.md#field-cards) · [Quick starts](catalog/README.en.md#starter-packs) |
 
 <details>
-<summary>Browse categories · previous README shortcuts</summary>
+<summary>All resource categories</summary>
 
-Looking for a category from the previous README? Follow its catalog link below.
-
-| Category | Catalog |
+| Category | Start here |
 | --- | --- |
 | <a id="starter-packs"></a>Quick starts | [Task-based combinations](catalog/README.en.md#starter-packs) |
 | <a id="field-cards"></a>Practical comparison | [Setup, auth, and permissions](catalog/README.en.md#field-cards) |
@@ -77,17 +59,19 @@ Looking for a category from the previous README? Follow its catalog link below.
 
 </details>
 
-## Our editorial promise
+## Find the next issue
 
-- Explain **change → significance → next action**. Separate publication and review dates.
-- Distinguish facts from opinion, and docs-reviewed from executed or unverified. Link primary sources.
-- Preserve dated issues; maintain the catalog as a reference for current use cases.
-- Keep stories, sources, and resource lists aligned in Korean and English.
-
-A newsletter to read on GitHub. Email delivery and automatic publication are not currently provided.
+Published irregularly. Add the [English RSS feed](https://yunsell.github.io/ai-agent-skills-korean/feed.en.xml) to a feed reader, or bookmark the [archive](newsletter/README.en.md). [한국어 RSS](https://yunsell.github.io/ai-agent-skills-korean/feed.xml)
 
 <a id="contributing"></a>
 
-Send stories or corrections through an [Issue](https://github.com/yunsell/ai-agent-skills-korean/issues) or PR. Read the [editorial and contribution guidelines](CONTRIBUTING.md#english).
+Send suggestions or corrections through an [Issue](https://github.com/yunsell/ai-agent-skills-korean/issues). [Editorial and contribution guidelines](CONTRIBUTING.md#english)
+
+<details>
+<summary>Editorial standards and review scope</summary>
+
+We explain changes, significance, and next actions with primary sources. Facts and commentary, docs review and execution are labeled, with dates for reviewed areas. Both editions are maintained together. Email delivery is not provided.
 
 [Previous review record](docs/updates/2026-10-12.md#english) · [Legacy visual map](https://yunsell.github.io/ai-agent-skills-korean/)
+
+</details>

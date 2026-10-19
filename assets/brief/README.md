@@ -15,8 +15,9 @@ Paper, ink, and vermilion. A Newsreader serif wordmark, thin publication rules, 
 
 ## Assets and accessibility
 
-- `masthead-*`: shared wordmark, with independent mobile composition.
+- `masthead-*`: compact shared wordmark, 1200×144 desktop and 600×108 mobile, leaving room for the latest stories.
 - `issue-ID-*`: a cover for each issue with `cover.labels` in the issue manifest. Labels are editorial cues, not test results or ratings.
+- `cover.layout: "index"` uses a plain typographic contents plate without button-like boxes. Issue 002 uses this layout; earlier artwork remains intact. On issue pages, place covers after the actionable content in a disclosure.
 - Each illustration has desktop/mobile and light/dark variants. A standard `picture` selects the appropriate one; the fallback is the desktop light image.
 - SVGs have a viewBox, title, and description. Embeds must have meaningful alt text. Do not move source citations or essential instructions into an image.
 - Both languages share the same artwork, using universal topic labels. Their native-language titles and explanation remain in Markdown.

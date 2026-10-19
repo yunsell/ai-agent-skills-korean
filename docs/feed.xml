@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Agent Stack Brief · 한국어</title>
+    <link>https://github.com/yunsell/ai-agent-skills-korean/blob/main/README.md</link>
+    <description>AI 에이전트 도구의 변화, 적용 판단과 실습을 읽습니다.</description>
+    <language>ko</language>
+    <atom:link href="https://yunsell.github.io/ai-agent-skills-korean/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>002 · 더 많은 도구보다, 더 잘 보이는 실행</title>
+      <link>https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-10-19.md</link>
+      <guid isPermaLink="true">https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-10-19.md</guid>
+      <pubDate>Sun, 18 Oct 2026 15:00:00 GMT</pubDate>
+      <description>skills · mcp · harness — GitHub에서 전체 내용을 읽으세요.</description>
+    </item>
+    <item>
+      <title>001 · 도구를 더 붙이기 전에, 실행 경계부터</title>
+      <link>https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-10-14.md</link>
+      <guid isPermaLink="true">https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-10-14.md</guid>
+      <pubDate>Tue, 13 Oct 2026 15:00:00 GMT</pubDate>
+      <description>skills · mcp · harness — GitHub에서 전체 내용을 읽으세요.</description>
+    </item>
+  </channel>
+</rss>

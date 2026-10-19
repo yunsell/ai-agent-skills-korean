@@ -16,9 +16,10 @@
 
 ## 2. 원하는 결과 하나를 고르세요
 
-- 화면 품질 점검: [프런트엔드 빠른 시작](../catalog/README.md#starter-packs)
-- DB 변경 준비: [DB 빠른 시작](../catalog/README.md#starter-packs). 운영 DB 대신 격리 환경 사용
+- 화면 품질 점검: [프런트엔드 빠른 시작](../catalog/README.md#starter-frontend) · [검색 검증 실습](web-validation.md)
+- DB 변경 준비: [DB 빠른 시작](../catalog/README.md#starter-db). 운영 DB 대신 격리 환경 사용
 - 이슈 원인 조사: [창간호의 읽기 전용 실험](../newsletter/2026-10-14.md#experiment)
+- 다른 작업: [네 가지 작업으로 찾기](../catalog/README.md)
 
 각 조합의 설치 원본·인증·접근 범위는 [실무 비교 카드](../catalog/README.md#field-cards)에 있습니다. 호스트 지원 여부를 확인하고 기존 지침·훅과 겹치지 않게 추가하세요.
 

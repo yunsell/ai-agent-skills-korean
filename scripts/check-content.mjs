@@ -49,6 +49,13 @@ for (const file of markdown) {
     assert(line.split("|").length - 2 <= 4, label + ": table wider than four columns");
   }
   for (const link of links(text)) {
+    if (link.startsWith("https://yunsell.github.io/ai-agent-skills-korean/")) {
+      const url = new URL(link);
+      const local = decodeURIComponent(url.pathname.slice("/ai-agent-skills-korean/".length)) || "index.html";
+      const target = path.resolve(root, "docs", local);
+      assert(target.startsWith(path.join(root, "docs") + path.sep), label + ": invalid Pages link " + link);
+      assert(fs.existsSync(target), label + ": missing Pages asset " + link);
+    }
     if (/^(https?:|mailto:)/.test(link)) continue;
     const [destination, fragment] = link.split("#");
     const target = destination ? path.resolve(path.dirname(file), decodeURIComponent(destination)) : file;
@@ -66,6 +73,7 @@ const paired = [
   ["catalog/README.md", "catalog/README.en.md"],
   ["newsletter/README.md", "newsletter/README.en.md"],
   ["guides/first-stack.md", "guides/first-stack.en.md"],
+  ["guides/web-validation.md", "guides/web-validation.en.md"],
 ];
 const manifest = JSON.parse(read("newsletter/issues.json"));
 assert(manifest.issues.length > 0, "Empty newsletter manifest");
@@ -103,7 +111,12 @@ for (const issue of manifest.issues) {
   }
 }
 const normalized = (file) => [...new Set(links(read(file)).map((link) => {
-  if (/^https?:/.test(link)) return link;
+  if (/^https?:/.test(link)) {
+    if (link.startsWith("https://yunsell.github.io/ai-agent-skills-korean/labs/search.html?lang=")) {
+      return link.replace(/\?lang=(ko|en)$/, "?lang=language");
+    }
+    return link;
+  }
   const [destination, fragment] = link.split("#");
   return path.relative(root, destination ? path.resolve(root, path.dirname(file), destination)
     : path.resolve(root, file)).replace(/\.en\.md$/, ".md")

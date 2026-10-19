@@ -6,6 +6,7 @@
       "date": "2026-10-19",
       "topics": ["skills", "mcp", "harness"],
       "cover": {
+        "layout": "index",
         "labels": ["SCAN", "EVIDENCE", "STATUS"]
       },
       "title": {

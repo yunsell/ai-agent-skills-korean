@@ -27,6 +27,8 @@
 5. 발행 시 양쪽 홈·아카이브·`issues.json`을 함께 갱신합니다. 발행 기록의 최신호가 README와 일치해야 합니다.
 6. 이전 호는 날짜별 기록입니다. 오류 정정은 해당 호에 날짜·이유를 남기고 양쪽 언어에 반영합니다. 새로운 소식은 새 호에 씁니다.
 7. 정기 자동 발행·이메일 발송이 설정되어 있다고 가정하지 않습니다. 기존 자료를 새로 출시된 자료처럼 소개하지 않습니다.
+8. 최신호의 독자별 적용 판단·시작 링크·확인할 결과를 먼저 제공합니다. 실습에는 고정 입력, 기대 결과, 실제 결과 양식을 포함합니다. 발행한 글의 편집 개선도 날짜와 이유를 남깁니다.
+9. 새 호 발행 시 `node scripts/build-feeds.mjs --patch`의 변경을 적용하고 `--check`로 한·영 RSS를 확인하세요. 피드는 `docs/`에서 Pages로 배포됩니다.
 
 ### 카탈로그 추가 기준
 
@@ -38,7 +40,7 @@
 6. 빠른 시작의 명령은 원본과 일치해야 합니다. 첫 요청에는 승인 경계와 완료 증거를 포함합니다.
 7. 신규 자료를 추가했다는 이유로 기존 자료의 확인일을 일괄 갱신하지 않습니다.
 
-PR 전에 `node scripts/check-content.mjs`를 실행하세요. GitHub Actions에서도 구조와 링크를 점검합니다. 기존 시각화 지도는 이전 분류의 보조 자료이며 현재 목록의 기준은 카탈로그 두 언어판입니다.
+PR 전에 `node scripts/check-content.mjs`, `node scripts/build-brand.mjs --check`, `node scripts/build-feeds.mjs --check`를 실행하세요. GitHub Actions는 구조·원본 링크·Pages 파일 존재를 점검합니다. 배포 후 실제 Pages URL도 확인하세요. 기존 시각화 지도는 이전 분류의 보조 자료이며 현재 목록의 기준은 카탈로그 두 언어판입니다.
 
 <a id="english"></a>
 
@@ -65,6 +67,8 @@ News tips, resource suggestions, and corrections are welcome. This repository co
 5. Publish issue files together with both home previews, both archives, and `issues.json`. The manifest's latest issue must match the READMEs.
 6. Preserve dated issues. Record corrections with date and reason in both languages; write new developments in new issues.
 7. Do not assume automatic publication or email delivery is configured. Newly listed is not newly released.
+8. Lead with audience-specific decisions, starting links, and outcomes to check. Exercises need fixed inputs, expected results, and an actual-outcome template. Date and explain editorial improvements to published issues too.
+9. When publishing an issue, apply the output of `node scripts/build-feeds.mjs --patch` and validate both RSS feeds with `--check`. Feeds deploy from `docs/` through Pages.
 
 ### Catalog guidelines
 
@@ -76,4 +80,4 @@ News tips, resource suggestions, and corrections are welcome. This repository co
 6. Keep quick-start commands aligned with sources. Include approval boundaries and completion evidence in example requests.
 7. Adding a resource does not advance unrelated review dates.
 
-Run `node scripts/check-content.mjs` before submitting. GitHub Actions also checks structure and links. The legacy visual map uses earlier categories; the two catalogs are the current resource reference.
+Before submitting, run `node scripts/check-content.mjs`, `node scripts/build-brand.mjs --check`, and `node scripts/build-feeds.mjs --check`. GitHub Actions checks structure, upstream links, and Pages file existence. Check live Pages URLs after deployment too. The legacy visual map uses earlier categories; the two catalogs are the current resource reference.
