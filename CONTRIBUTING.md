@@ -17,6 +17,8 @@
 | 상시 도구 목록·비교 카드 | `catalog/README.md` · `catalog/README.en.md` |
 | 빠른 시작·실습·실행 사례 | `guides/quick-starts*.md` · `guides/web-validation*.md` · `guides/cases/` |
 | 디자인 선택·실패 복구 | `guides/design-workflows*.md` · `guides/mcp-recovery*.md` |
+| 환경별 첫 단계 | `guides/client-first-steps*.md` |
+| 모바일 검색 페이지 | `docs/catalog/` — 데이터 원본은 한·영 카탈로그 |
 | 개편 이전 점검 근거 | `docs/updates/` — 기존 기록 보존 |
 
 ### 뉴스레터 편집 기준
@@ -35,14 +37,15 @@
 ### 카탈로그 추가 기준
 
 1. 원본 링크, 대표 분류, 구체적 용도, 기존 자료와 다른 점을 제시합니다.
-2. 한 행에 하나의 자료를 대표 역할에 배치하고, 제공 기능과 활용 예시를 따로 씁니다. 교육 과정·모음집·하네스·프레임워크를 구분합니다.
+2. 하나의 세로 목록 항목에 하나의 자료를 대표 역할에 배치하고, 제공 기능과 활용 예시를 따로 씁니다. 자료 전체는 펼쳐 두고 표는 두 열 이내로 제한합니다. 교육 과정·모음집·하네스·프레임워크를 구분합니다.
 3. 두 언어를 함께 수정합니다. 지원 환경·공식 여부·설치 안내는 원본에서 확인합니다.
 4. 보관·이전·지원 종료 상태를 발견하면 후속 자료나 현재 상태를 설명합니다. 최근 커밋만으로 품질을 단정하지 않습니다.
 5. 비교 카드에는 확인일·확인 수준을 표시합니다. 위험도는 품질 점수가 아니라 가능한 접근 범위입니다.
 6. 빠른 시작의 명령은 원본과 일치해야 합니다. 첫 요청에는 승인 경계와 완료 증거를 포함합니다. 추천 링크는 접힌 메뉴가 아닌 `guides/quick-starts*.md`의 해당 절로 직접 연결합니다.
 7. 신규 자료를 추가했다는 이유로 기존 자료의 확인일을 일괄 갱신하지 않습니다.
+8. 목록 수정 후 `node scripts/build-catalog.mjs --patch`의 출력을 적용합니다. 생성된 `docs/catalog/data.json`을 직접 고치지 마세요. 자료 수가 바뀌면 검색 페이지의 양쪽 소개와 `scripts/test-catalog.mjs`의 기대 수도 갱신합니다. 로컬 화면·실패 복구 확인은 [실제 디자인 사례](guides/cases/catalog-design.md)를 따르세요.
 
-PR 전에 `node scripts/check-content.mjs`, `node scripts/build-brand.mjs --check`, `node scripts/build-feeds.mjs --check`를 실행하세요. GitHub Actions는 구조·원본 링크·Pages 파일 존재를 점검합니다. 배포 후 실제 Pages URL도 확인하세요. 기존 시각화 지도는 이전 분류의 보조 자료이며 현재 목록의 기준은 카탈로그 두 언어판입니다.
+PR 전에 `node scripts/check-content.mjs`, `node scripts/build-brand.mjs --check`, `node scripts/build-feeds.mjs --check`, `node scripts/build-catalog.mjs --check`, `node scripts/test-catalog.mjs`를 실행하세요. GitHub Actions는 구조·원본 링크·Pages 파일 존재·검색 데이터 일치를 점검합니다. 배포 후 실제 Pages URL도 확인하세요. 기존 시각화 지도는 이전 분류의 보조 자료이며 현재 목록의 기준은 카탈로그 두 언어판입니다.
 
 <a id="english"></a>
 
@@ -59,6 +62,8 @@ News tips, resource suggestions, and corrections are welcome. This repository co
 | Evergreen resources and comparison cards | `catalog/README.md` · `catalog/README.en.md` |
 | Quick starts, exercises, and execution cases | `guides/quick-starts*.md` · `guides/web-validation*.md` · `guides/cases/` |
 | Design choices and failure recovery | `guides/design-workflows*.md` · `guides/mcp-recovery*.md` |
+| Client-specific first steps | `guides/client-first-steps*.md` |
+| Mobile search reader | `docs/catalog/` — both catalogs are the data source |
 | Pre-redesign review evidence | `docs/updates/` — preserve existing records |
 
 ### Editorial guidelines
@@ -77,11 +82,12 @@ News tips, resource suggestions, and corrections are welcome. This repository co
 ### Catalog guidelines
 
 1. Include the source, primary category, concrete use case, and distinction from existing entries.
-2. Use one resource per row and one primary category. Describe capabilities and example use separately. Distinguish courses, collections, harnesses, and frameworks.
+2. Use one resource per vertical list entry and one primary category. Keep the full list visible and tables within two columns. Describe capabilities and example use separately. Distinguish courses, collections, harnesses, and frameworks.
 3. Update both languages. Verify support, official status, and installation guidance upstream.
 4. Document archived, moved, or discontinued projects and possible successors. Recent commits alone are not a quality assessment.
 5. Record review date and level in comparison cards. Risk describes access scope, not project quality.
 6. Keep quick-start commands aligned with sources. Include approval boundaries and completion evidence in example requests. Link recommendations directly to the relevant section in `guides/quick-starts*.md`, not a closed disclosure.
 7. Adding a resource does not advance unrelated review dates.
+8. After changing a catalog, apply the output of `node scripts/build-catalog.mjs --patch`. Do not edit generated `docs/catalog/data.json` directly. If the resource count changes, update both reader introductions and the expectation in `scripts/test-catalog.mjs`. Follow the [real design case](guides/cases/catalog-design.en.md) for local visual and recovery checks.
 
-Before submitting, run `node scripts/check-content.mjs`, `node scripts/build-brand.mjs --check`, and `node scripts/build-feeds.mjs --check`. GitHub Actions checks structure, upstream links, and Pages file existence. Check live Pages URLs after deployment too. The legacy visual map uses earlier categories; the two catalogs are the current resource reference.
+Before submitting, run `node scripts/check-content.mjs`, `node scripts/build-brand.mjs --check`, `node scripts/build-feeds.mjs --check`, `node scripts/build-catalog.mjs --check`, and `node scripts/test-catalog.mjs`. GitHub Actions checks structure, upstream links, Pages file existence, and generated search data agreement. Check live Pages URLs after deployment too. The legacy visual map uses earlier categories; the two catalogs are the current resource reference.

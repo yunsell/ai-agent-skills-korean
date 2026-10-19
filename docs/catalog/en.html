@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Search all 56 catalog resources. Pick one task, inspect the source, and start small.">
+  <title>Tool shelf · Agent Stack Brief</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#search-form">Skip to search</a>
+  <header class="masthead">
+    <a class="brand" href="https://github.com/yunsell/ai-agent-skills-korean/blob/main/README.en.md">Agent Stack Brief</a>
+    <a id="language" href="./index.html" lang="ko">한국어</a>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <p class="eyebrow">THE TOOL SHELF / CATALOG</p>
+      <h1 id="title">Find a tool for your next task.</h1>
+      <p>Search all 56 catalog resources. Pick one task, inspect the source, and start small.</p>
+      <nav class="routes" aria-label="Related guides">
+        <a href="https://github.com/yunsell/ai-agent-skills-korean/blob/main/catalog/README.en.md">GitHub catalog</a>
+        <a href="https://github.com/yunsell/ai-agent-skills-korean/blob/main/guides/client-first-steps.en.md">Client first steps</a>
+      </nav>
+    </section>
+    <form id="search-form" class="finder" role="search" aria-label="Filter catalog">
+      <div><label for="query">Name or task</label><input id="query" name="q" type="search" maxlength="200" placeholder="Figma, database, browser…"></div>
+      <div><label for="category">Category</label><select id="category" name="category">
+        <option value="">All categories</option>
+        <option value="skills">Skills</option>
+        <option value="mcp">MCP</option>
+        <option value="tools">CLI & discovery</option>
+        <option value="plugins">Plugins</option>
+        <option value="validation">Validation</option>
+        <option value="harnesses">Harnesses</option>
+        <option value="frameworks">Frameworks</option>
+        <option value="agents">Agents</option>
+        <option value="learning">Learning</option>
+      </select></div>
+      <button type="button" id="reset">Reset filters</button>
+    </form>
+    <section aria-labelledby="results-heading">
+      <div class="results-header"><h2 id="results-heading">Resources</h2><p id="status" role="status" aria-live="polite" aria-atomic="true">Loading the catalog…</p></div>
+      <p id="message" hidden></p>
+      <div id="error" role="alert" hidden>
+        <p id="error-message"></p><button type="button" id="retry">Try again</button>
+        <p><a href="https://github.com/yunsell/ai-agent-skills-korean/blob/main/catalog/README.en.md">Open the GitHub list</a></p>
+      </div>
+      <ul id="results" aria-busy="true"></ul>
+      <noscript><p>JavaScript is required for filtering. All resources are also readable in the GitHub catalog. <a href="https://github.com/yunsell/ai-agent-skills-korean/blob/main/catalog/README.en.md">Open the GitHub list</a></p></noscript>
+    </section>
+    <footer class="note">The source of truth is the bilingual GitHub catalog. Baseline docs review: 2026-10-12; selected additions: 2026-10-19. Listing does not mean execution-tested or safe. Searches run in this page; no analytics or account connection.</footer>
+  </main>
+</body>
+</html>

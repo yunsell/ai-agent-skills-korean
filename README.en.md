@@ -30,7 +30,7 @@ Skill Scanner coverage gaps · Chrome recordings · Deep Agents wait states
 
 ### One thing to try today
 
-[Executed MCP workflow →](guides/cases/docs-mcp-review.en.md) Follow OpenAI Docs MCP retrieval through a setup-guide review, with actual call records. This is distinct from browser-tool execution.
+[Executed design workflow →](guides/cases/catalog-design.en.md) We redesigned this catalog's mobile discovery and checked normal, empty, recovery, and keyboard states. [Search 56 resources](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html)
 
 For screen validation, see the [search exercise and UI evidence](guides/web-validation.en.md).
 
@@ -39,7 +39,7 @@ For screen validation, see the [search exercise and UI evidence](guides/web-vali
 | What you need | Start here |
 | --- | --- |
 | Choose a useful tool | [Catalog with four task groups](catalog/README.en.md) |
-| Understand Skills, MCP, and Harness | [Your first agent stack](guides/first-stack.en.md) |
+| Connect your first tool | [Codex, Claude Code, and Cursor first steps](guides/client-first-steps.en.md) · [Explain the roles](guides/first-stack.en.md) |
 | Compare setup, auth, and access | [Practical comparison](catalog/README.en.md#field-cards) · [Quick starts](guides/quick-starts.en.md) |
 | Design review, Figma, or component implementation | [Design workflow guide](guides/design-workflows.en.md) |
 

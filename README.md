@@ -30,7 +30,7 @@ Skill Scanner 검사 누락 보고 · Chrome 화면 녹화 · Deep Agents 대기
 
 ### 오늘 해볼 것 하나
 
-[실제 MCP 업무 사례 →](guides/cases/docs-mcp-review.md) OpenAI Docs MCP로 공식 설정 문서를 찾아 가이드를 검수한 과정과 호출 기록을 공개했습니다. 브라우저 도구 실행과는 구분합니다.
+[실제 디자인 업무 사례 →](guides/cases/catalog-design.md) 이 카탈로그의 모바일 탐색을 개편하고 정상·빈 결과·실패 복구·키보드 동작을 검증했습니다. [56개 자료 검색해 보기](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html)
 
 화면 검증을 해보고 싶다면 [검색 실습과 UI 실행 근거](guides/web-validation.md)를 보세요.
 
@@ -39,7 +39,7 @@ Skill Scanner 검사 누락 보고 · Chrome 화면 녹화 · Deep Agents 대기
 | 필요한 것 | 바로가기 |
 | --- | --- |
 | 쓸 만한 도구 고르기 | [네 가지 작업으로 찾는 카탈로그](catalog/README.md) |
-| Skills·MCP·Harness 이해하기 | [첫 스택 가이드](guides/first-stack.md) |
+| 내 환경에서 처음 연결하기 | [Codex·Claude Code·Cursor 첫 단계](guides/client-first-steps.md) · [역할 설명](guides/first-stack.md) |
 | 설치·인증·접근 범위 비교 | [실무 비교](catalog/README.md#field-cards) · [빠른 시작](guides/quick-starts.md) |
 | 디자인 검토·Figma·컴포넌트 구현 | [디자인 작업 가이드](guides/design-workflows.md) |
 

@@ -1,0 +1,1006 @@
+{
+  "schema": 1,
+  "source": "catalog/README.md + catalog/README.en.md",
+  "reviewScope": "Baseline docs review 2026-10-12; selected additions 2026-10-19. Not all resources execution-tested.",
+  "categories": [
+    {
+      "id": "skills",
+      "ko": "Skills",
+      "en": "Skills"
+    },
+    {
+      "id": "mcp",
+      "ko": "MCP",
+      "en": "MCP"
+    },
+    {
+      "id": "tools",
+      "ko": "CLI·탐색",
+      "en": "CLI & discovery"
+    },
+    {
+      "id": "plugins",
+      "ko": "Plugins",
+      "en": "Plugins"
+    },
+    {
+      "id": "validation",
+      "ko": "검증·평가",
+      "en": "Validation"
+    },
+    {
+      "id": "harnesses",
+      "ko": "Harnesses",
+      "en": "Harnesses"
+    },
+    {
+      "id": "frameworks",
+      "ko": "Frameworks",
+      "en": "Frameworks"
+    },
+    {
+      "id": "agents",
+      "ko": "Agents",
+      "en": "Agents"
+    },
+    {
+      "id": "learning",
+      "ko": "학습",
+      "en": "Learning"
+    }
+  ],
+  "resources": [
+    {
+      "id": "skills-2cc5eab13f",
+      "category": "skills",
+      "url": "https://github.com/openai/skills",
+      "ko": {
+        "name": "OpenAI Skills",
+        "use": "범용 업무",
+        "offer": "코딩·문서 등 업무별 스킬을 찾는 카탈로그",
+        "example": "반복하는 코드·문서 작업에 맞는 스킬부터 선택"
+      },
+      "en": {
+        "name": "OpenAI Skills",
+        "use": "General tasks",
+        "offer": "A catalog of skills for coding, documents, and other tasks",
+        "example": "Start with a skill for a recurring coding or document task"
+      }
+    },
+    {
+      "id": "skills-82a901da1b",
+      "category": "skills",
+      "url": "https://github.com/anthropics/skills",
+      "ko": {
+        "name": "Anthropic Skills",
+        "use": "문서·디자인",
+        "offer": "문서 작성과 디자인 등 스킬의 구현 예시",
+        "example": "문서 생성 절차나 프런트엔드 디자인 스킬을 참고"
+      },
+      "en": {
+        "name": "Anthropic Skills",
+        "use": "Documents & design",
+        "offer": "Skill implementations for document and design workflows",
+        "example": "Study document workflows or frontend design skills"
+      }
+    },
+    {
+      "id": "skills-7341adec30",
+      "category": "skills",
+      "url": "https://github.com/vercel-labs/agent-skills",
+      "ko": {
+        "name": "Vercel Agent Skills",
+        "use": "프런트엔드",
+        "offer": "React·Next.js 성능과 웹 인터페이스 점검",
+        "example": "React 코드 리뷰에서 성능·UI 점검 기준으로 사용"
+      },
+      "en": {
+        "name": "Vercel Agent Skills",
+        "use": "Frontend",
+        "offer": "React, Next.js, and web interface best practices",
+        "example": "Use as a performance and UI checklist during React reviews"
+      }
+    },
+    {
+      "id": "skills-f358c3edcb",
+      "category": "skills",
+      "url": "https://github.com/supabase/agent-skills",
+      "ko": {
+        "name": "Supabase Agent Skills",
+        "use": "데이터베이스",
+        "offer": "Supabase·PostgreSQL 관련 개발 작업",
+        "example": "Supabase를 사용하는 앱의 DB 작업 지침으로 활용"
+      },
+      "en": {
+        "name": "Supabase Agent Skills",
+        "use": "Database",
+        "offer": "Skills for Supabase and PostgreSQL development",
+        "example": "Guide database work in an app built with Supabase"
+      }
+    },
+    {
+      "id": "skills-0a09b687d0",
+      "category": "skills",
+      "url": "https://github.com/remotion-dev/skills",
+      "ko": {
+        "name": "Remotion Skills",
+        "use": "영상 제작",
+        "offer": "React 기반 영상 구성과 렌더링",
+        "example": "React 컴포넌트로 설명 영상이나 제품 데모 제작"
+      },
+      "en": {
+        "name": "Remotion Skills",
+        "use": "Video",
+        "offer": "Compose and render videos with React",
+        "example": "Create an explainer or product demo with React components"
+      }
+    },
+    {
+      "id": "skills-637c99109a",
+      "category": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "ko": {
+        "name": "Matt Pocock Skills",
+        "use": "기획·개발",
+        "offer": "요구사항 정리, PRD, 작업 분해, TDD·디버깅·코드 리뷰",
+        "example": "grill-me로 요구사항을 구체화하고 테스트·리뷰 흐름 연결"
+      },
+      "en": {
+        "name": "Matt Pocock Skills",
+        "use": "Planning & development",
+        "offer": "Requirements, PRDs, task breakdown, TDD, debugging, and code review",
+        "example": "Clarify requirements with grill-me, then connect testing and review workflows"
+      }
+    },
+    {
+      "id": "skills-16271aacc6",
+      "category": "skills",
+      "url": "https://github.com/nvidia/skills",
+      "ko": {
+        "name": "NVIDIA Skills",
+        "use": "GPU·AI",
+        "offer": "CUDA, 시뮬레이션 등 전문 기술 작업",
+        "example": "GPU·시뮬레이션 작업에 맞는 전문 지침 찾기"
+      },
+      "en": {
+        "name": "NVIDIA Skills",
+        "use": "GPU & AI",
+        "offer": "Specialized workflows for CUDA, simulation, and AI",
+        "example": "Find domain guidance for GPU or simulation work"
+      }
+    },
+    {
+      "id": "skills-f2c662a213",
+      "category": "skills",
+      "url": "https://github.com/github/awesome-copilot",
+      "ko": {
+        "name": "Awesome Copilot",
+        "use": "Copilot 자료 모음",
+        "offer": "스킬·지침·에이전트 설정 예시 탐색",
+        "example": "팀의 Copilot 설정에 참고할 지침·스킬 찾기"
+      },
+      "en": {
+        "name": "Awesome Copilot",
+        "use": "Copilot collection",
+        "offer": "Discover skills, instructions, and agent configurations",
+        "example": "Find examples to adapt for your team's Copilot setup"
+      }
+    },
+    {
+      "id": "skills-ec673bd769",
+      "category": "skills",
+      "url": "https://github.com/pbakaus/impeccable",
+      "ko": {
+        "name": "Impeccable",
+        "use": "UI·UX 디자인",
+        "offer": "디자인 비평, 접근성 점검, 타이포그래피·레이아웃·모션 개선을 위한 스킬과 도구",
+        "example": "만든 화면의 위계·간격·완성도를 개선할 때"
+      },
+      "en": {
+        "name": "Impeccable",
+        "use": "UI & UX design",
+        "offer": "Skills and tools for design critique, accessibility checks, typography, layout, and motion",
+        "example": "Improve hierarchy, spacing, and polish in an existing interface"
+      }
+    },
+    {
+      "id": "skills-dae9f02535",
+      "category": "skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "ko": {
+        "name": "Addy Osmani Agent Skills",
+        "use": "개발 품질",
+        "offer": "요구사항, TDD, 코드 리뷰, 웹 성능 점검을 개발 단계별로 안내",
+        "example": "팀의 테스트·리뷰 기준을 반복 가능한 절차로 만들 때"
+      },
+      "en": {
+        "name": "Addy Osmani Agent Skills",
+        "use": "Engineering quality",
+        "offer": "Guidance for requirements, TDD, code review, and web performance across the development lifecycle",
+        "example": "Turn team testing and review standards into repeatable workflows"
+      }
+    },
+    {
+      "id": "skills-adb1f28c55",
+      "category": "skills",
+      "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "ko": {
+        "name": "Context Engineering Skills",
+        "use": "컨텍스트 설계",
+        "offer": "컨텍스트 압축·품질 저하, 메모리, 도구 설계, 에이전트 평가 패턴",
+        "example": "긴 작업에서 정보 누락·컨텍스트 비용을 분석할 때"
+      },
+      "en": {
+        "name": "Context Engineering Skills",
+        "use": "Context engineering",
+        "offer": "Patterns for context compression and degradation, memory, tool design, and agent evaluation",
+        "example": "Investigate information loss and context costs in long tasks"
+      }
+    },
+    {
+      "id": "skills-d0307bd4d4",
+      "category": "skills",
+      "url": "https://github.com/prisma/skills",
+      "ko": {
+        "name": "Prisma Skills",
+        "use": "ORM·DB 개발",
+        "offer": "Prisma CLI, Client, 스키마·마이그레이션과 버전 전환 지침",
+        "example": "Prisma 프로젝트의 DB 변경이나 업그레이드를 준비할 때"
+      },
+      "en": {
+        "name": "Prisma Skills",
+        "use": "ORM & database",
+        "offer": "Guidance for Prisma CLI, Client, schemas, migrations, and version upgrades",
+        "example": "Prepare database changes or upgrades in a Prisma project"
+      }
+    },
+    {
+      "id": "skills-afd49d6843",
+      "category": "skills",
+      "url": "https://github.com/neondatabase/agent-skills",
+      "ko": {
+        "name": "Neon Agent Skills",
+        "use": "Postgres·클라우드",
+        "offer": "Neon·Postgres 문서와 브랜치 기반 개발·마이그레이션 테스트 지침",
+        "example": "분리된 DB 브랜치에서 스키마 변경을 검증할 때"
+      },
+      "en": {
+        "name": "Neon Agent Skills",
+        "use": "Postgres & cloud",
+        "offer": "Neon and Postgres documentation plus branching and migration-testing workflows",
+        "example": "Validate schema changes on an isolated database branch"
+      }
+    },
+    {
+      "id": "skills-3e957fd654",
+      "category": "skills",
+      "url": "https://github.com/google/agents-cli",
+      "ko": {
+        "name": "Google Agents CLI",
+        "use": "에이전트 개발·운영",
+        "offer": "Google ADK 프로젝트 생성, 평가 데이터셋·지표, 배포, CI/CD, 로그·트레이스 관측 스킬",
+        "example": "Google Cloud용 에이전트를 만들고 평가 결과를 비교한 뒤 배포할 때"
+      },
+      "en": {
+        "name": "Google Agents CLI",
+        "use": "Agent development & operations",
+        "offer": "Skills for Google ADK project creation, evaluation datasets and metrics, deployment, CI/CD, logs, and traces",
+        "example": "Build an agent for Google Cloud, compare evaluation results, then deploy it"
+      }
+    },
+    {
+      "id": "skills-914476e6ab",
+      "category": "skills",
+      "url": "https://github.com/cloudflare/skills",
+      "ko": {
+        "name": "Cloudflare Skills",
+        "use": "엣지·서버리스",
+        "offer": "Workers, Agents SDK, Durable Objects, Wrangler, 웹 성능과 Cloudflare One 실무 지침",
+        "example": "상태가 있는 에이전트나 Worker를 만들고 배포 설정까지 검토할 때"
+      },
+      "en": {
+        "name": "Cloudflare Skills",
+        "use": "Edge & serverless",
+        "offer": "Practical guidance for Workers, Agents SDK, Durable Objects, Wrangler, web performance, and Cloudflare One",
+        "example": "Build a stateful agent or Worker and review its deployment configuration"
+      }
+    },
+    {
+      "id": "mcp-faa318861b",
+      "category": "mcp",
+      "url": "https://github.com/github/github-mcp-server",
+      "ko": {
+        "name": "GitHub MCP Server",
+        "use": "개발 협업",
+        "offer": "저장소·이슈·PR·Actions 연결",
+        "example": "이슈를 읽고 관련 변경의 PR 초안 작성"
+      },
+      "en": {
+        "name": "GitHub MCP Server",
+        "use": "Development",
+        "offer": "Connect repositories, issues, PRs, and Actions",
+        "example": "Read an issue and draft a PR for the related change"
+      }
+    },
+    {
+      "id": "mcp-ba31bde2df",
+      "category": "mcp",
+      "url": "https://github.com/microsoft/playwright-mcp",
+      "ko": {
+        "name": "Playwright MCP",
+        "use": "브라우저",
+        "offer": "실제 웹페이지 탐색과 브라우저 조작",
+        "example": "웹페이지 폼 입력 후 결과 화면 확인"
+      },
+      "en": {
+        "name": "Playwright MCP",
+        "use": "Browser",
+        "offer": "Navigate and interact with web pages",
+        "example": "Fill a web form and inspect the resulting page"
+      }
+    },
+    {
+      "id": "mcp-02e05af402",
+      "category": "mcp",
+      "url": "https://github.com/google/mcp",
+      "ko": {
+        "name": "Google MCP",
+        "use": "클라우드",
+        "offer": "Google Cloud 서비스 연결",
+        "example": "Cloud 데이터와 서비스를 사용하는 작업 연결"
+      },
+      "en": {
+        "name": "Google MCP",
+        "use": "Cloud",
+        "offer": "Connect Google Cloud services",
+        "example": "Connect a workflow to Cloud data and services"
+      }
+    },
+    {
+      "id": "mcp-f425676461",
+      "category": "mcp",
+      "url": "https://github.com/perplexityai/modelcontextprotocol",
+      "ko": {
+        "name": "Perplexity MCP",
+        "use": "검색·조사",
+        "offer": "웹 검색과 출처 기반 조사 연결",
+        "example": "기술 조사에 필요한 웹 근거 모으기"
+      },
+      "en": {
+        "name": "Perplexity MCP",
+        "use": "Search & research",
+        "offer": "Connect web search and source-based research",
+        "example": "Gather web sources for a technical investigation"
+      }
+    },
+    {
+      "id": "mcp-16a7277d62",
+      "category": "mcp",
+      "url": "https://github.com/upstash/context7",
+      "ko": {
+        "name": "Context7",
+        "use": "라이브러리 문서",
+        "offer": "라이브러리별·버전별 문서와 코드 예시 조회. MCP 또는 CLI+Skills 방식 제공",
+        "example": "사용 중인 버전에 맞는 API 사용법을 확인할 때"
+      },
+      "en": {
+        "name": "Context7",
+        "use": "Library documentation",
+        "offer": "Retrieve library- and version-specific docs and examples through MCP or CLI + Skills",
+        "example": "Check API usage against the version used by your project"
+      }
+    },
+    {
+      "id": "mcp-31ba1639da",
+      "category": "mcp",
+      "url": "https://developers.openai.com/learn/docs-mcp",
+      "ko": {
+        "name": "OpenAI Docs MCP",
+        "use": "공식 문서 조회",
+        "offer": "읽기 전용 OpenAI 문서 검색과 본문 조회",
+        "example": "설정·API 설명을 원문과 대조할 때. [실제 업무 사례](../guides/cases/docs-mcp-review.md)"
+      },
+      "en": {
+        "name": "OpenAI Docs MCP",
+        "use": "Official docs",
+        "offer": "Read-only documentation search and page retrieval",
+        "example": "Check setup/API guidance against its source. [Executed workflow](../guides/cases/docs-mcp-review.en.md)"
+      }
+    },
+    {
+      "id": "mcp-75ffc0e085",
+      "category": "mcp",
+      "url": "https://developers.figma.com/docs/figma-mcp-server/",
+      "ko": {
+        "name": "Figma MCP",
+        "use": "디자인 연결",
+        "offer": "Figma 디자인 문맥 제공. 구성에 따라 캔버스 변경도 가능",
+        "example": "디자인·토큰을 코드와 대응할 때. 파일 권한·쓰기 범위 확인"
+      },
+      "en": {
+        "name": "Figma MCP",
+        "use": "Design connection",
+        "offer": "Design context; some configurations also allow canvas changes",
+        "example": "Map designs/tokens to code; check file access and write scope"
+      }
+    },
+    {
+      "id": "mcp-006d02aee8",
+      "category": "mcp",
+      "url": "https://ui.shadcn.com/docs/mcp",
+      "ko": {
+        "name": "shadcn MCP",
+        "use": "UI 컴포넌트",
+        "offer": "레지스트리 컴포넌트 탐색·검색·설치",
+        "example": "호환 컴포넌트를 찾고 설치 diff를 검토할 때"
+      },
+      "en": {
+        "name": "shadcn MCP",
+        "use": "UI components",
+        "offer": "Browse, search, and install registry components",
+        "example": "Find compatible components and review installation diffs"
+      }
+    },
+    {
+      "id": "mcp-379642deb5",
+      "category": "mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "ko": {
+        "name": "Chrome DevTools MCP",
+        "use": "웹 성능·디버깅",
+        "offer": "Chrome 성능 트레이스, 네트워크 요청, 콘솔·스크린샷 조회와 브라우저 조작",
+        "example": "느린 화면·실패 요청의 원인을 분석할 때. 브라우저 데이터 노출·기본 통계 수집 확인"
+      },
+      "en": {
+        "name": "Chrome DevTools MCP",
+        "use": "Web performance & debugging",
+        "offer": "Chrome performance traces, network requests, console, screenshots, and browser interaction",
+        "example": "Investigate slow pages and failed requests; review browser data access and default usage statistics"
+      }
+    },
+    {
+      "id": "mcp-cfe6b1639c",
+      "category": "mcp",
+      "url": "https://github.com/mksglu/context-mode",
+      "ko": {
+        "name": "Context Mode",
+        "use": "고급 컨텍스트 관리",
+        "offer": "도구 출력의 실행·인덱싱·검색, 로컬 세션 저장, 환경별 라우팅 훅",
+        "example": "출력이 큰 장기 작업을 시험할 때. 훅 지원·저장 정책은 환경별 확인"
+      },
+      "en": {
+        "name": "Context Mode",
+        "use": "Advanced context management",
+        "offer": "Tool-output execution, indexing and search, local session storage, and host-specific routing hooks",
+        "example": "Trial long tasks with large output; check host-specific hook support and storage policy"
+      }
+    },
+    {
+      "id": "tools-3888c0e320",
+      "category": "tools",
+      "url": "https://github.com/vercel-labs/skills",
+      "ko": {
+        "name": "Skills CLI / find-skills",
+        "use": "스킬 검색·관리",
+        "offer": "스킬 검색·설치·업데이트를 위한 CLI와 find-skills 탐색 스킬",
+        "example": "원하는 작업을 설명하고 사용할 스킬을 찾을 때"
+      },
+      "en": {
+        "name": "Skills CLI / find-skills",
+        "use": "Skill discovery & management",
+        "offer": "A CLI for discovering, installing, and updating skills, with a find-skills discovery skill",
+        "example": "Find a skill by describing the task you want to perform"
+      }
+    },
+    {
+      "id": "tools-401c6af5b5",
+      "category": "tools",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "ko": {
+        "name": "agent-browser",
+        "use": "브라우저 CLI",
+        "offer": "페이지 스냅샷·요소 참조 기반 브라우저 조작 CLI와 사용 스킬",
+        "example": "MCP 외에 CLI 방식으로 웹 작업을 연결하고 싶을 때"
+      },
+      "en": {
+        "name": "agent-browser",
+        "use": "Browser CLI",
+        "offer": "Browser automation CLI with snapshots, element references, and a usage skill",
+        "example": "Connect browser tasks through a CLI workflow"
+      }
+    },
+    {
+      "id": "tools-c8eb6ea0d4",
+      "category": "tools",
+      "url": "https://github.com/microsoft/playwright-cli",
+      "ko": {
+        "name": "Playwright CLI",
+        "use": "브라우저 검증",
+        "offer": "세션을 유지하며 클릭·입력·스크린샷·네트워크·트레이스·코드 기록을 실행하는 CLI와 스킬",
+        "example": "에이전트가 구현한 화면을 브라우저에서 재현하고 증거를 남길 때"
+      },
+      "en": {
+        "name": "Playwright CLI",
+        "use": "Browser verification",
+        "offer": "A CLI and skill for persistent sessions, clicks, input, screenshots, network inspection, tracing, and code recording",
+        "example": "Reproduce an interface in a browser and save evidence after an agent implements it"
+      }
+    },
+    {
+      "id": "tools-b9d2abdd81",
+      "category": "tools",
+      "url": "https://github.com/googleworkspace/cli",
+      "ko": {
+        "name": "Google Workspace CLI",
+        "use": "업무 서비스",
+        "offer": "Gmail·Drive·Calendar·Sheets 등 API의 CLI, JSON 출력, 업무 스킬",
+        "example": "메일·일정·문서 업무를 자동화할 때. 개발 중이며 Google 공식 지원 제품은 아님"
+      },
+      "en": {
+        "name": "Google Workspace CLI",
+        "use": "Office workflows",
+        "offer": "CLI for Gmail, Drive, Calendar, Sheets, and other APIs, JSON output, and workflow skills",
+        "example": "Automate email, calendar, and document tasks. Under development; not officially supported by Google"
+      }
+    },
+    {
+      "id": "tools-6e18aa23e1",
+      "category": "tools",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "ko": {
+        "name": "HyperFrames",
+        "use": "HTML 영상 제작",
+        "offer": "HTML·CSS·미디어를 MP4로 렌더링하는 CLI와 제작 스킬",
+        "example": "HTML 자산으로 제품 데모·설명 영상 제작. 로컬 렌더링에는 Node.js 22+·FFmpeg 필요"
+      },
+      "en": {
+        "name": "HyperFrames",
+        "use": "HTML video creation",
+        "offer": "CLI and skills for rendering HTML, CSS, and media into MP4",
+        "example": "Create product demos and explainers from HTML assets; local rendering needs Node.js 22+ and FFmpeg"
+      }
+    },
+    {
+      "id": "tools-dec36f96df",
+      "category": "tools",
+      "url": "https://github.com/microsoft/markitdown",
+      "ko": {
+        "name": "MarkItDown",
+        "use": "문서 입력·변환",
+        "offer": "PDF·Office 등 파일을 Markdown으로 변환하는 Python 라이브러리·CLI와 MCP 패키지",
+        "example": "검색·요약·RAG용 텍스트 준비. 시각적 원본 복원이 아닌 문서 구조·내용 추출"
+      },
+      "en": {
+        "name": "MarkItDown",
+        "use": "Document input & conversion",
+        "offer": "Python library, CLI, and MCP package for converting PDF, Office, and other files to Markdown",
+        "example": "Prepare text for search, summarization, or RAG; extracts structure/content rather than preserving visual fidelity"
+      }
+    },
+    {
+      "id": "tools-73699a0ded",
+      "category": "tools",
+      "url": "https://skills.sh/",
+      "ko": {
+        "name": "skills.sh",
+        "use": "스킬 디렉터리",
+        "offer": "스킬 검색과 All Time·Trending·Hot 목록 제공",
+        "example": "새 스킬 후보와 현재 관심 흐름을 찾아볼 때"
+      },
+      "en": {
+        "name": "skills.sh",
+        "use": "Skill directory",
+        "offer": "Skill discovery with All Time, Trending, and Hot listings",
+        "example": "Discover new candidates and current interest signals"
+      }
+    },
+    {
+      "id": "plugins-8c6014a36c",
+      "category": "plugins",
+      "url": "https://github.com/obra/superpowers",
+      "ko": {
+        "name": "Superpowers",
+        "use": "개발 워크플로",
+        "offer": "계획·TDD·디버깅·검증을 묶은 스킬 기반 개발 방법론",
+        "example": "새 기능의 설계부터 테스트·리뷰까지 절차화"
+      },
+      "en": {
+        "name": "Superpowers",
+        "use": "Development workflow",
+        "offer": "A skills-based methodology for planning, TDD, debugging, and verification",
+        "example": "Structure feature work from design through tests and review"
+      }
+    },
+    {
+      "id": "plugins-632d5e5755",
+      "category": "plugins",
+      "url": "https://github.com/microsoft/azure-skills",
+      "ko": {
+        "name": "Azure Skills Plugin",
+        "use": "Azure 개발·운영",
+        "offer": "Azure 배포·검증·진단·비용·보안 지침과 Azure·Foundry MCP 구성을 함께 제공",
+        "example": "Azure 리소스를 조회하고 앱을 준비·배포하거나 장애와 비용을 분석할 때"
+      },
+      "en": {
+        "name": "Azure Skills Plugin",
+        "use": "Azure development & operations",
+        "offer": "Azure deployment, validation, diagnostics, cost, and security guidance bundled with Azure and Foundry MCP configuration",
+        "example": "Inspect Azure resources, prepare and deploy an app, or analyze incidents and cost"
+      }
+    },
+    {
+      "id": "plugins-a2b624049e",
+      "category": "plugins",
+      "url": "https://github.com/getsentry/sentry-for-ai",
+      "ko": {
+        "name": "Sentry for AI",
+        "use": "관측·운영 디버깅",
+        "offer": "Sentry 설치, 오류·트레이스·로그 분석, 이슈 수정, 알림과 OpenTelemetry 구성 스킬",
+        "example": "운영 오류의 영향을 파악하고 원인 문맥을 바탕으로 코드까지 수정할 때"
+      },
+      "en": {
+        "name": "Sentry for AI",
+        "use": "Observability & production debugging",
+        "offer": "Skills for Sentry setup, error, trace, and log analysis, issue repair, alerts, and OpenTelemetry configuration",
+        "example": "Assess the impact of a production error and fix code using its runtime context"
+      }
+    },
+    {
+      "id": "plugins-b633eb15d9",
+      "category": "plugins",
+      "url": "https://developers.openai.com/learn/developers-codex-plugin",
+      "ko": {
+        "name": "OpenAI Developers Plugin",
+        "use": "OpenAI API 개발",
+        "offer": "Platform 연결, API 키 설정 지원, Agents SDK 개발 안내. 환경별 제공 기능은 다름",
+        "example": "OpenAI API 앱을 만들거나 오류를 조사할 때. 공식 문서에서 설치·지원 범위 확인"
+      },
+      "en": {
+        "name": "OpenAI Developers Plugin",
+        "use": "OpenAI API development",
+        "offer": "Platform connection, API key setup, and Agents SDK guidance; capabilities differ by environment",
+        "example": "Build OpenAI API apps or diagnose errors; check official installation and compatibility documentation"
+      }
+    },
+    {
+      "id": "plugins-d7c024a0fd",
+      "category": "plugins",
+      "url": "https://github.com/momentic-ai/skills",
+      "ko": {
+        "name": "Momentic Agent Skills",
+        "use": "웹·모바일 E2E",
+        "offer": "테스트 작성·실행·실패 분류·수리 스킬과 브라우저·모바일 MCP 서버 구성",
+        "example": "기능 변경 뒤 실제 브라우저나 기기에서 회귀 테스트를 만들고 고칠 때"
+      },
+      "en": {
+        "name": "Momentic Agent Skills",
+        "use": "Web & mobile E2E",
+        "offer": "Skills for authoring, running, classifying, and repairing tests, bundled with browser and mobile MCP servers",
+        "example": "Create and repair regression tests on a real browser or device after a feature change"
+      }
+    },
+    {
+      "id": "validation-8273f319c7",
+      "category": "validation",
+      "url": "https://github.com/cisco-ai-defense/skill-scanner",
+      "ko": {
+        "name": "Cisco Skill Scanner",
+        "use": "스킬 보안 검토",
+        "offer": "스킬·스크립트의 정적·행동·선택적 LLM 분석과 CI 연동",
+        "example": "외부 스킬을 설치하거나 팀에 배포하기 전 의심 동작 검토"
+      },
+      "en": {
+        "name": "Cisco Skill Scanner",
+        "use": "Skill security review",
+        "offer": "Static, behavioral, and optional LLM analysis of skills and scripts, plus CI integration",
+        "example": "Review suspicious behavior before installing or distributing third-party skills"
+      }
+    },
+    {
+      "id": "validation-baf9cbcdf7",
+      "category": "validation",
+      "url": "https://github.com/promptfoo/promptfoo",
+      "ko": {
+        "name": "Promptfoo",
+        "use": "평가·회귀·레드팀",
+        "offer": "설정 기반 프롬프트·에이전트·RAG 평가, 모델 비교, 보안 테스트와 CI 연동",
+        "example": "모델·프롬프트 변경 전후의 정확도와 실패 사례 비교"
+      },
+      "en": {
+        "name": "Promptfoo",
+        "use": "Evals, regression, red teaming",
+        "offer": "Config-driven prompt, agent, and RAG evaluation, model comparison, security tests, and CI integration",
+        "example": "Compare accuracy and failure cases across model or prompt changes"
+      }
+    },
+    {
+      "id": "harnesses-191947403d",
+      "category": "harnesses",
+      "url": "https://github.com/langchain-ai/deepagents",
+      "ko": {
+        "name": "Deep Agents",
+        "use": "에이전트 하네스",
+        "offer": "파일시스템, 컨텍스트 관리, 서브에이전트, 스킬·도구와 승인 흐름을 묶은 실행 구성",
+        "example": "여러 단계 작업의 실행 골격이 필요할 때. 도구·샌드박스 경계는 별도로 설계"
+      },
+      "en": {
+        "name": "Deep Agents",
+        "use": "Agent harness",
+        "offer": "Filesystem, context management, subagents, skills/tools, and approval workflows",
+        "example": "Start a multi-step agent workflow; enforce tool and sandbox boundaries separately"
+      }
+    },
+    {
+      "id": "frameworks-82fcf33f25",
+      "category": "frameworks",
+      "url": "https://github.com/openai/openai-agents-python",
+      "ko": {
+        "name": "OpenAI Agents SDK",
+        "use": "에이전트 구성",
+        "offer": "도구 호출과 핸드오프를 코드로 구성",
+        "example": "도구를 호출하는 작은 에이전트 앱부터 시작"
+      },
+      "en": {
+        "name": "OpenAI Agents SDK",
+        "use": "Agent orchestration",
+        "offer": "Compose tool calls and agent handoffs",
+        "example": "Start with a small app that calls tools"
+      }
+    },
+    {
+      "id": "frameworks-642743ad90",
+      "category": "frameworks",
+      "url": "https://github.com/langchain-ai/langgraph",
+      "ko": {
+        "name": "LangGraph",
+        "use": "상태·실행 흐름",
+        "offer": "분기와 상태가 있는 에이전트 실행 설계",
+        "example": "분기와 상태를 가진 여러 단계 작업 구성"
+      },
+      "en": {
+        "name": "LangGraph",
+        "use": "State & control flow",
+        "offer": "Build stateful agent execution flows",
+        "example": "Model a multi-step workflow with branches and state"
+      }
+    },
+    {
+      "id": "frameworks-b6a803a2c8",
+      "category": "frameworks",
+      "url": "https://github.com/microsoft/agent-framework",
+      "ko": {
+        "name": "Microsoft Agent Framework",
+        "use": "Python·.NET",
+        "offer": "Microsoft 생태계의 에이전트 시스템 개발",
+        "example": "Python·.NET 서비스에 에이전트 흐름 통합"
+      },
+      "en": {
+        "name": "Microsoft Agent Framework",
+        "use": "Python & .NET",
+        "offer": "Build agent systems in the Microsoft ecosystem",
+        "example": "Integrate agent workflows into Python or .NET services"
+      }
+    },
+    {
+      "id": "frameworks-b6c275efa5",
+      "category": "frameworks",
+      "url": "https://github.com/google/adk-python",
+      "ko": {
+        "name": "Google ADK",
+        "use": "개발·평가",
+        "offer": "Google 생태계의 에이전트 개발 키트",
+        "example": "Google 도구를 활용하는 에이전트 앱 개발"
+      },
+      "en": {
+        "name": "Google ADK",
+        "use": "Development & evaluation",
+        "offer": "Agent development kit from Google",
+        "example": "Build an agent app around Google tooling"
+      }
+    },
+    {
+      "id": "frameworks-e916d97516",
+      "category": "frameworks",
+      "url": "https://github.com/pydantic/pydantic-ai",
+      "ko": {
+        "name": "PydanticAI",
+        "use": "타입·구조화 출력",
+        "offer": "Python 타입 중심의 에이전트 앱 개발",
+        "example": "응답을 백엔드에서 다룰 구조화 데이터로 받기"
+      },
+      "en": {
+        "name": "PydanticAI",
+        "use": "Types & structured output",
+        "offer": "Build agent applications with Python types",
+        "example": "Return structured data for a typed backend"
+      }
+    },
+    {
+      "id": "frameworks-cce1971943",
+      "category": "frameworks",
+      "url": "https://github.com/huggingface/smolagents",
+      "ko": {
+        "name": "smolagents",
+        "use": "가벼운 실험",
+        "offer": "작은 코드로 에이전트 구현과 실험",
+        "example": "작은 예제를 읽고 도구 실행 흐름 실험"
+      },
+      "en": {
+        "name": "smolagents",
+        "use": "Lightweight experiments",
+        "offer": "Implement and experiment with agents in a small codebase",
+        "example": "Read a small example and experiment with tool execution"
+      }
+    },
+    {
+      "id": "frameworks-715b6bc81a",
+      "category": "frameworks",
+      "url": "https://github.com/crewAIInc/crewAI",
+      "ko": {
+        "name": "CrewAI",
+        "use": "역할별 협업",
+        "offer": "역할이 다른 에이전트의 협업 구성",
+        "example": "조사·분석·작성 역할을 나눈 작업 구성"
+      },
+      "en": {
+        "name": "CrewAI",
+        "use": "Role-based collaboration",
+        "offer": "Coordinate agents with different roles",
+        "example": "Split work into research, analysis, and writing roles"
+      }
+    },
+    {
+      "id": "frameworks-c1af6b5849",
+      "category": "frameworks",
+      "url": "https://github.com/browser-use/browser-use",
+      "ko": {
+        "name": "browser-use",
+        "use": "웹 자동화",
+        "offer": "에이전트의 브라우저 작업을 구현하는 라이브러리",
+        "example": "Python 앱 안에 웹 탐색 자동화 구현"
+      },
+      "en": {
+        "name": "browser-use",
+        "use": "Web automation",
+        "offer": "A library for implementing browser tasks with agents",
+        "example": "Implement browser automation inside a Python app"
+      }
+    },
+    {
+      "id": "agents-8c3dc2a018",
+      "category": "agents",
+      "url": "https://github.com/openai/codex",
+      "ko": {
+        "name": "OpenAI Codex",
+        "use": "코딩",
+        "offer": "저장소 기반 코드 작업과 검증",
+        "example": "저장소의 수정 요청을 구현하고 결과 확인"
+      },
+      "en": {
+        "name": "OpenAI Codex",
+        "use": "Coding",
+        "offer": "Repository-based coding and verification",
+        "example": "Implement a repository change and verify the result"
+      }
+    },
+    {
+      "id": "agents-b5a44c85aa",
+      "category": "agents",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "ko": {
+        "name": "OpenHands",
+        "use": "개발 자동화",
+        "offer": "개발 에이전트 실행과 확장",
+        "example": "개발 자동화를 별도 시스템으로 확장"
+      },
+      "en": {
+        "name": "OpenHands",
+        "use": "Development automation",
+        "offer": "Run and extend software development agents",
+        "example": "Extend development automation into a dedicated system"
+      }
+    },
+    {
+      "id": "agents-27b0817e8f",
+      "category": "agents",
+      "url": "https://github.com/Aider-AI/aider",
+      "ko": {
+        "name": "Aider",
+        "use": "터미널·Git",
+        "offer": "터미널에서 대화하며 코드 수정",
+        "example": "Git 저장소에서 대화하며 수정 사항 검토"
+      },
+      "en": {
+        "name": "Aider",
+        "use": "Terminal & Git",
+        "offer": "Edit code through a terminal conversation",
+        "example": "Review conversational code edits in a Git repository"
+      }
+    },
+    {
+      "id": "agents-533d51d9d3",
+      "category": "agents",
+      "url": "https://github.com/cline/cline",
+      "ko": {
+        "name": "Cline",
+        "use": "코딩",
+        "offer": "승인 기반 코드 수정과 도구 실행",
+        "example": "코드 변경과 명령 실행을 단계별로 확인"
+      },
+      "en": {
+        "name": "Cline",
+        "use": "Coding",
+        "offer": "Coding and tool execution with approval controls",
+        "example": "Inspect code changes and command execution step by step"
+      }
+    },
+    {
+      "id": "agents-508ea0cfd5",
+      "category": "agents",
+      "url": "https://github.com/continuedev/continue",
+      "ko": {
+        "name": "Continue",
+        "use": "개발 워크플로",
+        "offer": "개발 환경에 맞춘 AI 작업 흐름 구성",
+        "example": "기존 개발 환경에 AI 작업 흐름 맞추기"
+      },
+      "en": {
+        "name": "Continue",
+        "use": "Development workflows",
+        "offer": "Customize AI workflows for your development environment",
+        "example": "Adapt AI workflows to an existing development setup"
+      }
+    },
+    {
+      "id": "agents-1004521f78",
+      "category": "agents",
+      "url": "https://github.com/microsoft/magentic-ui",
+      "ko": {
+        "name": "MagenticLite (구 Magentic-UI)",
+        "use": "실험적 웹·파일 에이전트",
+        "offer": "브라우저·로컬 파일 작업, 사용자 승인·개입, VM 샌드박스",
+        "example": "사람 참여형 자동화를 연구할 때. 운영 도입 전 제한 사항 검토"
+      },
+      "en": {
+        "name": "MagenticLite (formerly Magentic-UI)",
+        "use": "Experimental browser & file agent",
+        "offer": "Browser/local file tasks, human approval and intervention, VM sandbox",
+        "example": "Research human-in-the-loop automation; review limitations before production use"
+      }
+    },
+    {
+      "id": "agents-d2fc479804",
+      "category": "agents",
+      "url": "https://github.com/assafelovic/gpt-researcher",
+      "ko": {
+        "name": "GPT Researcher",
+        "use": "조사·보고서",
+        "offer": "여러 출처를 조사해 보고서 작성",
+        "example": "여러 웹 출처를 묶어 조사 보고서 초안 작성"
+      },
+      "en": {
+        "name": "GPT Researcher",
+        "use": "Research & reports",
+        "offer": "Research multiple sources and produce reports",
+        "example": "Draft a research report from multiple web sources"
+      }
+    },
+    {
+      "id": "learning-26b4cbe77e",
+      "category": "learning",
+      "url": "https://github.com/KeWang0622/agent-zero-to-hero",
+      "ko": {
+        "name": "Agent Zero to Hero",
+        "use": "실습 과정",
+        "offer": "프레임워크 없이 에이전트 하네스 구현",
+        "example": "도구 호출·실행 루프를 직접 구현하며 학습"
+      },
+      "en": {
+        "name": "Agent Zero to Hero",
+        "use": "Hands-on course",
+        "offer": "Build an agent harness without a framework",
+        "example": "Learn by implementing tool calls and execution loops"
+      }
+    }
+  ]
+}

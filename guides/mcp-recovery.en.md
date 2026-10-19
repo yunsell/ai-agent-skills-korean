@@ -4,6 +4,8 @@
 
 **Sequence:** registration → server startup → tool call → result check. Pick the failing stage. Being listed, being connected, and completing the task are different states.
 
+Unsure where settings belong? Choose your client in [first steps](client-first-steps.en.md).
+
 - [Server missing from the list](#server-missing)
 - [Server or browser will not start](#browser-start)
 - [Connected, but calls fail](#call-failure)

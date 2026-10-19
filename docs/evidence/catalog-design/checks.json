@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "date": "2026-10-19",
+  "environment": "Chrome desktop; CSS viewport emulation; local Node preview",
+  "baselineCommit": "59a094e268ff618601a6cd6b8fee500a66ab610a",
+  "scope": "Manually recorded observations from actual browser checks, not a raw trace or a usability study. The 503 was deliberately injected by the local preview server, not a production incident.",
+  "baseline": { "surface": "GitHub Skills table", "viewportWidth": 390, "tableVisibleWidth": 325, "tableContentWidth": 496 },
+  "checks": [
+    { "name": "initial", "results": 56, "status": "56개 자료" },
+    { "name": "search-and-category", "query": "Figma", "category": "mcp", "results": 1, "title": "Figma MCP" },
+    { "name": "empty", "results": 0, "guidanceVisible": true },
+    { "name": "reset", "query": "", "category": "", "focus": "query", "status": "56개 자료" },
+    { "name": "language-preserves-filters", "language": "en", "query": "Figma", "category": "mcp", "status": "1 resource" },
+    { "name": "keyboard-details", "focusTag": "SUMMARY", "openAfterSpace": true },
+    { "name": "controlled-503", "query": "Figma", "category": "mcp", "errorVisible": true },
+    { "name": "retry-recovers", "query": "Figma", "category": "mcp", "errorHidden": true, "focus": "query", "status": "1개 자료" },
+    { "name": "reload-restores-url-state", "query": "Figma", "category": "mcp", "status": "1개 자료" },
+    { "name": "responsive", "width": 320, "scrollWidth": 320, "results": 56 },
+    { "name": "responsive", "width": 390, "scrollWidth": 390, "results": 56 },
+    { "name": "responsive", "width": 768, "scrollWidth": 768, "results": 56 },
+    { "name": "responsive", "width": 1280, "scrollWidth": 1280, "results": 56 }
+  ],
+  "screenshots": ["before.png", "reader-mobile.png", "reader-desktop.png", "keyboard.png", "error.png"]
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="카탈로그의 56개 자료를 검색하세요. 작업 하나를 고르고 원본을 확인한 뒤 작게 시작하세요.">
+  <title>도구 탐색 · Agent Stack Brief</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#search-form">검색으로 건너뛰기</a>
+  <header class="masthead">
+    <a class="brand" href="https://github.com/yunsell/ai-agent-skills-korean/blob/main/README.md">Agent Stack Brief</a>
+    <a id="language" href="./en.html" lang="en">English</a>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <p class="eyebrow">THE TOOL SHELF / CATALOG</p>
+      <h1 id="title">내 작업에 맞는 도구를 찾으세요.</h1>
+      <p>카탈로그의 56개 자료를 검색하세요. 작업 하나를 고르고 원본을 확인한 뒤 작게 시작하세요.</p>
+      <nav class="routes" aria-label="관련 안내">
+        <a href="https://github.com/yunsell/ai-agent-skills-korean/blob/main/catalog/README.md">GitHub 전체 목록</a>
+        <a href="https://github.com/yunsell/ai-agent-skills-korean/blob/main/guides/client-first-steps.md">환경별 첫 단계</a>
+      </nav>
+    </section>
+    <form id="search-form" class="finder" role="search" aria-label="자료 검색">
+      <div><label for="query">이름 또는 작업</label><input id="query" name="q" type="search" maxlength="200" placeholder="Figma, 데이터베이스, 브라우저…"></div>
+      <div><label for="category">분류</label><select id="category" name="category">
+        <option value="">전체 분류</option>
+        <option value="skills">Skills</option>
+        <option value="mcp">MCP</option>
+        <option value="tools">CLI·탐색</option>
+        <option value="plugins">Plugins</option>
+        <option value="validation">검증·평가</option>
+        <option value="harnesses">Harnesses</option>
+        <option value="frameworks">Frameworks</option>
+        <option value="agents">Agents</option>
+        <option value="learning">학습</option>
+      </select></div>
+      <button type="button" id="reset">조건 초기화</button>
+    </form>
+    <section aria-labelledby="results-heading">
+      <div class="results-header"><h2 id="results-heading">자료</h2><p id="status" role="status" aria-live="polite" aria-atomic="true">자료를 불러오는 중입니다…</p></div>
+      <p id="message" hidden></p>
+      <div id="error" role="alert" hidden>
+        <p id="error-message"></p><button type="button" id="retry">다시 시도</button>
+        <p><a href="https://github.com/yunsell/ai-agent-skills-korean/blob/main/catalog/README.md">GitHub 목록 열기</a></p>
+      </div>
+      <ul id="results" aria-busy="true"></ul>
+      <noscript><p>검색에는 JavaScript가 필요합니다. GitHub 전체 목록에서도 모든 자료를 읽을 수 있습니다. <a href="https://github.com/yunsell/ai-agent-skills-korean/blob/main/catalog/README.md">GitHub 목록 열기</a></p></noscript>
+    </section>
+    <footer class="note">기준 자료는 GitHub 한·영 카탈로그입니다. 기본 문서 확인 2026-10-12 · 일부 추가 확인 2026-10-19. 등재가 실행 검증·안전 보장을 뜻하지 않습니다. 검색은 이 페이지에서 처리하며 분석 추적·계정 연결은 없습니다.</footer>
+  </main>
+</body>
+</html>

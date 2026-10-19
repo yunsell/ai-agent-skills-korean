@@ -79,6 +79,8 @@ const paired = [
   ["guides/cases/docs-mcp-review.md", "guides/cases/docs-mcp-review.en.md"],
   ["guides/mcp-recovery.md", "guides/mcp-recovery.en.md"],
   ["guides/design-workflows.md", "guides/design-workflows.en.md"],
+  ["guides/client-first-steps.md", "guides/client-first-steps.en.md"],
+  ["guides/cases/catalog-design.md", "guides/cases/catalog-design.en.md"],
 ];
 const manifest = JSON.parse(read("newsletter/issues.json"));
 assert(manifest.issues.length > 0, "Empty newsletter manifest");
@@ -124,6 +126,9 @@ for (const issue of manifest.issues) {
 }
 const normalized = (file) => [...new Set(links(read(file)).map((link) => {
   if (/^https?:/.test(link)) {
+    if (link === "https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html") {
+      return link.replace("/catalog/en.html", "/catalog/index.html");
+    }
     if (link.startsWith("https://yunsell.github.io/ai-agent-skills-korean/labs/search.html?lang=")) {
       return link.replace(/\?lang=(ko|en)$/, "?lang=language");
     }
@@ -142,6 +147,9 @@ for (const [ko, en] of paired) {
 for (const suffix of ["", ".en"]) {
   const guide = "guides/quick-starts" + suffix + ".md";
   const catalog = "catalog/README" + suffix + ".md";
+  for (const line of withoutCode(read(catalog)).split("\n").filter(line => line.startsWith("|"))) {
+    assert(line.split("|").length - 2 <= 2, catalog + ": full catalog must remain mobile-readable");
+  }
   const comparison = read(catalog).split('<a id="field-cards"></a>')[1]?.split('<a id="recent"></a>')[0];
   assert(comparison && !/^\|/m.test(comparison), catalog + ": comparison must not use wide tables");
   assert.equal((comparison.match(/<details>/g) || []).length, 9, catalog + ": preserve nine comparison entries");

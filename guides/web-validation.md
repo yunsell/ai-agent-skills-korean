@@ -14,6 +14,8 @@
 
 ## 2. 실행 경로를 고르세요
 
+처음 MCP를 연결한다면 [Codex·Claude Code·Cursor별 첫 단계](client-first-steps.md)에서 공개 문서 조회 한 번부터 성공해 보세요. 아래 설정은 브라우저 실습용입니다.
+
 | 경로 | 준비와 첫 행동 |
 | --- | --- |
 | 설치 없이 UI로 확인 | Chrome에서 예제를 열고 네 단계를 직접 실행합니다. Performance 기록은 [실행 사례의 수집 방법](cases/002-browser-evidence.md)을 따르세요. MCP는 필요 없습니다. |

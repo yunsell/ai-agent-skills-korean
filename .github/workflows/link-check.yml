@@ -24,6 +24,8 @@ jobs:
           node scripts/check-content.mjs
           node scripts/build-brand.mjs --check
           node scripts/build-feeds.mjs --check
+          node scripts/build-catalog.mjs --check
+          node scripts/test-catalog.mjs
       - name: Check Markdown links
         # Pages URLs are checked against docs/ by check-content.mjs.
         # A Pages deployment may still be running when this job starts.

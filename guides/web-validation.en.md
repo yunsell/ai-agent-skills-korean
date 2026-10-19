@@ -14,6 +14,8 @@ No login is required. Searches run within the page. Expect 3 initial results, 2 
 
 ## 2. Choose an execution path
 
+New to MCP? Complete one public documentation lookup with [client-specific first steps](client-first-steps.en.md). The setup below is for the browser exercise.
+
 | Path | Preparation and first action |
 | --- | --- |
 | No-install UI check | Open the example in Chrome and run the four steps manually. Follow the [case's collection method](cases/002-browser-evidence.en.md) for Performance recording. No MCP required. |

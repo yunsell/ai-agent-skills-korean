@@ -4,6 +4,8 @@
 
 Design judgment, design-source access, and component search are different tasks. Choose **one outcome**; you do not need all three tools.
 
+**See the result first:** [Executed redesign of this catalog](cases/catalog-design.en.md) · [First connection in your client](client-first-steps.en.md)
+
 [Review a design](#review) · [Implement from Figma](#figma) · [Find components](#components)
 
 <a id="review"></a>

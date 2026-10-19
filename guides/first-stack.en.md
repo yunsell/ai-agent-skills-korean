@@ -4,6 +4,8 @@
 
 Reading the news does not require installing every tool. Start with **one task → minimum setup → small validation**. This is editorial guidance, not a record of executed tests.
 
+For setup, use [client first steps](client-first-steps.en.md). To find a name or task, use [catalog search](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html).
+
 ## 1. Separate the roles
 
 | Role | Question it answers | First action |

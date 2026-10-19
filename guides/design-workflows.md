@@ -4,6 +4,8 @@
 
 디자인 판단, 디자인 원본 읽기, 컴포넌트 검색은 다른 작업입니다. **원하는 결과 하나**로 고르세요. 셋 모두 설치할 필요는 없습니다.
 
+**결과부터 보기:** [이 카탈로그를 실제로 개편한 디자인 업무 사례](cases/catalog-design.md) · [내 환경의 첫 연결](client-first-steps.md)
+
 [디자인 검토](#review) · [Figma에서 구현](#figma) · [컴포넌트 찾기](#components)
 
 <a id="review"></a>
