@@ -1,0 +1,479 @@
+{
+  "format": "Agent Stack Brief / metric-event excerpt v1",
+  "scope": "Selected main-frame metric events; not a complete importable performance trace.",
+  "source": {
+    "tool": "DevTools",
+    "recordedAt": "2026-10-19T01:49:06.156Z",
+    "archiveSha256": "6ad9419f526ef73707586931aa7af03555b3344ace8594e9a8f232aacd67725c",
+    "page": "https://yunsell.github.io/ai-agent-skills-korean/labs/search.html?lang=ko",
+    "totalEvents": 56982
+  },
+  "observations": {
+    "finalLcpCandidateMs": 331.724,
+    "finalLcpCandidateType": "image",
+    "maxObservedInteractionEventMs": 39.733,
+    "interactionCount": 3,
+    "layoutShiftCount": 3,
+    "shiftsWithRecentInput": 3,
+    "screenshotFrameCount": 306
+  },
+  "events": [
+    {
+      "args": {
+        "data": {
+          "documentLoaderURL": "https://yunsell.github.io/ai-agent-skills-korean/labs/search.html?lang=ko",
+          "isLoadingMainFrame": true,
+          "isOutermostMainFrame": true,
+          "navigationId": "C0A29E0CEE40B08D9E6143354BE1E404"
+        },
+        "frame": "575EF1304017E2BDE96DCB467DC3A268"
+      },
+      "cat": "blink.user_timing",
+      "name": "navigationStart",
+      "ph": "R",
+      "pid": 72613,
+      "s": "t",
+      "tid": 8181438,
+      "ts": 450091645580
+    },
+    {
+      "args": {
+        "data": {
+          "candidateIndex": 1,
+          "isMainFrame": true,
+          "isOutermostMainFrame": true,
+          "navigationId": "C0A29E0CEE40B08D9E6143354BE1E404",
+          "nodeId": 142,
+          "nodeName": "H1 id='title'",
+          "performanceTimelineNavigationId": 1551,
+          "size": 18870,
+          "type": "text"
+        },
+        "frame": "575EF1304017E2BDE96DCB467DC3A268"
+      },
+      "cat": "loading,rail,devtools.timeline",
+      "name": "largestContentfulPaint::Candidate",
+      "ph": "R",
+      "pid": 72613,
+      "s": "t",
+      "tid": 8181438,
+      "ts": 450091927304
+    },
+    {
+      "args": {
+        "data": {
+          "candidateIndex": 2,
+          "imageDiscoveryTime": 0,
+          "imageLoadEnd": 0,
+          "imageLoadStart": 0,
+          "isMainFrame": true,
+          "isOutermostMainFrame": true,
+          "loadingAttr": "",
+          "navigationId": "C0A29E0CEE40B08D9E6143354BE1E404",
+          "nodeId": 183,
+          "nodeName": "IMG",
+          "performanceTimelineNavigationId": 1551,
+          "size": 73322,
+          "type": "image"
+        },
+        "frame": "575EF1304017E2BDE96DCB467DC3A268"
+      },
+      "cat": "loading,rail,devtools.timeline",
+      "name": "largestContentfulPaint::Candidate",
+      "ph": "R",
+      "pid": 72613,
+      "s": "t",
+      "tid": 8181438,
+      "ts": 450091977304
+    },
+    {
+      "args": {
+        "data": {
+          "cumulative_score": 0,
+          "frame_max_distance": 159.53125,
+          "had_recent_input": true,
+          "impacted_nodes": [
+            {
+              "debug_name": "ASIDE",
+              "new_rect": [
+                278,
+                1136,
+                1282,
+                190
+              ],
+              "node_id": 156,
+              "old_rect": [
+                278,
+                1295,
+                1282,
+                190
+              ]
+            }
+          ],
+          "is_main_frame": true,
+          "last_input_timestamp": 9846.199999988079,
+          "overall_max_distance": 159.53125,
+          "region_rects": [
+            [
+              278,
+              1136,
+              1282,
+              349
+            ]
+          ],
+          "score": 0.01342342924957215,
+          "weighted_score_delta": 0.01342342924957215
+        },
+        "frame": "575EF1304017E2BDE96DCB467DC3A268"
+      },
+      "cat": "loading",
+      "name": "LayoutShift",
+      "ph": "I",
+      "pid": 72613,
+      "s": "t",
+      "tid": 8181438,
+      "ts": 450101493400,
+      "tts": 1046464
+    },
+    {
+      "args": {
+        "data": {
+          "cumulative_score": 0,
+          "frame_max_distance": 268.59375,
+          "had_recent_input": true,
+          "impacted_nodes": [
+            {
+              "debug_name": "ASIDE",
+              "new_rect": [
+                278,
+                867,
+                1282,
+                190
+              ],
+              "node_id": 156,
+              "old_rect": [
+                278,
+                1136,
+                1282,
+                190
+              ]
+            }
+          ],
+          "is_main_frame": true,
+          "last_input_timestamp": 14710.09999996424,
+          "overall_max_distance": 268.59375,
+          "region_rects": [
+            [
+              278,
+              867,
+              1282,
+              190
+            ],
+            [
+              278,
+              1136,
+              1282,
+              190
+            ]
+          ],
+          "score": 0.02460774299707719,
+          "weighted_score_delta": 0.02460774299707719
+        },
+        "frame": "575EF1304017E2BDE96DCB467DC3A268"
+      },
+      "cat": "loading",
+      "name": "LayoutShift",
+      "ph": "I",
+      "pid": 72613,
+      "s": "t",
+      "tid": 8181438,
+      "ts": 450106356600,
+      "tts": 1290520
+    },
+    {
+      "args": {
+        "data": {
+          "cumulative_score": 0,
+          "frame_max_distance": 428.125,
+          "had_recent_input": true,
+          "impacted_nodes": [
+            {
+              "debug_name": "ASIDE",
+              "new_rect": [
+                278,
+                1295,
+                1282,
+                190
+              ],
+              "node_id": 156,
+              "old_rect": [
+                278,
+                867,
+                1282,
+                190
+              ]
+            }
+          ],
+          "is_main_frame": true,
+          "last_input_timestamp": 19879,
+          "overall_max_distance": 428.125,
+          "region_rects": [
+            [
+              278,
+              867,
+              1282,
+              190
+            ],
+            [
+              278,
+              1295,
+              1282,
+              190
+            ]
+          ],
+          "score": 0.03922351123443368,
+          "weighted_score_delta": 0.03922351123443368
+        },
+        "frame": "575EF1304017E2BDE96DCB467DC3A268"
+      },
+      "cat": "loading",
+      "name": "LayoutShift",
+      "ph": "I",
+      "pid": 72613,
+      "s": "t",
+      "tid": 8181438,
+      "ts": 450111525721,
+      "tts": 1524313
+    },
+    {
+      "args": {
+        "data": {
+          "cancelable": true,
+          "commitFinishTime": 9857.488,
+          "duration": 38.838,
+          "enqueuedToMainThreadTime": 9843.049,
+          "frame": "575EF1304017E2BDE96DCB467DC3A268",
+          "interactionId": 9677,
+          "interactionOffset": 2,
+          "nodeId": 0,
+          "processingEnd": 9843.189,
+          "processingStart": 9843.181,
+          "timeStamp": 9842.915,
+          "type": "pointerdown"
+        }
+      },
+      "cat": "devtools.timeline",
+      "id": "0x52",
+      "name": "EventTiming",
+      "ph": "b",
+      "pid": 72613,
+      "tid": 8181438,
+      "ts": 450101488495
+    },
+    {
+      "args": {
+        "data": {
+          "cancelable": true,
+          "commitFinishTime": 9857.488,
+          "duration": 35.506,
+          "enqueuedToMainThreadTime": 9846.288,
+          "frame": "575EF1304017E2BDE96DCB467DC3A268",
+          "interactionId": 9677,
+          "interactionOffset": 2,
+          "nodeId": 0,
+          "processingEnd": 9846.394,
+          "processingStart": 9846.359,
+          "timeStamp": 9846.247,
+          "type": "pointerup"
+        }
+      },
+      "cat": "devtools.timeline",
+      "id": "0x57",
+      "name": "EventTiming",
+      "ph": "b",
+      "pid": 72613,
+      "tid": 8181438,
+      "ts": 450101491827
+    },
+    {
+      "args": {
+        "data": {
+          "cancelable": true,
+          "commitFinishTime": 9857.488,
+          "duration": 35.506,
+          "enqueuedToMainThreadTime": 9846.288,
+          "frame": "575EF1304017E2BDE96DCB467DC3A268",
+          "interactionId": 9677,
+          "interactionOffset": 2,
+          "nodeId": 146,
+          "processingEnd": 9847.261,
+          "processingStart": 9846.401,
+          "timeStamp": 9846.247,
+          "type": "click"
+        }
+      },
+      "cat": "devtools.timeline",
+      "id": "0x59",
+      "name": "EventTiming",
+      "ph": "b",
+      "pid": 72613,
+      "tid": 8181438,
+      "ts": 450101491827
+    },
+    {
+      "args": {
+        "data": {
+          "cancelable": true,
+          "commitFinishTime": 14724.317,
+          "duration": 39.733,
+          "enqueuedToMainThreadTime": 14708.88,
+          "frame": "575EF1304017E2BDE96DCB467DC3A268",
+          "interactionId": 9684,
+          "interactionOffset": 3,
+          "nodeId": 0,
+          "processingEnd": 14709.008,
+          "processingStart": 14709,
+          "timeStamp": 14708.701,
+          "type": "pointerdown"
+        }
+      },
+      "cat": "devtools.timeline",
+      "id": "0x4d",
+      "name": "EventTiming",
+      "ph": "b",
+      "pid": 72613,
+      "tid": 8181438,
+      "ts": 450106354281
+    },
+    {
+      "args": {
+        "data": {
+          "cancelable": true,
+          "commitFinishTime": 14724.317,
+          "duration": 38.242,
+          "enqueuedToMainThreadTime": 14710.224,
+          "frame": "575EF1304017E2BDE96DCB467DC3A268",
+          "interactionId": 9684,
+          "interactionOffset": 3,
+          "nodeId": 0,
+          "processingEnd": 14710.292,
+          "processingStart": 14710.28,
+          "timeStamp": 14710.192,
+          "type": "pointerup"
+        }
+      },
+      "cat": "devtools.timeline",
+      "id": "0x4f",
+      "name": "EventTiming",
+      "ph": "b",
+      "pid": 72613,
+      "tid": 8181438,
+      "ts": 450106355772
+    },
+    {
+      "args": {
+        "data": {
+          "cancelable": true,
+          "commitFinishTime": 14724.317,
+          "duration": 38.242,
+          "enqueuedToMainThreadTime": 14710.224,
+          "frame": "575EF1304017E2BDE96DCB467DC3A268",
+          "interactionId": 9684,
+          "interactionOffset": 3,
+          "nodeId": 146,
+          "processingEnd": 14710.607,
+          "processingStart": 14710.299,
+          "timeStamp": 14710.192,
+          "type": "click"
+        }
+      },
+      "cat": "devtools.timeline",
+      "id": "0x53",
+      "name": "EventTiming",
+      "ph": "b",
+      "pid": 72613,
+      "tid": 8181438,
+      "ts": 450106355772
+    },
+    {
+      "args": {
+        "data": {
+          "cancelable": true,
+          "commitFinishTime": 19891.858,
+          "duration": 38.295,
+          "enqueuedToMainThreadTime": 19876.91,
+          "frame": "575EF1304017E2BDE96DCB467DC3A268",
+          "interactionId": 9691,
+          "interactionOffset": 4,
+          "nodeId": 0,
+          "processingEnd": 19877.002,
+          "processingStart": 19876.998,
+          "timeStamp": 19876.822,
+          "type": "pointerdown"
+        }
+      },
+      "cat": "devtools.timeline",
+      "id": "0x58",
+      "name": "EventTiming",
+      "ph": "b",
+      "pid": 72613,
+      "tid": 8181438,
+      "ts": 450111522402
+    },
+    {
+      "args": {
+        "data": {
+          "cancelable": true,
+          "commitFinishTime": 19891.858,
+          "duration": 36.075,
+          "enqueuedToMainThreadTime": 19879.076,
+          "frame": "575EF1304017E2BDE96DCB467DC3A268",
+          "interactionId": 9691,
+          "interactionOffset": 4,
+          "nodeId": 0,
+          "processingEnd": 19879.145,
+          "processingStart": 19879.127,
+          "timeStamp": 19879.042,
+          "type": "pointerup"
+        }
+      },
+      "cat": "devtools.timeline",
+      "id": "0x5d",
+      "name": "EventTiming",
+      "ph": "b",
+      "pid": 72613,
+      "tid": 8181438,
+      "ts": 450111524622
+    },
+    {
+      "args": {
+        "data": {
+          "cancelable": true,
+          "commitFinishTime": 19891.858,
+          "duration": 36.075,
+          "enqueuedToMainThreadTime": 19879.076,
+          "frame": "575EF1304017E2BDE96DCB467DC3A268",
+          "interactionId": 9691,
+          "interactionOffset": 4,
+          "nodeId": 147,
+          "processingEnd": 19879.555,
+          "processingStart": 19879.155,
+          "timeStamp": 19879.042,
+          "type": "click"
+        }
+      },
+      "cat": "devtools.timeline",
+      "id": "0x5f",
+      "name": "EventTiming",
+      "ph": "b",
+      "pid": 72613,
+      "tid": 8181438,
+      "ts": 450111524622
+    }
+  ],
+  "filmstrip": {
+    "method": "Performance screenshot frames with original timing; not an MCP screencast.",
+    "frames": 306,
+    "frameSpanSeconds": 21.26166
+  }
+}

@@ -11,14 +11,14 @@
       <link>https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-10-19.en.md</link>
       <guid isPermaLink="true">https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-10-19.en.md</guid>
       <pubDate>Sun, 18 Oct 2026 15:00:00 GMT</pubDate>
-      <description>skills · mcp · harness — Read the full issue on GitHub.</description>
+      <description>&lt;ul&gt;&lt;li&gt;Skill Scanner 2.3.0 reports unscanned symlinks and load failures; review CI rules.&lt;/li&gt;&lt;li&gt;Chrome DevTools MCP 1.11.0 recording/diagnostic changes, plus a separate DevTools UI case.&lt;/li&gt;&lt;li&gt;Deep Agents 0.7.26–0.7.28 improves async status reporting and glob path handling.&lt;/li&gt;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>001 · Before adding tools, check the boundaries</title>
       <link>https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-10-14.en.md</link>
       <guid isPermaLink="true">https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-10-14.en.md</guid>
       <pubDate>Tue, 13 Oct 2026 15:00:00 GMT</pubDate>
-      <description>skills · mcp · harness — Read the full issue on GitHub.</description>
+      <description>&lt;ul&gt;&lt;li&gt;agent-browser 0.39.1 prevents duplicate execution after a lost response; inspect before retrying.&lt;/li&gt;&lt;li&gt;Deep Agents 0.7.25 checks path permissions with symlink targets in mind.&lt;/li&gt;&lt;li&gt;Skill Scanner 2.2.1 and 2.2.2 fixes: update the scanner before reviewing third-party skills.&lt;/li&gt;&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

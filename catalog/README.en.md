@@ -14,7 +14,7 @@ Open one group for a starting point. If you know a name, use Ctrl+F / ⌘F. Proj
 <details>
 <summary><strong>01 · Build and test</strong> — interfaces, browsers, and code quality</summary>
 
-**Start with:** [Frontend quick start](#starter-frontend).
+**Start with:** [Frontend quick start](../guides/quick-starts.en.md#frontend).
 
 - UI implementation: [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills)
 - Browser interaction: [Playwright MCP](https://github.com/microsoft/playwright-mcp); performance diagnosis: [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp)
@@ -40,7 +40,7 @@ Open one group for a starting point. If you know a name, use Ctrl+F / ⌘F. Proj
 <details>
 <summary><strong>03 · Operate and manage data</strong> — databases, GitHub, errors, and skill review</summary>
 
-**Start with:** [Database quick start](#starter-db) or [Error investigation](#starter-ops).
+**Start with:** [Database quick start](../guides/quick-starts.en.md#database) or [Error investigation](../guides/quick-starts.en.md#operations).
 
 - Database guidance: [Supabase Agent Skills](https://github.com/supabase/agent-skills)
 - Issues and PRs: [GitHub MCP Server](https://github.com/github/github-mcp-server)
@@ -53,7 +53,7 @@ Open one group for a starting point. If you know a name, use Ctrl+F / ⌘F. Proj
 <details>
 <summary><strong>04 · Build an agent</strong> — application frameworks, evaluation, and execution</summary>
 
-**Start with:** [Agent development quick start](#starter-agent) for an ADK app and evaluation workflow.
+**Start with:** [Agent development quick start](../guides/quick-starts.en.md#agent) for an ADK app and evaluation workflow.
 
 - Agent applications: [OpenAI Agents SDK](https://github.com/openai/openai-agents-python)
 - ADK development and evaluation: [Google Agents CLI](https://github.com/google/agents-cli)
@@ -76,128 +76,15 @@ Open one group for a starting point. If you know a name, use Ctrl+F / ⌘F. Proj
 
 ## Task-based quick starts
 
-If comparing tools one by one feels slow, start with a combination built around your goal. Setup time depends on your environment and authentication. Review the source repository and files before running commands, and select only the skills you need. The `npx` commands require Node.js/npm.
+Each link opens the instructions directly.
 
-<a id="starter-frontend"></a>
-<details>
-<summary><strong>01 · Frontend quality check</strong> — implementation guidance + current docs + real-browser verification</summary>
-
-**Stack:** [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) · [Context7](https://github.com/upstash/context7) · [Playwright CLI](https://github.com/microsoft/playwright-cli)
-
-**Get started**
-
-```bash
-npx skills add vercel-labs/agent-skills
-npx ctx7 setup
-npm install -g @playwright/cli@latest
-playwright-cli install --skills
-```
-
-**First request**
-
-> Review this React/Next.js interface against performance and UI guidance, then make the necessary changes. Use Context7 for documentation matching the versions in this project, verify the critical user flow with Playwright CLI, and preserve evidence for both successful and failing checks.
-
-**Done when:** change summary, checks run, critical-flow result, and screenshots or a reproducible failure record.
-
-</details>
-
-<a id="starter-db"></a>
-<details>
-<summary><strong>02 · Safer database change</strong> — schema analysis + migration + version-specific docs</summary>
-
-**Stack:** choose [Supabase Agent Skills](https://github.com/supabase/agent-skills) or [Prisma Skills](https://github.com/prisma/skills) for your stack · [Context7](https://github.com/upstash/context7)
-
-**Get started**
-
-Run **only one** of the following.
-
-Supabase:
-
-```bash
-npx skills add supabase/agent-skills
-```
-
-Prisma:
-
-```bash
-npx skills add prisma/skills
-```
-
-To add documentation lookup:
-
-```bash
-npx ctx7 setup
-```
-
-Check the installed Prisma version first. The source currently defaults new ORM projects to Prisma 8, but explicitly says that fixing connections in existing 6/7 projects does not require an upgrade. Select guidance from the [version-specific skills](https://github.com/prisma/skills#available-skills).
-
-**First request**
-
-> Inspect the current schema and its application usage first. Write a change plan and rollback procedure, warn me before any command that could lose data, and validate the migration against a development or isolated database before summarizing the result.
-
-**Done when:** impact assessment, migration and rollback steps, validation result, and a production-readiness checklist.
-
-</details>
-
-<a id="starter-process"></a>
-<details>
-<summary><strong>03 · Plan through test</strong> — requirements + task breakdown + TDD + completion checks</summary>
-
-**Stack:** [Superpowers](https://github.com/obra/superpowers)
-
-**Get started:** Superpowers uses a different install path for each agent. Choose your environment in the source repository's [Installation](https://github.com/obra/superpowers#installation) section. Install it separately for each agent you use.
-
-**First request**
-
-> Do not implement this feature immediately. Clarify the requirements and constraints, break the work into small tasks, write a failing test first, and then implement it. Finish by reviewing the test results and diff against the completion criteria.
-
-**Done when:** agreed requirements, task plan, red-to-green test record, final diff, and verification result.
-
-</details>
-
-<a id="starter-ops"></a>
-<details>
-<summary><strong>04 · Production incident investigation</strong> — impact + root cause + verified fix</summary>
-
-**Stack:** [Sentry for AI](https://github.com/getsentry/sentry-for-ai)
-
-**Get started:** This is the skill **source repository**, not a directly installable plugin. Follow the distribution instructions for [Codex](https://github.com/getsentry/plugin-codex), [Claude Code](https://github.com/getsentry/plugin-claude), [Cursor](https://github.com/getsentry/plugin-cursor), or [Grok](https://github.com/getsentry/plugin-grok). Production queries require Sentry authentication, and some workflows also require the GitHub CLI.
-
-**First request**
-
-> Rank the major errors from the last 24 hours by user impact. Analyze the highest-impact error using its events, traces, and relevant code, then test a proposed fix. Do not resolve the issue or deploy anything without approval.
-
-**Done when:** error evidence, impact, root-cause hypothesis, code and test results, and pre-deployment checks.
-
-</details>
-
-<a id="starter-agent"></a>
-<details>
-<summary><strong>05 · Agent development and evaluation</strong> — scaffold + eval dataset + failure analysis + deployment readiness</summary>
-
-**Stack:** [Google Agents CLI](https://github.com/google/agents-cli)
-
-**Get started:** requires Python 3.11+, uv, and Node.js.
-
-```bash
-uvx google-agents-cli setup
-```
-
-To add **only the skills** without the CLI, use this instead:
-
-```bash
-npx skills add google/agents-cli
-```
-
-This is not a coding agent itself: it helps your existing agent build, evaluate, and deploy ADK applications.
-
-**First request**
-
-> Build a small ADK agent that runs locally. Create an evaluation dataset with happy-path, edge, and failure cases, run the evaluation, and summarize failure clusters and the before-and-after difference. Do not deploy it to the cloud yet.
-
-**Done when:** runnable agent, evaluation cases and metrics, failure analysis, and evidence for a deployment decision.
-
-</details>
+| Task | Instructions |
+| --- | --- |
+| <a id="starter-frontend"></a>01 · Frontend quality check | [Open guide →](../guides/quick-starts.en.md#frontend) |
+| <a id="starter-db"></a>02 · Safer database change | [Open guide →](../guides/quick-starts.en.md#database) |
+| <a id="starter-process"></a>03 · Plan through test | [Open guide →](../guides/quick-starts.en.md#process) |
+| <a id="starter-ops"></a>04 · Production incident investigation | [Open guide →](../guides/quick-starts.en.md#operations) |
+| <a id="starter-agent"></a>05 · Agent development and evaluation | [Open guide →](../guides/quick-starts.en.md#agent) |
 
 <a id="field-cards"></a>
 

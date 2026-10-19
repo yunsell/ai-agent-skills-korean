@@ -30,7 +30,7 @@ Skill Scanner coverage gaps · Chrome recordings · Deep Agents wait states
 
 ### One thing to try today
 
-Record **steps, expected outcomes, and actual outcomes** for a search example. [Practice page and copyable prompt →](guides/web-validation.en.md)
+Start with an [executed case and screen evidence](guides/cases/002-browser-evidence.en.md) for **3 → 2 → 0 → 3** search results. It was recorded in DevTools UI, not through MCP. [Reproduce the flow →](guides/web-validation.en.md)
 
 ## Start with your task
 
@@ -38,14 +38,14 @@ Record **steps, expected outcomes, and actual outcomes** for a search example. [
 | --- | --- |
 | Choose a useful tool | [Catalog with four task groups](catalog/README.en.md) |
 | Understand Skills, MCP, and Harness | [Your first agent stack](guides/first-stack.en.md) |
-| Compare setup, auth, and access | [Practical comparison](catalog/README.en.md#field-cards) · [Quick starts](catalog/README.en.md#starter-packs) |
+| Compare setup, auth, and access | [Practical comparison](catalog/README.en.md#field-cards) · [Quick starts](guides/quick-starts.en.md) |
 
 <details>
 <summary>All resource categories</summary>
 
 | Category | Start here |
 | --- | --- |
-| <a id="starter-packs"></a>Quick starts | [Task-based combinations](catalog/README.en.md#starter-packs) |
+| <a id="starter-packs"></a>Quick starts | [Task-based combinations](guides/quick-starts.en.md) |
 | <a id="field-cards"></a>Practical comparison | [Setup, auth, and permissions](catalog/README.en.md#field-cards) |
 | <a id="skills"></a>Skills | [Reusable workflows and expertise](catalog/README.en.md#skills) |
 | <a id="mcp"></a>MCP | [External tools and data](catalog/README.en.md#mcp) |

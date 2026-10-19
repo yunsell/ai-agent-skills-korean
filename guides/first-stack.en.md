@@ -16,8 +16,8 @@ These are this repository's navigation categories. A plugin is an installable pa
 
 ## 2. Choose one outcome
 
-- Interface quality: [frontend quick start](../catalog/README.en.md#starter-frontend) · [search validation exercise](web-validation.en.md)
-- Database changes: [database quick start](../catalog/README.en.md#starter-db). Use isolation, not a production database
+- Interface quality: [frontend quick start](quick-starts.en.md#frontend) · [search validation exercise](web-validation.en.md)
+- Database changes: [database quick start](quick-starts.en.md#database). Use isolation, not a production database
 - Issue investigation: [the first issue's read-only experiment](../newsletter/2026-10-14.en.md#experiment)
 - Other work: [choose from four task groups](../catalog/README.en.md)
 

@@ -10,6 +10,8 @@
 - 선택: 살펴볼 레포 1개, 작은 실험 1개 / Optional: one repository and one small experiment
 - 정정 이력, 아카이브·카탈로그·언어 전환 / Corrections, archive/catalog links, language switch
 - 구체적인 도구·작업 부제, 첫 화면의 독자별 소식 선택, 매호 실습의 기대 결과와 기록 양식 / Concrete tool/task subtitle, audience-based story selection, expected outcomes and a result template for the issue's exercise
+- RSS용 `summary.ko`·`summary.en`: 각각 2–3줄, 줄당 280자 이내. 도구·버전·구체적 변화·판단을 요약합니다. / RSS `summary.ko` and `summary.en`: 2–3 lines each, at most 280 characters per line; summarize tools, versions, concrete changes, and decisions.
+- 직접 실행 사례가 있다면 환경·방법·기대/실제 결과·다시 열 수 있는 근거·한계. 문서 확인과 분리합니다. / For an executed case: environment, method, expected/actual outcomes, reopenable evidence, and limitations; distinguish it from document review.
 
 ## 확인 수준 / Review levels
 

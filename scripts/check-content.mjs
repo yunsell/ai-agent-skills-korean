@@ -74,6 +74,8 @@ const paired = [
   ["newsletter/README.md", "newsletter/README.en.md"],
   ["guides/first-stack.md", "guides/first-stack.en.md"],
   ["guides/web-validation.md", "guides/web-validation.en.md"],
+  ["guides/quick-starts.md", "guides/quick-starts.en.md"],
+  ["guides/cases/002-browser-evidence.md", "guides/cases/002-browser-evidence.en.md"],
 ];
 const manifest = JSON.parse(read("newsletter/issues.json"));
 assert(manifest.issues.length > 0, "Empty newsletter manifest");
@@ -93,8 +95,15 @@ for (const issue of manifest.issues) {
     assert.equal(issue.cover.labels.length, 3, "Cover needs exactly three topic labels");
     assert(issue.cover.labels.every((label) => /^[A-Z][A-Z /-]{1,12}$/.test(label)), "Invalid cover label");
   }
+  assert.equal(issue.summary?.ko?.length, issue.summary?.en?.length,
+    "Language summary count mismatch: " + issue.id);
   paired.push(["newsletter/" + issue.files.ko, "newsletter/" + issue.files.en]);
   for (const language of ["ko", "en"]) {
+    const summary = issue.summary?.[language];
+    assert(Array.isArray(summary) && summary.length >= 2 && summary.length <= 3,
+      "Issue needs 2–3 RSS summary lines: " + issue.id + "/" + language);
+    assert(summary.every(line => typeof line === "string" && line.trim() === line
+      && line.length > 0 && line.length <= 280), "Invalid RSS summary: " + issue.id);
     assert.equal(path.basename(issue.files[language]), issue.files[language], "Invalid issue filename");
     const file = "newsletter/" + issue.files[language];
     const text = read(file);
@@ -126,6 +135,17 @@ for (const [ko, en] of paired) {
   assert.deepEqual(normalized(ko), normalized(en), "Language link mismatch: " + ko);
   const code = (file) => [...read(file).matchAll(/```bash\n([\s\S]*?)```/g)].map((match) => match[1].trim());
   assert.deepEqual(code(ko), code(en), "Language command mismatch: " + ko);
+}
+for (const suffix of ["", ".en"]) {
+  const guide = "guides/quick-starts" + suffix + ".md";
+  const catalog = "catalog/README" + suffix + ".md";
+  assert(!read(guide).includes("<details>"), guide + ": keep quick-start instructions visible");
+  for (const [old, current] of [["frontend", "frontend"], ["db", "database"],
+    ["process", "process"], ["ops", "operations"], ["agent", "agent"]]) {
+    assert(anchors(read(catalog)).has("starter-" + old), "Legacy catalog anchor missing: " + old);
+    assert(links(read(catalog)).includes("../" + guide + "#" + current),
+      catalog + ": missing direct quick-start link " + current);
+  }
 }
 for (const home of ["README.md", "README.en.md"]) {
   for (const anchor of ["starter-packs", "field-cards", "recent", "skills", "mcp",

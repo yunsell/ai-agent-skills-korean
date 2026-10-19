@@ -13,6 +13,18 @@
         "ko": "더 많은 도구보다, 더 잘 보이는 실행",
         "en": "Make agent work observable"
       },
+      "summary": {
+        "ko": [
+          "Skill Scanner 2.3.0의 미검사 링크·로드 실패 보고와 CI 규칙 점검.",
+          "Chrome DevTools MCP 1.11.0의 녹화·진단 변화와 별도 DevTools UI 실행 사례.",
+          "Deep Agents 0.7.26–0.7.28의 비동기 상태 보고·glob 경로 처리 개선."
+        ],
+        "en": [
+          "Skill Scanner 2.3.0 reports unscanned symlinks and load failures; review CI rules.",
+          "Chrome DevTools MCP 1.11.0 recording/diagnostic changes, plus a separate DevTools UI case.",
+          "Deep Agents 0.7.26–0.7.28 improves async status reporting and glob path handling."
+        ]
+      },
       "files": {
         "ko": "2026-10-19.md",
         "en": "2026-10-19.en.md"
@@ -28,6 +40,18 @@
       "title": {
         "ko": "도구를 더 붙이기 전에, 실행 경계부터",
         "en": "Before adding tools, check the boundaries"
+      },
+      "summary": {
+        "ko": [
+          "agent-browser 0.39.1의 응답 유실 뒤 중복 실행 방지와 재시도 판단.",
+          "Deep Agents 0.7.25의 심볼릭 링크를 고려한 경로 권한 검사.",
+          "Skill Scanner 2.2.1·2.2.2 수정과 스킬 도입 전 검사 도구 업데이트."
+        ],
+        "en": [
+          "agent-browser 0.39.1 prevents duplicate execution after a lost response; inspect before retrying.",
+          "Deep Agents 0.7.25 checks path permissions with symlink targets in mind.",
+          "Skill Scanner 2.2.1 and 2.2.2 fixes: update the scanner before reviewing third-party skills."
+        ]
       },
       "files": {
         "ko": "2026-10-14.md",

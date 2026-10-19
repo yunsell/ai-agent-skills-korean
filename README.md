@@ -30,7 +30,7 @@ Skill Scanner 검사 누락 보고 · Chrome 화면 녹화 · Deep Agents 대기
 
 ### 오늘 해볼 것 하나
 
-검색 예제에서 **재현 단계·기대 결과·실제 결과**를 남겨 보세요. [예제와 복사할 프롬프트 →](guides/web-validation.md)
+검색 **3 → 2 → 0 → 3**을 직접 확인한 [실행 사례와 화면 근거](guides/cases/002-browser-evidence.md)부터 보세요. DevTools UI로 기록한 사례이며 MCP 실행 결과는 아닙니다. [같은 흐름 따라 하기 →](guides/web-validation.md)
 
 ## 내 작업에 맞는 시작점
 
@@ -38,14 +38,14 @@ Skill Scanner 검사 누락 보고 · Chrome 화면 녹화 · Deep Agents 대기
 | --- | --- |
 | 쓸 만한 도구 고르기 | [네 가지 작업으로 찾는 카탈로그](catalog/README.md) |
 | Skills·MCP·Harness 이해하기 | [첫 스택 가이드](guides/first-stack.md) |
-| 설치·인증·접근 범위 비교 | [실무 비교](catalog/README.md#field-cards) · [빠른 시작](catalog/README.md#starter-packs) |
+| 설치·인증·접근 범위 비교 | [실무 비교](catalog/README.md#field-cards) · [빠른 시작](guides/quick-starts.md) |
 
 <details>
 <summary>분류별 전체 목록</summary>
 
 | 분류 | 바로가기 |
 | --- | --- |
-| <a id="starter-packs"></a>빠른 시작 | [목적별 조합](catalog/README.md#starter-packs) |
+| <a id="starter-packs"></a>빠른 시작 | [목적별 조합](guides/quick-starts.md) |
 | <a id="field-cards"></a>실무 비교 | [설치·인증·권한](catalog/README.md#field-cards) |
 | <a id="skills"></a>Skills | [재사용할 절차와 전문 지식](catalog/README.md#skills) |
 | <a id="mcp"></a>MCP | [외부 도구·데이터 연결](catalog/README.md#mcp) |

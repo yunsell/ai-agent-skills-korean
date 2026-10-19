@@ -4,17 +4,42 @@
 
 **얻는 것:** 검색 동작의 통과·실패 기록과 화면 근거. 검색 결과가 정해진 예제로 시작합니다.
 
+**먼저 결과 보기:** [직접 실행 사례 — 네 단계 통과·화면 영상·이벤트 발췌](cases/002-browser-evidence.md). Chrome DevTools UI로 기록했으며, MCP를 실행한 사례는 아닙니다.
+
 ## 1. 예제를 먼저 열어 보세요
 
 [검색 검증 예제 열기 →](https://yunsell.github.io/ai-agent-skills-korean/labs/search.html?lang=ko)
 
 로그인이 필요 없고 검색은 페이지 안에서 처리됩니다. 처음에는 3개, `agent`를 검색하면 2개, `zzzz`를 검색하면 0개, 초기화하면 3개가 나와야 합니다. [예제 소스](../docs/labs/search.html)
 
-## 2. 사용할 도구를 준비하세요
+## 2. 실행 경로를 고르세요
+
+| 경로 | 준비와 첫 행동 |
+| --- | --- |
+| 설치 없이 UI로 확인 | Chrome에서 예제를 열고 네 단계를 직접 실행합니다. Performance 기록은 [실행 사례의 수집 방법](cases/002-browser-evidence.md)을 따르세요. MCP는 필요 없습니다. |
+| 에이전트에 MCP 연결 | 아래에서 환경에 맞게 설정한 뒤 3번 요청을 사용합니다. 연결 성공과 실제 실행 결과는 따로 확인하세요. |
 
 이미 쓰는 브라우저 도구가 있다면 위 동작부터 확인하세요. 002호의 진단 기능을 살펴보려면 **Chrome DevTools MCP 1.11.0**을 사용합니다. Node.js LTS·npm·Chrome과 MCP를 지원하는 에이전트가 필요합니다. [공식 시작 안내](https://github.com/ChromeDevTools/chrome-devtools-mcp#getting-started) · [환경별 설정](https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/client-configurations.md)
 
-아래는 `mcpServers` 형식을 받는 클라이언트의 설정 예시입니다. 사용하는 환경의 설정 파일에 맞춰 **해당 서버 항목을 추가**하세요.
+### Codex · CLI로 등록하기
+
+이미 같은 이름으로 등록했다면 먼저 설정을 확인하세요. 아래는 새 서버를 등록할 때의 명령입니다.
+
+```bash
+codex mcp add chrome-devtools -- npx -y chrome-devtools-mcp@1.11.0 --isolated --no-usage-statistics --no-performance-crux
+codex mcp list
+```
+
+Codex의 MCP 설정은 `~/.codex/config.toml`을 사용하며 데스크톱·CLI·IDE에서 공유합니다. `mcp list`는 등록 확인이지 실습 통과를 뜻하지 않습니다. [공식 Codex MCP 안내](https://developers.openai.com/codex/mcp)
+
+### Claude Code · Cursor · VS Code 등
+
+[환경별 공식 설정](https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/client-configurations.md)에서 사용하는 클라이언트 항목을 고르세요. 설정 파일 위치와 서버 키가 다를 수 있으므로 아래 JSON을 Codex 설정 파일 등에 그대로 붙이지 마세요.
+
+<details>
+<summary>mcpServers 형식을 받는 클라이언트용 JSON 예시</summary>
+
+기존 설정 전체를 덮어쓰지 말고 해당 서버 항목을 추가하세요.
 
 ```json
 {
@@ -26,6 +51,8 @@
   }
 }
 ```
+
+</details>
 
 실습 버전을 고정하고 별도 브라우저 세션을 사용합니다. 두 수집 옵션은 사용 통계와 CrUX 조회를 끕니다. [설정 원본](https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/configuration.md)
 
@@ -66,4 +93,4 @@ https://yunsell.github.io/ai-agent-skills-korean/labs/search.html?lang=ko 를 �
 
 [도구 비교](../catalog/README.md#field-cards) · [이번 호로 돌아가기](../newsletter/2026-10-19.md)
 
-**확인 범위 · 2026-10-19:** macOS의 Chrome 155.0.8059.82에서 예제의 한·영 검색 네 단계와 영문 Enter 검색을 직접 확인했습니다. MCP 설정은 원본 문서 기준이며, 이 실습을 Chrome DevTools MCP로 실행한 결과는 아직 없습니다.
+**확인 범위 · 2026-10-19:** macOS의 Chrome 155.0.8059.82에서 예제의 한·영 검색 네 단계와 영문 Enter 검색을 직접 확인했습니다. 별도 사례에는 한국어 화면의 Performance UI 기록을 공개했습니다. MCP·Codex 설정은 원본 문서 기준이며, 이 실습을 Chrome DevTools MCP로 실행한 결과는 아직 없습니다.

@@ -21,10 +21,15 @@ for (const language of ["ko", "en"]) {
   const items = issues.map(issue => {
     const url = repo + "newsletter/" + encodeURIComponent(issue.files[language]);
     const date = new Date(issue.date + "T00:00:00+09:00").toUTCString();
+    const lines = issue.summary?.[language];
+    if (!Array.isArray(lines) || lines.length < 2 || lines.length > 3) {
+      throw new Error("Issue " + issue.id + " needs 2–3 summary lines in " + language);
+    }
+    const summary = "<ul>" + lines.map(line => "<li>" + escape(line) + "</li>").join("") + "</ul>";
     return "    <item>\n      <title>" + escape(issue.id + " · " + issue.title[language])
       + "</title>\n      <link>" + escape(url) + "</link>\n      <guid isPermaLink=\"true\">" + escape(url)
       + "</guid>\n      <pubDate>" + date + "</pubDate>\n      <description>"
-      + escape(issue.topics.join(" · ") + " — " + (english ? "Read the full issue on GitHub." : "GitHub에서 전체 내용을 읽으세요."))
+      + escape(summary)
       + "</description>\n    </item>";
   }).join("\n");
   const source = '<?xml version="1.0" encoding="UTF-8"?>\n'
