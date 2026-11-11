@@ -7,6 +7,13 @@
     <language>ko</language>
     <atom:link href="https://yunsell.github.io/ai-agent-skills-korean/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>003 · 에이전트가 읽는 범위와 멈추는 이유</title>
+      <link>https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-11-11.md</link>
+      <guid isPermaLink="true">https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-11-11.md</guid>
+      <pubDate>Tue, 10 Nov 2026 15:00:00 GMT</pubDate>
+      <description>&lt;ul&gt;&lt;li&gt;Skill Scanner 2.3.2는 프리셋 간 LLM 입력을 맞춥니다. 정적 탐지와 LLM 판정은 따로 비교하세요.&lt;/li&gt;&lt;li&gt;Fetch MCP 2026.11.4는 선택적 호스트 허용 목록을 추가합니다. 시험 환경에서 허용·거부를 확인하세요.&lt;/li&gt;&lt;li&gt;Deep Agents SDK 0.7.33은 모델 거부를 기본 오류로 처리하고, 0.7.35는 분기된 서브에이전트의 캐시 접두사와 심볼릭 링크 표시를 수정합니다.&lt;/li&gt;&lt;/ul&gt;</description>
+    </item>
+    <item>
       <title>002 · 더 많은 도구보다, 더 잘 보이는 실행</title>
       <link>https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-10-19.md</link>
       <guid isPermaLink="true">https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-10-19.md</guid>

@@ -16,21 +16,23 @@ Changes in AI agent tools, with practical ways to apply them.
 
 ---
 
-<a id="latest"></a><a id="recent"></a> **BRIEF 002** · 2026-10-19 · Docs reviewed
+<a id="latest"></a><a id="recent"></a> **BRIEF 003** · 2026-11-11 · Docs reviewed
 
-## Make agent work observable
+## What agents can read and why they stop
 
-Skill Scanner coverage gaps · Chrome recordings · Deep Agents wait states
+Skill scan comparisons · Fetch MCP host limits · Deep Agents model refusals
 
-- **Scanning skills?** [Skill Scanner 2.3.0 — account for unscanned files](newsletter/2026-10-19.en.md#skills). Check CI rules when updating.
-- **Building websites?** [Chrome DevTools MCP 1.11.0 — retain recordings and diagnostics](newsletter/2026-10-19.en.md#mcp). Start with the practice page.
-- **Running async agents?** [Deep Agents 0.7.26–0.7.28 — distinguish waits from failures](newsletter/2026-10-19.en.md#harness). Check status records and path results.
+- **Scanning skills?** Separate static findings from LLM verdicts in [Skill Scanner 2.3.2](newsletter/2026-11-11.en.md#skills).
+- **Fetching public docs?** Use [Fetch MCP 2026.11.4](newsletter/2026-11-11.en.md#mcp) to allow only the hosts you need.
+- **Running subagents?** Check that [Deep Agents 0.7.33–0.7.35](newsletter/2026-11-11.en.md#harness) does not record model refusals as completion in your workflow.
 
-**[Read the full issue →](newsletter/2026-10-19.en.md)** · [한국어판](newsletter/2026-10-19.md)
+**[Read the full issue →](newsletter/2026-11-11.en.md)** · [한국어판](newsletter/2026-11-11.md)
 
 ### One thing to try today
 
-[Executed design workflow →](guides/cases/catalog-design.en.md) We redesigned this catalog's mobile discovery and checked normal, empty, recovery, and keyboard states. [Search 56 resources](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html)
+[Try the Fetch MCP allow/deny exercise →](newsletter/2026-11-11.en.md#experiment) If you have a test connection, check the allowlist against two public URLs.
+
+[Search 57 resources](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html) · [Real catalog design case](guides/cases/catalog-design.en.md)
 
 For screen validation, see the [search exercise and UI evidence](guides/web-validation.en.md).
 

@@ -1,6 +1,35 @@
 {
-  "latest": "002",
+  "latest": "003",
   "issues": [
+    {
+      "id": "003",
+      "date": "2026-11-11",
+      "topics": ["skills", "mcp", "harness"],
+      "cover": {
+        "layout": "index",
+        "labels": ["SCAN", "ACCESS", "REFUSAL"]
+      },
+      "title": {
+        "ko": "에이전트가 읽는 범위와 멈추는 이유",
+        "en": "What agents can read and why they stop"
+      },
+      "summary": {
+        "ko": [
+          "Skill Scanner 2.3.2는 프리셋 간 LLM 입력을 맞춥니다. 정적 탐지와 LLM 판정은 따로 비교하세요.",
+          "Fetch MCP 2026.11.4는 선택적 호스트 허용 목록을 추가합니다. 시험 환경에서 허용·거부를 확인하세요.",
+          "Deep Agents SDK 0.7.33은 모델 거부를 기본 오류로 처리하고, 0.7.35는 분기된 서브에이전트의 캐시 접두사와 심볼릭 링크 표시를 수정합니다."
+        ],
+        "en": [
+          "Skill Scanner 2.3.2 aligns LLM inputs across presets; compare static findings and LLM verdicts separately.",
+          "Fetch MCP 2026.11.4 adds an opt-in host allowlist. Verify allowed and denied destinations in a test environment.",
+          "Deep Agents SDK 0.7.33 raises model refusals by default; 0.7.35 fixes forked subagent cache prefixes and symlink display."
+        ]
+      },
+      "files": {
+        "ko": "2026-11-11.md",
+        "en": "2026-11-11.en.md"
+      }
+    },
     {
       "id": "002",
       "date": "2026-10-19",

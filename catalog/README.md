@@ -4,11 +4,11 @@
 
 AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개발 도구와 학습 자료를 모았습니다.
 
-**[56개 자료 검색·분류해서 찾기 →](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html)** · [환경별 첫 단계](../guides/client-first-steps.md)
+**[57개 자료 검색·분류해서 찾기 →](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html)** · [환경별 첫 단계](../guides/client-first-steps.md)
 
 이 문서에서는 전체 항목을 접지 않은 세로 목록으로 읽을 수 있습니다. [실제 개편 사례와 검증 결과](../guides/cases/catalog-design.md)
 
-기본 자료 문서 확인 **2026-10-12** · 일부 릴리스 갱신 **2026-10-19**. [관련 브리핑](../newsletter/2026-10-19.md)
+기본 자료 문서 확인 **2026-10-12** · 일부 릴리스 문서 확인 **2026-11-11**. [최신 브리핑](../newsletter/2026-11-11.md)
 
 ## 지금 어떤 작업을 하나요?
 
@@ -477,6 +477,12 @@ AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개
 
   활용: 느린 화면·실패 요청의 원인을 분석할 때. 브라우저 데이터 노출·기본 통계 수집 확인
 
+- **[Fetch MCP](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) · 공개 웹 문서 조회**
+
+  제공: 지정한 URL을 Markdown으로 조회. 패키지 2026.11.4에서 선택적 호스트 허용 목록 추가
+
+  활용: 정해진 호스트의 공개 문서를 읽을 때. 시험 환경에서 시작하고 기본 사설 IP 차단은 유지
+
 - **[Context Mode](https://github.com/mksglu/context-mode) · 고급 컨텍스트 관리**
 
   제공: 도구 출력의 실행·인덱싱·검색, 로컬 세션 저장, 환경별 라우팅 훅
@@ -486,7 +492,9 @@ AI 에이전트를 사용할 때 유용한 스킬, MCP 서버, 플러그인, 개
 
 **서버 더 찾기:** [공식 MCP Registry](https://registry.modelcontextprotocol.io/) · [Awesome MCP Servers](https://github.com/punkpeye/awesome-mcp-servers). 프로토콜 구현을 배우려면 [MCP Reference Servers](https://github.com/modelcontextprotocol/servers)를 참고하세요.
 
-Chrome DevTools MCP 추가 문서 확인: **2026-10-19**. [1.11.0](https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v1.11.0)은 FFmpeg 없는 화면 녹화, 캐시 무시 옵션과 실패 감사 항목·DOM 노드의 직접 반환을 추가했습니다. 비민감 시험 브라우저에서 진단 자료를 검토하세요. 실행 검증은 하지 않았습니다.
+**카탈로그 추가 · 2026-11-11:** [Fetch MCP 2026.11.4](../newsletter/2026-11-11.md#mcp)는 기존 레퍼런스 구현입니다. 호스트 허용 목록 시험 방법과 한계는 최신호에 정리했습니다.
+
+**Chrome DevTools MCP 문서 확인 · 2026-11-11:** [1.12.0](https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v1.12.0)(한국 시간 2026-10-22 공개)은 브라우저에 연결하지 않고 저장된 힙 스냅샷을 분석할 수 있습니다. 민감하지 않은 시험 자료를 쓰세요. 1.11.0 녹화 변경은 [002호](../newsletter/2026-10-19.md#mcp)를 참고하세요. 실행 검증은 하지 않았습니다.
 
 <a id="tools"></a>
 
@@ -597,6 +605,8 @@ Chrome DevTools MCP 추가 문서 확인: **2026-10-19**. [1.11.0](https://githu
 
 Scanner는 CPython 3.11–3.14가 필요합니다. 2.2.0 사용자는 [2.2.1 보안 수정](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.1)과 [2.2.2 후속 수정](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.2)을 확인하세요. **2026-10-19 추가 문서 확인:** [2.3.0](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.3.0)은 미검사 링크·로드 실패를 보고하고 분류 코드를 변경하므로, CI 필터·종료 코드도 함께 검토하세요. 기본 정적 분석과 외부 서비스 분석을 구분하고, LLM·VirusTotal 등 외부 분석을 켜기 전에 코드·파일의 전송 범위를 확인하세요. Promptfoo도 선택한 모델·대상에 따라 인증, 데이터 전송과 비용이 발생합니다. 보안 테스트는 소유하거나 허가받은 대상에만 수행하세요.
 
+**추가 문서 확인 · 2026-11-11:** [Skill Scanner 2.3.2](../newsletter/2026-11-11.md#skills)는 프리셋 간 LLM 입력을 맞춥니다. 비교 시 검사 버전과 모델을 고정하세요. 입력이 같아도 판정 재현을 보장하지 않습니다.
+
 <a id="harnesses"></a>
 
 ## Harnesses
@@ -613,6 +623,8 @@ Scanner는 CPython 3.11–3.14가 필요합니다. 2.2.0 사용자는 [2.2.1 보
 추가 문서 확인: **2026-10-14**. [0.7.25 릴리스](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.25)의 경로 권한 수정과 [공식 개요](https://docs.langchain.com/oss/python/deepagents/overview)를 확인하세요. 이 카탈로그에서 실행 검증하지 않았습니다.
 
 **2026-10-19 추가 문서 확인:** [0.7.26](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.26)·[0.7.27](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.27)은 비동기 서브에이전트의 대기·진행 상태 관측을, [0.7.28](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.28)은 ContextHubBackend의 glob 경로 처리를 개선했습니다. 버전을 고정하고 승인 대기·하위 경로 결과를 회귀 검사하세요.
+
+**추가 문서 확인 · 2026-11-11:** [Deep Agents SDK 0.7.33–0.7.35](../newsletter/2026-11-11.md#harness)는 기본 모델 거부 처리를 변경하고 캐시 접두사·심볼릭 링크 표시를 수정했습니다. 성공·거부·시간 초과를 각각 시험하세요.
 
 <a id="frameworks"></a>
 

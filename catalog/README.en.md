@@ -4,11 +4,11 @@
 
 A curated collection of skills, MCP servers, plugins, frameworks, and learning resources for working with AI agents.
 
-**[Search and filter 56 resources →](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html)** · [Client first steps](../guides/client-first-steps.en.md)
+**[Search and filter 57 resources →](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html)** · [Client first steps](../guides/client-first-steps.en.md)
 
 All entries remain visible as a vertical list in this document. [Executed redesign case and results](../guides/cases/catalog-design.en.md)
 
-Core documentation reviewed **2026-10-12**; selected releases updated **2026-10-19**. [Latest briefing](../newsletter/2026-10-19.en.md).
+Core documentation reviewed **2026-10-12**; selected release notes reviewed **2026-11-11**. [Latest briefing](../newsletter/2026-11-11.en.md).
 
 ## What are you working on?
 
@@ -477,6 +477,12 @@ Connect agents to external services and data.
 
   Use it for: Investigate slow pages and failed requests; review browser data access and default usage statistics
 
+- **[Fetch MCP](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) · Public web content**
+
+  Offers: Retrieve a given URL as Markdown. Package 2026.11.4 adds an optional host allowlist.
+
+  Use it for: Read public docs from known hosts. Start in a test environment and keep the default private-address guard enabled.
+
 - **[Context Mode](https://github.com/mksglu/context-mode) · Advanced context management**
 
   Offers: Tool-output execution, indexing and search, local session storage, and host-specific routing hooks
@@ -486,7 +492,9 @@ Connect agents to external services and data.
 
 **Find more servers:** [Official MCP Registry](https://registry.modelcontextprotocol.io/) · [Awesome MCP Servers](https://github.com/punkpeye/awesome-mcp-servers). For educational implementations, see [MCP Reference Servers](https://github.com/modelcontextprotocol/servers).
 
-Additional Chrome DevTools MCP docs review: **2026-10-19**. [1.11.0](https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v1.11.0) adds FFmpeg-free recordings, a cache-bypass option, and inline failing audits with DOM nodes. Review diagnostic evidence in a non-sensitive test browser. Not execution-tested.
+**New catalog entry · 2026-11-11:** [Fetch MCP 2026.11.4](../newsletter/2026-11-11.en.md#mcp) is an existing reference implementation, not a new project. See the issue for an allowlist test and its limits.
+
+**Chrome DevTools MCP docs review · 2026-11-11:** [1.12.0](https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v1.12.0) (published 2026-10-22 KST) supports analyzing saved heap snapshots without a live browser connection. Use non-sensitive test captures. See [issue 002](../newsletter/2026-10-19.en.md#mcp) for 1.11.0 recording changes. Not execution-tested.
 
 <a id="tools"></a>
 
@@ -597,6 +605,8 @@ Review safety before connecting more tools, and compare results before and after
 
 Scanner requires CPython 3.11–3.14. Users of 2.2.0 should review the [2.2.1 security fix](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.1) and [2.2.2 follow-up](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.2.2). **Additional docs review, 2026-10-19:** [2.3.0](https://github.com/cisco-ai-defense/skill-scanner/releases/tag/2.3.0) reports unscanned symlinks and load failures and changes taxonomy codes; review CI filters and exit codes too. Distinguish default static analysis from external-service analysis, and check what code/files may be sent before enabling LLM, VirusTotal, or other external analyzers. Promptfoo may also require credentials, transmit data, and incur costs depending on the model and target. Run security tests only against systems you own or are authorized to test.
 
+**Additional docs review · 2026-11-11:** [Skill Scanner 2.3.2](../newsletter/2026-11-11.en.md#skills) aligns LLM inputs across presets. Pin the scanner and model for comparisons; identical inputs do not guarantee repeatable verdicts.
+
 <a id="harnesses"></a>
 
 ## Harnesses
@@ -613,6 +623,8 @@ Execution scaffolding that combines an agent loop with files, tools, memory, and
 Added from documentation on **2026-10-14**. Review the path-permission fix in [0.7.25](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.25) and the [official overview](https://docs.langchain.com/oss/python/deepagents/overview). Not execution-tested by this catalog.
 
 **Additional docs review, 2026-10-19:** [0.7.26](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.26) and [0.7.27](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.27) improve async-subagent wait/status observability; [0.7.28](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.28) fixes ContextHubBackend glob path handling. Pin versions and regression-test approval waits and subdirectory results.
+
+**Additional docs review · 2026-11-11:** [Deep Agents SDK 0.7.33–0.7.35](../newsletter/2026-11-11.en.md#harness) changes default model-refusal handling and fixes cache prefixes and symlink display. Test success, refusal, and timeout as separate paths.
 
 <a id="frameworks"></a>
 

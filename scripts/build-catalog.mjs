@@ -36,7 +36,7 @@ const resources = parsed.ko.map((ko, index) => {
 });
 assert.equal(new Set(resources.map(r => r.id)).size, resources.length, 'Duplicate resource');
 const output = JSON.stringify({ schema: 1, source: 'catalog/README.md + catalog/README.en.md',
-  reviewScope: 'Baseline docs review 2026-10-12; selected additions 2026-10-19. Not all resources execution-tested.',
+  reviewScope: 'Baseline docs review 2026-10-12; selected release notes reviewed 2026-11-11. Not all resources execution-tested.',
   categories, resources }, null, 2) + '\n';
 const file = path.join(root, 'docs/catalog/data.json');
 const exists = fs.existsSync(file);

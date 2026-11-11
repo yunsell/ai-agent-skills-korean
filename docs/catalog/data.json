@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source": "catalog/README.md + catalog/README.en.md",
-  "reviewScope": "Baseline docs review 2026-10-12; selected additions 2026-10-19. Not all resources execution-tested.",
+  "reviewScope": "Baseline docs review 2026-10-12; selected release notes reviewed 2026-11-11. Not all resources execution-tested.",
   "categories": [
     {
       "id": "skills",
@@ -456,6 +456,23 @@
         "use": "Web performance & debugging",
         "offer": "Chrome performance traces, network requests, console, screenshots, and browser interaction",
         "example": "Investigate slow pages and failed requests; review browser data access and default usage statistics"
+      }
+    },
+    {
+      "id": "mcp-95ec80ccbf",
+      "category": "mcp",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+      "ko": {
+        "name": "Fetch MCP",
+        "use": "공개 웹 문서 조회",
+        "offer": "지정한 URL을 Markdown으로 조회. 패키지 2026.11.4에서 선택적 호스트 허용 목록 추가",
+        "example": "정해진 호스트의 공개 문서를 읽을 때. 시험 환경에서 시작하고 기본 사설 IP 차단은 유지"
+      },
+      "en": {
+        "name": "Fetch MCP",
+        "use": "Public web content",
+        "offer": "Retrieve a given URL as Markdown. Package 2026.11.4 adds an optional host allowlist.",
+        "example": "Read public docs from known hosts. Start in a test environment and keep the default private-address guard enabled."
       }
     },
     {

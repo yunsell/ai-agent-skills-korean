@@ -8,14 +8,15 @@ Dated news and editorial commentary. Dates below are publication dates; each sto
 
 | Published | Issue | Briefing |
 | --- | --- | --- |
+| 2026-11-11 | 003 | [What agents can read and why they stop](2026-11-11.en.md) · [한국어](2026-11-11.md)<br>Scan comparisons · Fetch host limits · Model refusals |
 | 2026-10-19 | 002 | [Make agent work observable](2026-10-19.en.md) · [한국어](2026-10-19.md)<br>Skill Scanner coverage gaps · Chrome recordings · Deep Agents wait states |
 | 2026-10-14 | 001 | [Before adding tools, check the boundaries](2026-10-14.en.md) · [한국어](2026-10-14.md) |
 
 ## Read by topic
 
-- **Skills:** [002 — scan gaps are results too](2026-10-19.en.md#skills) · [001 — scanner review](2026-10-14.en.md#skills)
-- **MCP·CLI:** [002 — retain diagnostic evidence](2026-10-19.en.md#mcp) · [001 — retry boundaries](2026-10-14.en.md#browser)
-- **Harness:** [002 — distinguish waits from failures](2026-10-19.en.md#harness) · [001 — resolved-path checks](2026-10-14.en.md#harness)
+- **Skills:** [003 — separate static and LLM results](2026-11-11.en.md#skills) · [002 — scan gaps are results too](2026-10-19.en.md#skills) · [001 — scanner review](2026-10-14.en.md#skills)
+- **MCP·CLI:** [003 — limit Fetch destinations](2026-11-11.en.md#mcp) · [002 — retain diagnostic evidence](2026-10-19.en.md#mcp) · [001 — retry boundaries](2026-10-14.en.md#browser)
+- **Harness:** [003 — handle model refusals](2026-11-11.en.md#harness) · [002 — distinguish waits from failures](2026-10-19.en.md#harness) · [001 — resolved-path checks](2026-10-14.en.md#harness)
 
 ## How to read an issue
 

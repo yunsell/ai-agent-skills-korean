@@ -16,21 +16,23 @@ AI 에이전트 도구의 변화와, 내 작업에 적용하는 방법을 읽습
 
 ---
 
-<a id="latest"></a><a id="recent"></a> **BRIEF 002** · 2026-10-19 · 원본 문서 확인
+<a id="latest"></a><a id="recent"></a> **BRIEF 003** · 2026-11-11 · 원본 문서 확인
 
-## 더 많은 도구보다, 더 잘 보이는 실행
+## 에이전트가 읽는 범위와 멈추는 이유
 
-Skill Scanner 검사 누락 보고 · Chrome 화면 녹화 · Deep Agents 대기 상태
+스킬 검사 결과 비교 · Fetch MCP 호스트 제한 · Deep Agents 모델 거부 처리
 
-- **스킬을 검사한다면:** [Skill Scanner 2.3.0 — 검사하지 못한 파일까지 확인](newsletter/2026-10-19.md#skills). 업데이트할 때 CI 규칙도 함께 점검하세요.
-- **웹을 개발한다면:** [Chrome DevTools MCP 1.11.0 — 녹화와 진단 근거 남기기](newsletter/2026-10-19.md#mcp). 예제 페이지로 시작할 수 있습니다.
-- **비동기 에이전트를 운영한다면:** [Deep Agents 0.7.26–0.7.28 — 승인 대기와 실패 구분](newsletter/2026-10-19.md#harness). 상태 기록과 경로 결과를 확인하세요.
+- **스킬을 검사한다면:** [Skill Scanner 2.3.2](newsletter/2026-11-11.md#skills)에서 정적 탐지와 LLM 판정의 차이를 확인하세요.
+- **공개 문서를 자동으로 읽는다면:** [Fetch MCP 2026.11.4](newsletter/2026-11-11.md#mcp)에서 필요한 호스트만 허용하는 방법을 살펴보세요.
+- **서브에이전트를 운영한다면:** [Deep Agents 0.7.33–0.7.35](newsletter/2026-11-11.md#harness)에서 모델 거부가 완료로 기록되지 않는지 확인하세요.
 
-**[이번 호 전체 읽기 →](newsletter/2026-10-19.md)** · [English edition](newsletter/2026-10-19.en.md)
+**[이번 호 전체 읽기 →](newsletter/2026-11-11.md)** · [English edition](newsletter/2026-11-11.en.md)
 
 ### 오늘 해볼 것 하나
 
-[실제 디자인 업무 사례 →](guides/cases/catalog-design.md) 이 카탈로그의 모바일 탐색을 개편하고 정상·빈 결과·실패 복구·키보드 동작을 검증했습니다. [56개 자료 검색해 보기](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html)
+[Fetch MCP 허용·거부 실습 →](newsletter/2026-11-11.md#experiment) 테스트용 연결이 있다면 공개 URL 두 개로 허용 목록이 적용되는지 확인하세요.
+
+[57개 자료 검색해 보기](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html) · [실제 카탈로그 디자인 사례](guides/cases/catalog-design.md)
 
 화면 검증을 해보고 싶다면 [검색 실습과 UI 실행 근거](guides/web-validation.md)를 보세요.
 

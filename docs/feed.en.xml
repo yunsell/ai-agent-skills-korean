@@ -7,6 +7,13 @@
     <language>en</language>
     <atom:link href="https://yunsell.github.io/ai-agent-skills-korean/feed.en.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>003 · What agents can read and why they stop</title>
+      <link>https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-11-11.en.md</link>
+      <guid isPermaLink="true">https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-11-11.en.md</guid>
+      <pubDate>Tue, 10 Nov 2026 15:00:00 GMT</pubDate>
+      <description>&lt;ul&gt;&lt;li&gt;Skill Scanner 2.3.2 aligns LLM inputs across presets; compare static findings and LLM verdicts separately.&lt;/li&gt;&lt;li&gt;Fetch MCP 2026.11.4 adds an opt-in host allowlist. Verify allowed and denied destinations in a test environment.&lt;/li&gt;&lt;li&gt;Deep Agents SDK 0.7.33 raises model refusals by default; 0.7.35 fixes forked subagent cache prefixes and symlink display.&lt;/li&gt;&lt;/ul&gt;</description>
+    </item>
+    <item>
       <title>002 · Make agent work observable</title>
       <link>https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-10-19.en.md</link>
       <guid isPermaLink="true">https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-10-19.en.md</guid>
