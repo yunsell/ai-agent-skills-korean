@@ -5,9 +5,9 @@ import { validateCatalog, filterResources, safeLink, normalize } from '../docs/c
 const root = new URL('../', import.meta.url);
 const read = file => fs.readFileSync(new URL(file, root), 'utf8');
 const data = validateCatalog(JSON.parse(read('docs/catalog/data.json')));
-assert.equal(data.resources.length, 57);
+assert.equal(data.resources.length, 59);
 assert.equal(data.categories.length, 9);
-assert.equal(filterResources(data).length, 57);
+assert.equal(filterResources(data).length, 59);
 assert.equal(filterResources(data, 'Figma').length, 1);
 assert.equal(filterResources(data, 'Figma', 'mcp').length, 1);
 assert.equal(filterResources(data, '', 'mcp').length, 11);

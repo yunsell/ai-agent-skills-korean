@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "source": "catalog/README.md + catalog/README.en.md",
-  "reviewScope": "Baseline docs review 2026-10-12; selected release notes reviewed 2026-11-11. Not all resources execution-tested.",
+  "reviewScope": "Baseline docs review 2026-10-12; selected release notes reviewed 2026-11-23. Not all resources execution-tested.",
   "categories": [
     {
       "id": "skills",
@@ -507,6 +507,23 @@
         "use": "Skill discovery & management",
         "offer": "A CLI for discovering, installing, and updating skills, with a find-skills discovery skill",
         "example": "Find a skill by describing the task you want to perform"
+      }
+    },
+    {
+      "id": "tools-ed2f687a31",
+      "category": "tools",
+      "url": "https://github.com/Fission-AI/OpenSpec",
+      "ko": {
+        "name": "OpenSpec",
+        "use": "명세 기반 개발",
+        "offer": "변경 제안·명세·구현 작업 관리. 2.1.1은 CLI 패키지에 포함된 스킬 설치",
+        "example": "코딩 에이전트가 구현에 착수하기 전에 범위와 완료 조건을 합의할 때"
+      },
+      "en": {
+        "name": "OpenSpec",
+        "use": "Spec-driven development",
+        "offer": "Organize a change proposal, specs, and implementation tasks. Version 2.1.1 installs skills bundled with the CLI.",
+        "example": "Agree on scope and acceptance criteria before a coding agent starts work."
       }
     },
     {
@@ -1017,6 +1034,23 @@
         "use": "Hands-on course",
         "offer": "Build an agent harness without a framework",
         "example": "Learn by implementing tool calls and execution loops"
+      }
+    },
+    {
+      "id": "learning-02839603f2",
+      "category": "learning",
+      "url": "https://github.com/modelcontextprotocol/ext-skills",
+      "ko": {
+        "name": "MCP Skills 확장",
+        "use": "베타 규격",
+        "offer": "MCP Resources를 통한 스킬 탐색·조회와 파일별 해시 검증 규격",
+        "example": "원격 스킬 연동을 설계하고 클라이언트의 v0.1.0 베타 지원을 확인할 때"
+      },
+      "en": {
+        "name": "MCP Skills extension",
+        "use": "Beta specification",
+        "offer": "Protocol for discovering and reading skills via MCP Resources with per-file hashes.",
+        "example": "Design a remote skill integration and check whether your client supports the v0.1.0 beta."
       }
     }
   ]

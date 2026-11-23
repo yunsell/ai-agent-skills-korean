@@ -16,23 +16,23 @@ Changes in AI agent tools, with practical ways to apply them.
 
 ---
 
-<a id="latest"></a><a id="recent"></a> **BRIEF 003** · 2026-11-11 · Docs reviewed
+<a id="latest"></a><a id="recent"></a> **BRIEF 004** · 2026-11-23 · Docs reviewed
 
-## What agents can read and why they stop
+## Restore the same skills and review change specs
 
-Skill scan comparisons · Fetch MCP host limits · Deep Agents model refusals
+Skills CLI commit pinning · MCP Skills extension beta · OpenSpec offline skill installs
 
-- **Scanning skills?** Separate static findings from LLM verdicts in [Skill Scanner 2.3.2](newsletter/2026-11-11.en.md#skills).
-- **Fetching public docs?** Use [Fetch MCP 2026.11.4](newsletter/2026-11-11.en.md#mcp) to allow only the hosts you need.
-- **Running subagents?** Check that [Deep Agents 0.7.33–0.7.35](newsletter/2026-11-11.en.md#harness) does not record model refusals as completion in your workflow.
+- [Skills CLI 1.9.0](newsletter/2026-11-23.en.md#skills) · Restore team skills from the installed Git commit.
+- [MCP Skills v0.1.0 beta](newsletter/2026-11-23.en.md#mcp) · Check host support and file hash verification.
+- [OpenSpec 2.1.1](newsletter/2026-11-23.en.md#harness) · Review change scope before implementation.
 
-**[Read the full issue →](newsletter/2026-11-11.en.md)** · [한국어판](newsletter/2026-11-11.md)
+**[Read the full issue →](newsletter/2026-11-23.en.md)** · [한국어판](newsletter/2026-11-23.md)
 
 ### One thing to try today
 
-[Try the Fetch MCP allow/deny exercise →](newsletter/2026-11-11.en.md#experiment) If you have a test connection, check the allowlist against two public URLs.
+Check whether a clean checkout can restore the skill pinned in your team's lockfile. [Skill restore exercise →](newsletter/2026-11-23.en.md#experiment)
 
-[Search 57 resources](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html) · [Real catalog design case](guides/cases/catalog-design.en.md)
+[Search 59 resources](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html) · [Real catalog design case](guides/cases/catalog-design.en.md)
 
 For screen validation, see the [search exercise and UI evidence](guides/web-validation.en.md).
 

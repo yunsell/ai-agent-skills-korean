@@ -7,6 +7,13 @@
     <language>ko</language>
     <atom:link href="https://yunsell.github.io/ai-agent-skills-korean/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>004 · 같은 스킬을 복원하고 변경 명세를 검토하는 법</title>
+      <link>https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-11-23.md</link>
+      <guid isPermaLink="true">https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-11-23.md</guid>
+      <pubDate>Sun, 22 Nov 2026 15:00:00 GMT</pubDate>
+      <description>&lt;ul&gt;&lt;li&gt;Skills CLI 1.9.0은 Git 스킬의 설치 커밋을 기록할 수 있습니다. 새 체크아웃에서 락 파일 복원을 확인하세요.&lt;/li&gt;&lt;li&gt;MCP Skills 확장 v0.1.0 베타가 파일 해시 검증 규격과 스키마를 공개했습니다. 대상 호스트의 확장 지원을 확인하세요.&lt;/li&gt;&lt;li&gt;OpenSpec 2.1.1은 CLI에 포함된 스킬을 설치합니다. 작은 변경 하나로 명세 검토 흐름을 시험하세요.&lt;/li&gt;&lt;/ul&gt;</description>
+    </item>
+    <item>
       <title>003 · 에이전트가 읽는 범위와 멈추는 이유</title>
       <link>https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-11-11.md</link>
       <guid isPermaLink="true">https://github.com/yunsell/ai-agent-skills-korean/blob/main/newsletter/2026-11-11.md</guid>

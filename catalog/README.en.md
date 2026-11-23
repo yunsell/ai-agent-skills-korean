@@ -4,11 +4,11 @@
 
 A curated collection of skills, MCP servers, plugins, frameworks, and learning resources for working with AI agents.
 
-**[Search and filter 57 resources →](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html)** · [Client first steps](../guides/client-first-steps.en.md)
+**[Search and filter 59 resources →](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html)** · [Client first steps](../guides/client-first-steps.en.md)
 
 All entries remain visible as a vertical list in this document. [Executed redesign case and results](../guides/cases/catalog-design.en.md)
 
-Core documentation reviewed **2026-10-12**; selected release notes reviewed **2026-11-11**. [Latest briefing](../newsletter/2026-11-11.en.md).
+Core documentation reviewed **2026-10-12**; selected release notes reviewed **2026-11-23**. [Latest briefing](../newsletter/2026-11-23.en.md).
 
 ## What are you working on?
 
@@ -494,6 +494,8 @@ Connect agents to external services and data.
 
 **New catalog entry · 2026-11-11:** [Fetch MCP 2026.11.4](../newsletter/2026-11-11.en.md#mcp) is an existing reference implementation, not a new project. See the issue for an allowlist test and its limits.
 
+**Chrome DevTools MCP docs review · 2026-11-23.** [1.13.0](https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v1.13.0) adds page-scoped network mocks and logpoints. Use a test page to check how the UI handles a simulated API response.
+
 **Chrome DevTools MCP docs review · 2026-11-11:** [1.12.0](https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v1.12.0) (published 2026-10-22 KST) supports analyzing saved heap snapshots without a live browser connection. Use non-sensitive test captures. See [issue 002](../newsletter/2026-10-19.en.md#mcp) for 1.11.0 recording changes. Not execution-tested.
 
 <a id="tools"></a>
@@ -507,6 +509,14 @@ Find skills and connect tools to your agent workflow.
   Offers: A CLI for discovering, installing, and updating skills, with a find-skills discovery skill
 
   Use it for: Find a skill by describing the task you want to perform
+
+**Skills CLI docs review · 2026-11-23.** Version 1.9.0 can record the installed Git commit and restore it from the project lockfile. See [issue 004](../newsletter/2026-11-23.en.md#skills) for the exercise and the reported `experimental_sync` issue.
+
+- **[OpenSpec](https://github.com/Fission-AI/OpenSpec) · Spec-driven development**
+
+  Offers: Organize a change proposal, specs, and implementation tasks. Version 2.1.1 installs skills bundled with the CLI.
+
+  Use it for: Agree on scope and acceptance criteria before a coding agent starts work.
 
 - **[agent-browser](https://github.com/vercel-labs/agent-browser) · Browser CLI**
 
@@ -626,6 +636,8 @@ Added from documentation on **2026-10-14**. Review the path-permission fix in [0
 
 **Additional docs review · 2026-11-11:** [Deep Agents SDK 0.7.33–0.7.35](../newsletter/2026-11-11.en.md#harness) changes default model-refusal handling and fixes cache prefixes and symlink display. Test success, refusal, and timeout as separate paths.
 
+**SDK release docs review · 2026-11-23.** [Deep Agents 0.7.41](https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.41) corrects message-channel handling. If you consume incremental message updates, check their order and final content in a test workflow.
+
 <a id="frameworks"></a>
 
 ## Frameworks & Libraries
@@ -744,6 +756,12 @@ Explore implementation principles and specifications.
 
   Use it for: Learn by implementing tool calls and execution loops
 
+
+- **[MCP Skills extension](https://github.com/modelcontextprotocol/ext-skills) · Beta specification**
+
+  Offers: Protocol for discovering and reading skills via MCP Resources with per-file hashes.
+
+  Use it for: Design a remote skill integration and check whether your client supports the v0.1.0 beta.
 
 **Specification:** [Agent Skills](https://agentskills.io/specification) — the structure and format of a skill.
 
