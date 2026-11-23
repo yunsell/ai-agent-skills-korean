@@ -8,14 +8,14 @@
   </picture>
 </h1>
 
-**[Search 59 resources →](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html)** · [Latest issue](#latest) · [한국어](README.md)
+**[Search 59 resources →](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html)** · [Latest issue](#latest) · [한국어](README.md#agent-stack-brief)
 
 Find skills, MCP servers, and harnesses, and read release updates you can use in your work.
 
 **Browse by task**<br>
-[Browser tests](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html?q=browser&category=mcp) · [Connect Figma](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html?q=Figma&category=mcp) · [Database guide](guides/quick-starts.en.md#database)
+[Browser tests](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html?q=browser&category=mcp) · [Figma setup](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html?q=Figma&category=mcp) · [DB guide](guides/quick-starts.en.md#database)
 
-[First MCP setup for Codex, Claude Code, or Cursor →](guides/client-first-steps.en.md)
+[MCP setup for Codex, Claude Code, or Cursor](guides/client-first-steps.en.md)
 
 ---
 

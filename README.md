@@ -8,7 +8,7 @@
   </picture>
 </h1>
 
-**[59개 자료 검색 →](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html)** · [최신호 읽기](#latest) · [English](README.en.md)
+**[59개 자료 검색 →](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html)** · [최신호 읽기](#latest) · [English](README.en.md#agent-stack-brief)
 
 스킬·MCP·하네스 자료를 찾고 실무에 필요한 릴리스 소식을 읽을 수 있습니다.
 
