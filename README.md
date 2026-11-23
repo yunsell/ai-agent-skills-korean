@@ -12,9 +12,10 @@
 
 스킬·MCP·하네스 자료를 찾고 실무에 필요한 릴리스 소식을 읽을 수 있습니다.
 
-**작업으로 찾기** · [브라우저 테스트](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html?q=%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80&category=mcp) · [Figma 연결](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html?q=Figma&category=mcp) · [DB 작업 시작](guides/quick-starts.md#database)
+**작업으로 찾기**<br>
+[브라우저 테스트](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html?q=%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80&category=mcp) · [Figma 연결](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html?q=Figma&category=mcp) · [DB 작업 시작](guides/quick-starts.md#database)
 
-**처음 연결한다면** · [Codex·Claude Code·Cursor 설정 안내](guides/client-first-steps.md)
+[Codex·Claude Code·Cursor 첫 연결 →](guides/client-first-steps.md)
 
 ---
 
