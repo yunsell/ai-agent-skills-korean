@@ -16,12 +16,12 @@
 
 | 작업 | 도구와 용도 |
 | --- | --- |
-| 웹 테스트 | **Playwright MCP** · 화면 동작 검사<br>**Chrome DevTools MCP** · 성능 진단 |
+| 테스트 | **Playwright MCP** · 화면 동작 검사<br>**Chrome DevTools MCP** · 성능 진단 |
 | Figma | **Figma MCP** · 디자인과 컴포넌트 읽기 |
-| DB 변경 | **Supabase Agent Skills** · 스키마와 마이그레이션 검토 |
-| 문서 변환 | **MarkItDown** · PDF와 Office 파일을 Markdown으로 변환 |
-| 변경 계획 | **OpenSpec** · 구현 전 요구사항과 완료 조건 정리 |
-| 에이전트 | **Deep Agents** · 파일, 도구, 서브에이전트와 승인 흐름 구성 |
+| DB | **Supabase Agent Skills** · 스키마와 마이그레이션 검토 |
+| 문서 | **MarkItDown** · PDF와 Office 파일을 Markdown으로 변환 |
+| 계획 | **OpenSpec** · 구현 전 요구사항과 완료 조건 정리 |
+| 구축 | **Deep Agents** · 에이전트의 파일, 도구, 승인 흐름 구성 |
 
 <!-- catalog-tables:start -->
 <details>
