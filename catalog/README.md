@@ -656,11 +656,11 @@ Scanner는 CPython 3.11–3.14가 필요합니다. 2.2.0 사용자는 [2.2.1 보
 
   활용: 분기와 상태를 가진 여러 단계 작업 구성
 
-- **[Microsoft Agent Framework](https://github.com/microsoft/agent-framework) · Python·.NET**
+- **[Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/) · Python·.NET**
 
   제공: Microsoft 생태계의 에이전트 시스템 개발
 
-  활용: Python·.NET 서비스에 에이전트 흐름 통합
+  활용: Python·.NET 서비스에 에이전트 흐름 통합. PyPI의 `agent-framework` 1.26.1·1.26.2는 사용을 피하세요. [GitHub 보안 공지](https://github.com/advisories/GHSA-764m-3ppc-5m73)
 
 - **[Google ADK](https://github.com/google/adk-python) · 개발·평가**
 

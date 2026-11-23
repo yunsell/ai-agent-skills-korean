@@ -799,20 +799,20 @@
       }
     },
     {
-      "id": "frameworks-b6a803a2c8",
+      "id": "frameworks-05f7482fa3",
       "category": "frameworks",
-      "url": "https://github.com/microsoft/agent-framework",
+      "url": "https://learn.microsoft.com/en-us/agent-framework/overview/",
       "ko": {
         "name": "Microsoft Agent Framework",
         "use": "Python·.NET",
         "offer": "Microsoft 생태계의 에이전트 시스템 개발",
-        "example": "Python·.NET 서비스에 에이전트 흐름 통합"
+        "example": "Python·.NET 서비스에 에이전트 흐름 통합. PyPI의 `agent-framework` 1.26.1·1.26.2는 사용을 피하세요. [GitHub 보안 공지](https://github.com/advisories/GHSA-764m-3ppc-5m73)"
       },
       "en": {
         "name": "Microsoft Agent Framework",
         "use": "Python & .NET",
         "offer": "Build agent systems in the Microsoft ecosystem",
-        "example": "Integrate agent workflows into Python or .NET services"
+        "example": "Integrate agent workflows into Python or .NET services. Avoid PyPI `agent-framework` versions 1.26.1 and 1.26.2. [GitHub security advisory](https://github.com/advisories/GHSA-764m-3ppc-5m73)"
       }
     },
     {

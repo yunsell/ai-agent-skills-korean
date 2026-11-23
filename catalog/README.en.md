@@ -656,11 +656,11 @@ Build agent applications and automation systems.
 
   Use it for: Model a multi-step workflow with branches and state
 
-- **[Microsoft Agent Framework](https://github.com/microsoft/agent-framework) · Python & .NET**
+- **[Microsoft Agent Framework](https://learn.microsoft.com/en-us/agent-framework/overview/) · Python & .NET**
 
   Offers: Build agent systems in the Microsoft ecosystem
 
-  Use it for: Integrate agent workflows into Python or .NET services
+  Use it for: Integrate agent workflows into Python or .NET services. Avoid PyPI `agent-framework` versions 1.26.1 and 1.26.2. [GitHub security advisory](https://github.com/advisories/GHSA-764m-3ppc-5m73)
 
 - **[Google ADK](https://github.com/google/adk-python) · Development & evaluation**
 

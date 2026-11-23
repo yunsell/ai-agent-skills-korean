@@ -26,7 +26,7 @@ const projects = [
   { category: "mcp", name: "Perplexity MCP", description: "최신 웹 검색과 출처 기반 조사를 에이전트 워크플로에 연결하는 MCP 서버.", url: "https://github.com/perplexityai/modelcontextprotocol" },
   { category: "framework", name: "OpenAI Agents SDK", description: "도구, 핸드오프, 가드레일, 세션과 추적을 가볍고 직접적으로 구성하는 Python SDK.", url: "https://github.com/openai/openai-agents-python" },
   { category: "framework", name: "LangGraph", description: "상태 그래프, 분기, 재시도, 중단 후 재개가 중요한 장기 실행 에이전트 프레임워크.", url: "https://github.com/langchain-ai/langgraph" },
-  { category: "framework", name: "Microsoft Agent Framework", description: "Python과 .NET으로 기업 환경의 멀티 에이전트 시스템을 구성하는 프레임워크.", url: "https://github.com/microsoft/agent-framework" },
+  { category: "framework", name: "Microsoft Agent Framework", description: "Python과 .NET 멀티 에이전트 프레임워크. PyPI agent-framework 1.26.1·1.26.2는 사용을 피하세요.", url: "https://learn.microsoft.com/en-us/agent-framework/overview/" },
   { category: "framework", name: "Google ADK", description: "코드 중심으로 에이전트를 개발하고 평가·배포하는 Google의 Agent Development Kit.", url: "https://github.com/google/adk-python" },
   { category: "framework", name: "PydanticAI", description: "Python 백엔드의 타입 안전성과 구조화된 출력을 중심에 둔 에이전트 프레임워크.", url: "https://github.com/pydantic/pydantic-ai" },
   { category: "framework", name: "smolagents", description: "작고 읽기 쉬운 코드로 에이전트의 원리를 배우고 빠르게 실험하는 프레임워크.", url: "https://github.com/huggingface/smolagents" },
