@@ -41,11 +41,48 @@ const output = JSON.stringify({ schema: 1, source: 'catalog/README.md + catalog/
 const file = path.join(root, 'docs/catalog/data.json');
 const exists = fs.existsSync(file);
 const old = exists ? fs.readFileSync(file, 'utf8') : '';
+const changes = [{ file, exists, before: old, after: output }];
+const start = '<!-- catalog-tables:start -->';
+const end = '<!-- catalog-tables:end -->';
+const tableBlock = /<!-- catalog-tables:start -->\n[\s\S]*?<!-- catalog-tables:end -->/g;
+const cell = text => text.replaceAll('|', '&#124;');
+for (const language of ['ko', 'en']) {
+  const english = language === 'en';
+  const readme = path.join(root, english ? 'README.en.md' : 'README.md');
+  const source = fs.readFileSync(readme, 'utf8');
+  const blocks = [...source.matchAll(tableBlock)];
+  assert.equal(blocks.length, 1, readme + ': expected one generated catalog section');
+  const tables = categories.map(category => {
+    const entries = resources.filter(resource => resource.category === category.id);
+    const rows = entries.map(resource => {
+      const { name, offer } = resource[language];
+      return `| [${cell(name)}](${resource.url}) | ${cell(offer)} |`;
+    });
+    return [
+      `<a id="${category.id}"></a>`,
+      '',
+      `### ${category[language]} · ${entries.length}`,
+      '',
+      english ? '| Resource | What it does |' : '| 자료 | 주요 기능 |',
+      '| --- | --- |',
+      ...rows,
+    ].join('\n');
+  });
+  const summary = english ? `All ${resources.length} resources by category` : `전체 ${resources.length}개 자료를 분류별로 보기`;
+  const after = [start, '<details>', `<summary>${summary}</summary>`, '', tables.join('\n\n'),
+    '', '</details>', end].join('\n');
+  changes.push({ file: readme, exists: true, before: blocks[0][0], after });
+}
+
+const stale = changes.filter(change => change.before.trimEnd() !== change.after.trimEnd());
 if (process.argv.includes('--check')) {
-  assert.equal(old, output, 'Catalog data stale: regenerate with --patch');
-  console.log('PASS: ' + resources.length + ' bilingual resources match the source catalog.');
-} else if (process.argv.includes('--patch') && old !== output) {
-  process.stdout.write('*** Begin Patch\n*** ' + (exists ? 'Update' : 'Add') + ' File: ' + file + '\n'
-    + (exists ? '@@\n' + old.trimEnd().split('\n').map(l => '-' + l).join('\n') + '\n' : '')
-    + output.trimEnd().split('\n').map(l => '+' + l).join('\n') + '\n*** End Patch\n');
+  assert.equal(stale.length, 0, 'Catalog output stale: regenerate with --patch (' + stale.map(change => path.relative(root, change.file)).join(', ') + ')');
+  console.log('PASS: ' + resources.length + ' bilingual resources match the search data and README tables.');
+} else if (process.argv.includes('--patch') && stale.length) {
+  const patches = stale.map(({ file, exists, before, after }) => [
+    '*** ' + (exists ? 'Update' : 'Add') + ' File: ' + file,
+    ...(exists ? ['@@', ...before.trimEnd().split('\n').map(line => '-' + line)] : []),
+    ...after.trimEnd().split('\n').map(line => '+' + line),
+  ].join('\n'));
+  process.stdout.write(['*** Begin Patch', ...patches, '*** End Patch', ''].join('\n'));
 } else console.log('Use --check or --patch.');

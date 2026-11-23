@@ -43,7 +43,7 @@
 5. 비교 카드에는 확인일·확인 수준을 표시합니다. 위험도는 품질 점수가 아니라 가능한 접근 범위입니다.
 6. 빠른 시작의 명령은 원본과 일치해야 합니다. 첫 요청에는 승인 경계와 완료 증거를 포함합니다. 추천 링크는 접힌 메뉴가 아닌 `guides/quick-starts*.md`의 해당 절로 직접 연결합니다.
 7. 신규 자료를 추가했다는 이유로 기존 자료의 확인일을 일괄 갱신하지 않습니다.
-8. 목록 수정 후 `node scripts/build-catalog.mjs --patch`의 출력을 적용합니다. 생성된 `docs/catalog/data.json`을 직접 고치지 마세요. 자료 수가 바뀌면 검색 페이지의 양쪽 소개와 `scripts/test-catalog.mjs`의 기대 수도 갱신합니다. 로컬 화면·실패 복구 확인은 [실제 디자인 사례](guides/cases/catalog-design.md)를 따르세요.
+8. 목록 수정 후 `node scripts/build-catalog.mjs --patch`의 출력을 적용해 검색 데이터와 한·영 홈의 전체 자료 표를 갱신합니다. 전체 표의 원본은 `catalog/`의 한·영 문서입니다. 자료 수가 바뀌면 검색 페이지의 양쪽 소개와 `scripts/test-catalog.mjs`의 기대 수도 갱신합니다. 로컬 화면·실패 복구 확인은 [실제 디자인 사례](guides/cases/catalog-design.md)를 따르세요.
 
 PR 전에 `node scripts/check-content.mjs`, `node scripts/build-brand.mjs --check`, `node scripts/build-feeds.mjs --check`, `node scripts/build-catalog.mjs --check`, `node scripts/test-catalog.mjs`를 실행하세요. GitHub Actions는 구조·원본 링크·Pages 파일 존재·검색 데이터 일치를 점검합니다. 배포 후 실제 Pages URL도 확인하세요. 기존 시각화 지도는 이전 분류의 보조 자료이며 현재 목록의 기준은 카탈로그 두 언어판입니다.
 
@@ -88,6 +88,6 @@ News tips, resource suggestions, and corrections are welcome. This repository co
 5. Record review date and level in comparison cards. Risk describes access scope, not project quality.
 6. Keep quick-start commands aligned with sources. Include approval boundaries and completion evidence in example requests. Link recommendations directly to the relevant section in `guides/quick-starts*.md`, not a closed disclosure.
 7. Adding a resource does not advance unrelated review dates.
-8. After changing a catalog, apply the output of `node scripts/build-catalog.mjs --patch`. Do not edit generated `docs/catalog/data.json` directly. If the resource count changes, update both reader introductions and the expectation in `scripts/test-catalog.mjs`. Follow the [real design case](guides/cases/catalog-design.en.md) for local visual and recovery checks.
+8. After changing a catalog, apply the output of `node scripts/build-catalog.mjs --patch` to update the search data and full tables on both home pages. The bilingual documents in `catalog/` are the source for the full tables. If the resource count changes, update both reader introductions and the expectation in `scripts/test-catalog.mjs`. Follow the [real design case](guides/cases/catalog-design.en.md) for local visual and recovery checks.
 
 Before submitting, run `node scripts/check-content.mjs`, `node scripts/build-brand.mjs --check`, `node scripts/build-feeds.mjs --check`, `node scripts/build-catalog.mjs --check`, and `node scripts/test-catalog.mjs`. GitHub Actions checks structure, upstream links, Pages file existence, and generated search data agreement. Check live Pages URLs after deployment too. The legacy visual map uses earlier categories; the two catalogs are the current resource reference.
