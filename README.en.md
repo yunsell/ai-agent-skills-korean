@@ -8,40 +8,54 @@
   </picture>
 </h1>
 
-**[Search 59 resources →](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html)** · [Latest issue](#latest) · [한국어](README.md#agent-stack-brief)
+[Latest issue](#latest) · [한국어](README.md#agent-stack-brief)
 
-Find skills, MCP servers, and harnesses, and read release updates you can use in your work.
+## [Search 59 resources →](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html)
 
-**Browse by task**<br>
-[Browser tests](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html?q=browser&category=mcp) · [Figma setup](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html?q=Figma&category=mcp) · [DB guide](guides/quick-starts.en.md#database)
+Find skills, MCP servers, plugins, and harnesses by name or task.
 
-[MCP setup for Codex, Claude Code, or Cursor](guides/client-first-steps.en.md)
+### Start with a task
+
+**[Browser testing](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html?q=browser&category=mcp)**<br>
+Playwright MCP and Chrome DevTools MCP
+
+**[Connect Figma](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html?q=Figma&category=mcp)**<br>
+Read design files from your agent
+
+**[Start a database task](guides/quick-starts.en.md#database)**<br>
+Plan and verify a schema change
+
+**[Set up your first MCP connection](guides/client-first-steps.en.md)**<br>
+Codex · Claude Code · Cursor
 
 ---
 
-<a id="latest"></a><a id="recent"></a> **BRIEF 004** · 2026-11-23 · Docs reviewed
+<a id="latest"></a><a id="recent"></a>
 
-## Restore the same skills and review change specs
+## Latest issue
 
-Skills CLI commit pinning · MCP Skills extension beta · OpenSpec offline skill installs
+Issue 004 · 2026-11-23 · Docs reviewed
 
-- [Skills CLI 1.9.0](newsletter/2026-11-23.en.md#skills) · Restore team skills from the installed Git commit.
-- [MCP Skills v0.1.0 beta](newsletter/2026-11-23.en.md#mcp) · Check host support and file hash verification.
-- [OpenSpec 2.1.1](newsletter/2026-11-23.en.md#harness) · Review change scope before implementation.
+### [Restore the same skills and review change specs](newsletter/2026-11-23.en.md)
 
-**[Read the full issue →](newsletter/2026-11-23.en.md)** · [한국어판](newsletter/2026-11-23.md)
+- [Skills CLI 1.9.0](newsletter/2026-11-23.en.md#skills) · Restore skills from the installed commit
+- [MCP Skills beta](newsletter/2026-11-23.en.md#mcp) · Verify remote skill files
+- [OpenSpec 2.1.1](newsletter/2026-11-23.en.md#harness) · Install skills offline
 
-### One thing to try today
-
-Check whether a clean checkout can restore the skill pinned in your team's lockfile. [Skill restore exercise →](newsletter/2026-11-23.en.md#experiment)
+[Skill restore exercise](newsletter/2026-11-23.en.md#experiment) · [한국어판](newsletter/2026-11-23.md)
 
 ## Catalog and practical guides
 
-- [Full GitHub catalog](catalog/README.en.md) · [Roles of Skills, MCP, and Harness](guides/first-stack.en.md) · [Troubleshoot a connection](guides/mcp-recovery.en.md)
-- [Design workflow guide](guides/design-workflows.en.md) · [UI verification exercise](guides/web-validation.en.md) · [Catalog redesign case](guides/cases/catalog-design.en.md)
+- [Full GitHub catalog](catalog/README.en.md)
+- [How Skills, MCP, and Harness differ](guides/first-stack.en.md)
+- [Troubleshoot an MCP connection](guides/mcp-recovery.en.md)
 
 <details>
-<summary>All resource categories</summary>
+<summary>Browse categories and practical guides</summary>
+
+- [Design workflow guide](guides/design-workflows.en.md)
+- [UI verification exercise](guides/web-validation.en.md)
+- [Catalog redesign case](guides/cases/catalog-design.en.md)
 
 | Category | Start here |
 | --- | --- |

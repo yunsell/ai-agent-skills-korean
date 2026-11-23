@@ -8,40 +8,54 @@
   </picture>
 </h1>
 
-**[59개 자료 검색 →](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html)** · [최신호 읽기](#latest) · [English](README.en.md#agent-stack-brief)
+[최신호](#latest) · [English](README.en.md#agent-stack-brief)
 
-스킬·MCP·하네스 자료를 찾고 실무에 필요한 릴리스 소식을 읽을 수 있습니다.
+## [59개 자료 검색 →](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html)
 
-**작업으로 찾기**<br>
-[브라우저 테스트](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html?q=%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80&category=mcp) · [Figma 연결](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html?q=Figma&category=mcp) · [DB 작업 시작](guides/quick-starts.md#database)
+스킬, MCP, 플러그인, 하네스를 이름이나 용도로 찾을 수 있습니다.
 
-[Codex·Claude Code·Cursor 첫 연결 →](guides/client-first-steps.md)
+### 작업별 바로가기
+
+**[브라우저 테스트](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html?q=%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80&category=mcp)**<br>
+Playwright MCP와 Chrome DevTools MCP
+
+**[Figma 연결](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html?q=Figma&category=mcp)**<br>
+에이전트에서 디자인 파일 확인하기
+
+**[DB 작업 시작](guides/quick-starts.md#database)**<br>
+스키마 변경 전 점검과 검증
+
+**[첫 MCP 연결](guides/client-first-steps.md)**<br>
+Codex · Claude Code · Cursor
 
 ---
 
-<a id="latest"></a><a id="recent"></a> **BRIEF 004** · 2026-11-23 · 원본 문서 확인
+<a id="latest"></a><a id="recent"></a>
 
-## 같은 스킬을 복원하고 변경 명세를 검토하는 법
+## 최신호
 
-Skills CLI 커밋 고정 · MCP Skills 확장 베타 · OpenSpec 오프라인 스킬 설치
+004호 · 2026-11-23 · 원본 문서 확인
 
-- [Skills CLI 1.9.0](newsletter/2026-11-23.md#skills) · 설치한 Git 커밋에서 팀 스킬을 복원합니다.
-- [MCP Skills v0.1.0 베타](newsletter/2026-11-23.md#mcp) · 호스트 지원과 파일 해시 검증을 확인합니다.
-- [OpenSpec 2.1.1](newsletter/2026-11-23.md#harness) · 구현 전에 변경 범위를 검토합니다.
+### [같은 스킬을 복원하고 변경 명세를 검토하는 법](newsletter/2026-11-23.md)
 
-**[이번 호 전체 읽기 →](newsletter/2026-11-23.md)** · [English edition](newsletter/2026-11-23.en.md)
+- [Skills CLI 1.9.0](newsletter/2026-11-23.md#skills) · 설치 커밋으로 스킬 복원
+- [MCP Skills 베타](newsletter/2026-11-23.md#mcp) · 원격 스킬 파일 검증
+- [OpenSpec 2.1.1](newsletter/2026-11-23.md#harness) · 오프라인 스킬 설치
 
-### 오늘 해볼 것 하나
-
-팀의 락 파일에 고정된 스킬을 새 체크아웃에서 복원할 수 있는지 확인하세요. [스킬 복원 실습 →](newsletter/2026-11-23.md#experiment)
+[스킬 복원 실습](newsletter/2026-11-23.md#experiment) · [English edition](newsletter/2026-11-23.en.md)
 
 ## 카탈로그와 실무 안내
 
-- [GitHub 전체 카탈로그](catalog/README.md) · [Skills·MCP·Harness 역할](guides/first-stack.md) · [연결이 막혔을 때](guides/mcp-recovery.md)
-- [디자인 작업 가이드](guides/design-workflows.md) · [화면 검증 실습](guides/web-validation.md) · [카탈로그 개편 사례](guides/cases/catalog-design.md)
+- [GitHub 전체 카탈로그](catalog/README.md)
+- [Skills·MCP·Harness의 차이](guides/first-stack.md)
+- [MCP 연결 문제 해결](guides/mcp-recovery.md)
 
 <details>
-<summary>분류별 전체 목록</summary>
+<summary>분류와 실무 가이드 펼치기</summary>
+
+- [디자인 작업 가이드](guides/design-workflows.md)
+- [화면 검증 실습](guides/web-validation.md)
+- [카탈로그 개편 사례](guides/cases/catalog-design.md)
 
 | 분류 | 바로가기 |
 | --- | --- |
