@@ -16,12 +16,12 @@
 
 | Task | Tools and uses |
 | --- | --- |
-| Test in a browser | Use **Playwright MCP** to check what the page does and **Chrome DevTools MCP** to inspect performance and network activity. |
-| Inspect a Figma design | Use **Figma MCP** to read component and design information for implementation. |
-| Change a DB schema | Use **Supabase Agent Skills** to review PostgreSQL schemas and migrations. |
-| Convert documents | Use **MarkItDown** to turn PDF and Office files into Markdown. |
-| Review a change plan | Use **OpenSpec** to document requirements and acceptance criteria before implementation. |
-| Build an agent | Use **Deep Agents** to organize files, tools, subagents, and approvals. |
+| Browser tests | **Playwright MCP** · Check UI behavior<br>**Chrome DevTools MCP** · Diagnose performance |
+| Figma | **Figma MCP** · Read designs and components |
+| DB changes | **Supabase Agent Skills** · Review schemas and migrations |
+| Documents | **MarkItDown** · Convert PDF and Office files to Markdown |
+| Change plans | **OpenSpec** · Define requirements and acceptance criteria |
+| Agent setup | **Deep Agents** · Organize files, tools, subagents, and approvals |
 
 <!-- catalog-tables:start -->
 <details>
@@ -152,7 +152,7 @@
 </details>
 <!-- catalog-tables:end -->
 
-[Search the catalog](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html) · [MCP setup for Codex, Claude Code, or Cursor](guides/client-first-steps.en.md)
+[Search the catalog](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html) · [First MCP setup](guides/client-first-steps.en.md)
 
 ---
 

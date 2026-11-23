@@ -45,7 +45,7 @@ const changes = [{ file, exists, before: old, after: output }];
 const start = '<!-- catalog-tables:start -->';
 const end = '<!-- catalog-tables:end -->';
 const tableBlock = /<!-- catalog-tables:start -->\n[\s\S]*?<!-- catalog-tables:end -->/g;
-const cell = text => text.replaceAll('|', '&#124;');
+const cell = text => text.replace(/\s*·\s*/g, ' · ').replaceAll('|', '&#124;');
 for (const language of ['ko', 'en']) {
   const english = language === 'en';
   const readme = path.join(root, english ? 'README.en.md' : 'README.md');
