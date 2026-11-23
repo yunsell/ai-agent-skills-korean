@@ -8,11 +8,13 @@
   </picture>
 </h1>
 
-[한국어](README.md) · **English**
+**[Search 59 resources →](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html)** · [Read the latest issue](#latest) · [한국어](README.md)
 
-Changes in AI agent tools, with practical ways to apply them.
+Find skills, MCP servers, and harnesses, and read release updates you can use in your work.
 
-[Latest issue](#latest) · [Find a tool](catalog/README.en.md) · [Get started](guides/first-stack.en.md) · [Archive](newsletter/README.en.md)
+**Browse by task** · [Test in a browser](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html?q=browser&category=mcp) · [Connect Figma](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html?q=Figma&category=mcp) · [Start a database task](guides/quick-starts.en.md#database)
+
+**Setting up your first connection?** [Setup for Codex, Claude Code, and Cursor](guides/client-first-steps.en.md)
 
 ---
 
@@ -32,20 +34,10 @@ Skills CLI commit pinning · MCP Skills extension beta · OpenSpec offline skill
 
 Check whether a clean checkout can restore the skill pinned in your team's lockfile. [Skill restore exercise →](newsletter/2026-11-23.en.md#experiment)
 
-[Search 59 resources](https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html) · [Real catalog design case](guides/cases/catalog-design.en.md)
+## Catalog and practical guides
 
-For screen validation, see the [search exercise and UI evidence](guides/web-validation.en.md).
-
-## Start with your task
-
-| What you need | Start here |
-| --- | --- |
-| Choose a useful tool | [Catalog with four task groups](catalog/README.en.md) |
-| Connect your first tool | [Codex, Claude Code, and Cursor first steps](guides/client-first-steps.en.md) · [Explain the roles](guides/first-stack.en.md) |
-| Compare setup, auth, and access | [Practical comparison](catalog/README.en.md#field-cards) · [Quick starts](guides/quick-starts.en.md) |
-| Design review, Figma, or component implementation | [Design workflow guide](guides/design-workflows.en.md) |
-
-Stuck? Use [recovery by registration, startup, call, or search-result symptom](guides/mcp-recovery.en.md).
+- [Full GitHub catalog](catalog/README.en.md) · [Roles of Skills, MCP, and Harness](guides/first-stack.en.md) · [Troubleshoot a connection](guides/mcp-recovery.en.md)
+- [Design workflow guide](guides/design-workflows.en.md) · [UI verification exercise](guides/web-validation.en.md) · [Catalog redesign case](guides/cases/catalog-design.en.md)
 
 <details>
 <summary>All resource categories</summary>

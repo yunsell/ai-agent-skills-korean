@@ -126,8 +126,11 @@ for (const issue of manifest.issues) {
 }
 const normalized = (file) => [...new Set(links(read(file)).map((link) => {
   if (/^https?:/.test(link)) {
-    if (link === "https://yunsell.github.io/ai-agent-skills-korean/catalog/en.html") {
-      return link.replace("/catalog/en.html", "/catalog/index.html");
+    if (/^https:\/\/yunsell\.github\.io\/ai-agent-skills-korean\/catalog\/(index|en)\.html(?:\?|$)/.test(link)) {
+      const catalog = new URL(link);
+      catalog.pathname = "/ai-agent-skills-korean/catalog/index.html";
+      if (catalog.searchParams.get("q") === "브라우저") catalog.searchParams.set("q", "browser");
+      return catalog.href;
     }
     if (link.startsWith("https://yunsell.github.io/ai-agent-skills-korean/labs/search.html?lang=")) {
       return link.replace(/\?lang=(ko|en)$/, "?lang=language");

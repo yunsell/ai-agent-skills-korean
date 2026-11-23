@@ -8,11 +8,13 @@
   </picture>
 </h1>
 
-**한국어** · [English](README.en.md)
+**[59개 자료 검색 →](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html)** · [최신호 읽기](#latest) · [English](README.en.md)
 
-AI 에이전트 도구의 변화와, 내 작업에 적용하는 방법을 읽습니다.
+스킬·MCP·하네스 자료를 찾고 실무에 필요한 릴리스 소식을 읽을 수 있습니다.
 
-[최신호](#latest) · [도구 찾기](catalog/README.md) · [처음 시작하기](guides/first-stack.md) · [지난호](newsletter/README.md)
+**작업으로 찾기** · [브라우저 테스트](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html?q=%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80&category=mcp) · [Figma 연결](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html?q=Figma&category=mcp) · [DB 작업 시작](guides/quick-starts.md#database)
+
+**처음 연결한다면** · [Codex·Claude Code·Cursor 설정 안내](guides/client-first-steps.md)
 
 ---
 
@@ -32,20 +34,10 @@ Skills CLI 커밋 고정 · MCP Skills 확장 베타 · OpenSpec 오프라인 �
 
 팀의 락 파일에 고정된 스킬을 새 체크아웃에서 복원할 수 있는지 확인하세요. [스킬 복원 실습 →](newsletter/2026-11-23.md#experiment)
 
-[59개 자료 검색해 보기](https://yunsell.github.io/ai-agent-skills-korean/catalog/index.html) · [실제 카탈로그 디자인 사례](guides/cases/catalog-design.md)
+## 카탈로그와 실무 안내
 
-화면 검증을 해보고 싶다면 [검색 실습과 UI 실행 근거](guides/web-validation.md)를 보세요.
-
-## 내 작업에 맞는 시작점
-
-| 필요한 것 | 바로가기 |
-| --- | --- |
-| 쓸 만한 도구 고르기 | [네 가지 작업으로 찾는 카탈로그](catalog/README.md) |
-| 내 환경에서 처음 연결하기 | [Codex·Claude Code·Cursor 첫 단계](guides/client-first-steps.md) · [역할 설명](guides/first-stack.md) |
-| 설치·인증·접근 범위 비교 | [실무 비교](catalog/README.md#field-cards) · [빠른 시작](guides/quick-starts.md) |
-| 디자인 검토·Figma·컴포넌트 구현 | [디자인 작업 가이드](guides/design-workflows.md) |
-
-실행이 막혔다면 [등록·시작·호출·검색 결과별 복구 안내](guides/mcp-recovery.md)를 보세요.
+- [GitHub 전체 카탈로그](catalog/README.md) · [Skills·MCP·Harness 역할](guides/first-stack.md) · [연결이 막혔을 때](guides/mcp-recovery.md)
+- [디자인 작업 가이드](guides/design-workflows.md) · [화면 검증 실습](guides/web-validation.md) · [카탈로그 개편 사례](guides/cases/catalog-design.md)
 
 <details>
 <summary>분류별 전체 목록</summary>
