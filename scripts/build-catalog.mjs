@@ -55,22 +55,20 @@ for (const language of ['ko', 'en']) {
   const tables = categories.map(category => {
     const entries = resources.filter(resource => resource.category === category.id);
     const rows = entries.map(resource => {
-      const { name, offer } = resource[language];
-      return `| [${cell(name)}](${resource.url}) | ${cell(offer)} |`;
+      const { name, use } = resource[language];
+      return `| [${cell(name)}](${resource.url}) | ${cell(use)} |`;
     });
     return [
       `<a id="${category.id}"></a>`,
       '',
       `### ${category[language]} · ${entries.length}`,
       '',
-      english ? '| Resource | What it does |' : '| 자료 | 주요 기능 |',
+      english ? '| Resource | Use |' : '| 자료 | 용도 |',
       '| --- | --- |',
       ...rows,
     ].join('\n');
   });
-  const summary = english ? `All ${resources.length} resources by category` : `전체 ${resources.length}개 자료를 분류별로 보기`;
-  const after = [start, '<details>', `<summary>${summary}</summary>`, '', tables.join('\n\n'),
-    '', '</details>', end].join('\n');
+  const after = [start, '', tables.join('\n\n'), '', end].join('\n');
   changes.push({ file: readme, exists: true, before: blocks[0][0], after });
 }
 
